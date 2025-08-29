@@ -69,13 +69,14 @@
       nav.show { display:flex; }
       nav a { margin:10px 0; }
     }
-
-    /* Banner integrado */
+        /* Banner general */
     .banner {
       background: url('imagenes/banner.webp') center/cover no-repeat;
-      padding:100px 20px;
-      text-align:center;
+      padding: 100px 20px;
+      text-align: center;
     }
+    
+    /* Título dentro del banner */
     .banner h1 {
       font-size: 2.2rem;
       font-weight: 700;
@@ -85,10 +86,45 @@
       padding: 15px 25px;
       border-radius: 10px;
     }
+    
+    /* Ajustes para tabletas */
+    @media (max-width: 1024px) {
+      .banner {
+        padding: 70px 20px;
+      }
+      .banner h1 {
+        font-size: 1.9rem;
+        padding: 12px 20px;
+      }
+    }
+    
+    /* Ajustes para móviles */
+    @media (max-width: 768px) {
+      .banner {
+        padding: 40px 15px;
+      }
+      .banner h1 {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+      }
+    }
+    
+    /* Ajustes para móviles muy pequeños */
+    @media (max-width: 480px) {
+      .banner {
+        padding: 30px 10px;
+      }
+      .banner h1 {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+      }
+    }
+
 
     /* Main */
+    /*Foto Central*/
     main { max-width:900px; margin:auto; padding:40px 20px; }
-    main img { display:block; margin:30px auto; max-width:100%; height:auto; border-radius:12px; }
+    main img { display:block; margin:30px auto; max-width:100%; height:auto; border-radius:3px; }
     h2 { text-align:center; margin-top:40px; font-size:1.8rem; }
 
     /* Acordeón */
