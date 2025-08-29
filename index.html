@@ -12,7 +12,9 @@
   <style>
     body { margin:0; font-family:'Open Sans', Arial, sans-serif; line-height:1.6; color:#222; }
     header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#fff; position:sticky; top:0; z-index:1000; }
-    header img { height:40px; }
+    header img { height:40px; margin-right:10px; }
+    header .title { font-size:1.4rem; font-weight:700; display:flex; align-items:center; }
+
     nav { display:flex; }
     nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
     
@@ -28,15 +30,17 @@
     }
 
     .banner { text-align:center; background:url('imagenes/banner.webp') center/cover no-repeat; color:white; padding:80px 20px; }
-    .banner h1 { font-size:1.8rem; font-weight:700; }
+    .banner h1 { font-size:1.8rem; font-weight:700; line-height:1.4; white-space:pre-line; }
     .subbanner { background:#f4f4f4; padding:20px; text-align:center; }
     .btn-whatsapp { display:inline-block; margin:20px auto; padding:12px 20px; background:#25D366; color:white; font-weight:700; border-radius:8px; text-decoration:none; }
-    .features, .links { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:15px; padding:20px; text-align:center; }
-    .features img, .links img { width:100%; border-radius:8px; }
     
+    .features, .links { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:15px; padding:20px; text-align:center; }
+    .features img, .links img { width:60%; border-radius:8px; }
+    .features p, .links p { font-size:1.1rem; font-weight:700; color:#000; text-decoration:none; margin-top:10px; }
+
     footer { background:#800020; color:white; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
     footer .whatsapp-logo { flex:0 0 auto; margin-right:20px; }
-    footer .whatsapp-logo img { width:60px; height:auto; }
+    footer .whatsapp-logo img { width:90px; height:auto; }
     footer .footer-text { flex:1; text-align:center; }
     footer a { color:white; font-weight:bold; text-decoration:none; }
   </style>
@@ -44,7 +48,10 @@
 <body>
 
   <header>
-    <div><img src="imagenes/logo.webp" alt="Logo Nabil Mentalista"> Nabil Mentalista</div>
+    <div class="title">
+      <img src="imagenes/logo.webp" alt="Logo Nabil Mentalista - Mentalismo Corporativo en Bogotá" title="Logo de Nabil Mentalista, experto en mentalismo corporativo en Bogotá"> 
+      Nabil Mentalista
+    </div>
     <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <nav class="menu">
       <a href="servicios.html">Servicios</a>
@@ -55,7 +62,8 @@
   </header>
 
   <section class="banner">
-    <h1>Eleva tu Evento Corporativo: shows de Mentalismo Personalizado que Dejan Huella.</h1>
+    <h1>Eleva tu Evento Corporativo: 
+Shows de Mentalismo Personalizado que Dejan Huella.</h1>
   </section>
 
   <section class="subbanner">
@@ -68,15 +76,15 @@
     <h2 style="text-align:center; margin-top:40px;">Shows de mentalismo personalizados que potencian tu marca</h2>
     <div class="features">
       <div>
-        <img src="imagenes/pancarta.webp" alt="Mentalismo profesional para empresas">
+        <img src="imagenes/pancarta.webp" alt="Show de mentalismo corporativo con pancarta para empresas en Bogotá" title="Show de mentalismo profesional para eventos corporativos" loading="lazy">
         <p>Profesionalismo garantizado</p>
       </div>
       <div>
-        <img src="imagenes/cajita.webp" alt="Diversión asegurada en shows corporativos">
+        <img src="imagenes/cajita.webp" alt="Show de mentalismo corporativo divertido para empresas en Bogotá" title="Diversión asegurada en shows de mentalismo empresarial" loading="lazy">
         <p>Diversión asegurada</p>
       </div>
       <div>
-        <img src="imagenes/block.webp" alt="Comunica tu mensaje con mentalismo">
+        <img src="imagenes/block.webp" alt="Comunicación de mensaje de marca a través del mentalismo corporativo" title="Comunica tu mensaje empresarial con mentalismo" loading="lazy">
         <p>Tu mensaje, nuestro poder</p>
       </div>
     </div>
@@ -91,20 +99,29 @@
 
   <section class="links">
     <div>
-      <a href="servicios.html"><img src="imagenes/siigo.webp" alt="Servicios de mentalismo corporativo"><p>Servicios</p></a>
+      <a href="servicios.html">
+        <img src="imagenes/siigo.webp" alt="Servicios de mentalismo corporativo en Bogotá y toda Colombia" title="Explora los servicios de mentalismo corporativo en Bogotá" loading="lazy">
+        <p>Servicios</p>
+      </a>
     </div>
     <div>
-      <a href="propuestas.html"><img src="imagenes/beesac.webp" alt="Propuestas de valor mentalismo"><p>Propuestas de Valor</p></a>
+      <a href="propuestas.html">
+        <img src="imagenes/beesac.webp" alt="Propuestas de valor en mentalismo corporativo para empresas" title="Conoce las propuestas de valor del mentalismo corporativo" loading="lazy">
+        <p>Propuestas de Valor</p>
+      </a>
     </div>
     <div>
-      <a href="faq.html"><img src="imagenes/bbva.webp" alt="Preguntas frecuentes mentalismo"><p>Preguntas Frecuentes</p></a>
+      <a href="faq.html">
+        <img src="imagenes/bbva.webp" alt="Preguntas frecuentes sobre shows de mentalismo corporativo" title="Resuelve tus dudas en las preguntas frecuentes de mentalismo corporativo" loading="lazy">
+        <p>Preguntas Frecuentes</p>
+      </a>
     </div>
   </section>
 
   <footer>
     <div class="whatsapp-logo">
       <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp">
+        <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
       </a>
     </div>
     <div class="footer-text">
