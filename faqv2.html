@@ -105,51 +105,52 @@
     .accordion-content { display:none; padding:15px; background:white; }
 
     /* Footer */
-    footer { background:#800020; color:white; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
-    footer .whatsapp-logo { flex:0 0 auto; margin-right:20px; }
-    footer .whatsapp-logo img { width:90px; height:auto; }
-    footer .footer-text { flex:1; text-align:center; }
-    footer a { color:white; font-weight:bold; text-decoration:none; }
-
     footer {
-      background:#800020;
-      color:white;
-      padding:20px;
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:center; /* Centra horizontalmente */
-      text-align:center;      /* Centra el texto dentro del div */
-      gap:20px;               /* Espacio entre logo y texto */
-    }
-    
-    footer .whatsapp-logo {
-      flex:0 0 auto;          /* No crece, ocupa solo su tamaño */
-    }
-    
-    footer .whatsapp-logo img {
-      width:90px;
-      height:auto;
-    }
-    
-    footer .footer-text {
-      flex:1 1 300px;        /* Ocupa resto del espacio, mínimo 300px */
-    }
-    
-    @media (max-width:768px) {
-      footer {
-        flex-direction:column;  /* Logo arriba, texto abajo */
-        text-align:center;      /* Asegura centrado en mobile */
-      }
-    
-      footer .whatsapp-logo {
-        margin-bottom:15px;    /* Separación entre logo y texto */
-      }
-    
-      footer .footer-text {
-        flex:1 1 100%;         /* Ocupa todo el ancho */
-      }
-    }
+  position: relative;
+  background:#800020;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+footer .whatsapp-logo {
+  position: absolute;
+  left:20px;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+footer .whatsapp-logo img {
+  width:90px;
+  height:auto;
+}
+
+footer .footer-text {
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+  max-width:700px; /* Opcional, para que no sea demasiado ancho */
+}
+
+/* Mobile */
+@media (max-width:768px) {
+  footer {
+    padding:20px 10px;
+  }
+  footer .whatsapp-logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-bottom:15px;
+  }
+  footer .footer-text {
+    left:auto;
+    transform:none;
+  }
+}
+
+  
     
   </style>
 </head>
@@ -243,18 +244,19 @@
 <footer>
   <div class="whatsapp-logo">
     <a href="https://wa.me/573057679511" target="_blank">
-      <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
+      <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp">
     </a>
   </div>
   <div class="footer-text">
     <p>Conversemos sobre tu Próximo Evento</p>
     <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
     <p><strong>Contáctanos:</strong><br>
-    WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
-    Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+       WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
+       Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
     <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
   </div>
 </footer>
+
 
 <script>
   // Menú hamburguesa
