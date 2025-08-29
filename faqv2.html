@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Nabil Mentalista</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      background-color: #f7f7f7;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .accordion-content {
+      padding: 15px;
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #fff;
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .footer-logo {
+      max-height: 50px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+    }
+
+    .footer-whatsapp {
+      position: absolute;
+      right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        flex-direction: column;
+        position: static;
+      }
+      .footer-whatsapp {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <h1>Preguntas Frecuentes (FAQ)</h1>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿Puedes personalizar el show con el mensaje de mi marca o producto?</div>
+    <div class="accordion-content">
+      <p>Esa es mi especialidad! Integro elementos visuales, efectos y un guion que resalta tu marca, producto o el mensaje que deseas comunicar.</p>
+      <p>El objetivo es que su marca sea 'La Mejor Elección' dentro del show.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿El show es interactivo?</div>
+    <div class="accordion-content">
+      <p>¡Absolutamente! La participación de los invitados es el corazón de mis shows.</p>
+      <p>Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿Dónde realizas tus shows? ¿Solo en Bogotá?</div>
+    <div class="accordion-content">
+      <p>Si bien radico en Bogotá, me apasiona viajar y llevar la magia del mentalismo a eventos corporativos en otras ciudades de Colombia y a nivel internacional.</p>
+      <p>Si tu evento está fuera de Bogotá, <a href="https://wa.me/573057679511" target="_blank"><strong>¡conversemos sin problema!</strong></a></p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿Qué necesito para el show (espacio, sonido, etc.)?</div>
+    <div class="accordion-content">
+      <p>Dependerá del formato de presentación, mis shows son flexibles y se adaptan a diversos escenarios.</p>
+      <p>Para un show central generalmente solo necesito un espacio de presentación que me permita estar siempre de frente al público y un sistema de sonido donde conectar mi micrófono.</p>
+      <p>Para talleres es necesario contar además del espacio de show con un espacio para realizar las actividades.</p>
+      <p>Y para campañas en puestos de trabajo no hay requerimientos técnicos pues está pensado para ser totalmente itinerante.</p>
+      <p>Pero los detalles los coordinaremos para asegurar que todo sea perfecto.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">¿Cuál es el precio de un show de mentalismo para mi evento corporativo?</div>
+    <div class="accordion-content">
+      <p>El único precio fijo es el de un show central personalizado en Bogotá, que se establece por el show, no por el número de asistentes ni por la duración.</p>
+      <p>Esto se debe a que el nivel de personalización, el trabajo de diseño, la preparación, el transporte y la ocupación de agenda son consistentes.</p>
+      <p>Para el año 2025 el precio del Show Central en Bogotá es de 2.000.000 COP (Dos Millones de pesos colombianos).</p>
+      <p>En cuanto a talleres y campañas en puesto de trabajo, el precio es variable y depende del número de sesiones, duración, materiales, etc.</p>
+      <p>Pero en todos los casos el valor radica en la creación de una experiencia única y a medida para su marca.</p>
+      <p>Para obtener una cotización precisa y discutir los detalles de tu evento, te invito a <a href="https://wa.me/573057679511" target="_blank"><strong>contactarme directamente vía WhatsApp</strong></a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <img src="logo.png" alt="Nabil Mentalista - Shows de mentalismo corporativo" class="footer-logo">
+    <p class="footer-text">© 2025 Nabil Mentalista | Mentalismo Corporativo en Bogotá</p>
+    <a href="https://wa.me/573057679511" target="_blank" class="footer-whatsapp">
+      <img src="whatsapp.png" alt="Contactar a Nabil Mentalista vía WhatsApp" title="Enviar mensaje por WhatsApp">
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Script básico para accordion
+  const headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
