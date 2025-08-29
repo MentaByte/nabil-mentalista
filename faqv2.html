@@ -3,151 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - Nabil Mentalista</title>
+  <title>Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá</title>
+  <meta name="description" content="Preguntas frecuentes sobre mentalismo corporativo, costos de shows para empresas y experiencias únicas con Nabil Mentalista en Bogotá y a nivel nacional.">
+  <meta name="keywords" content="FAQ mentalismo corporativo, costo show empresas, mentalista Bogotá, entretenimiento empresarial, preguntas frecuentes show de magia">
+  <meta name="author" content="Nabil Mentalista">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá">
+  <meta property="og:description" content="Descubre las respuestas a las preguntas frecuentes sobre mentalismo corporativo, precios y experiencias con Nabil Mentalista.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nabilmentalista.com/faq.html">
+  <meta property="og:image" content="https://www.nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá">
+  <meta name="twitter:description" content="Preguntas frecuentes sobre mentalismo corporativo y costos de shows para empresas con Nabil Mentalista.">
+  <meta name="twitter:image" content="https://www.nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nabil Mentalista - Mentalismo Corporativo",
+    "image": "https://www.nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
+    "description": "Shows de mentalismo diseñados para empresas y eventos corporativos. Impacta a tu audiencia y genera conexión memorable.",
+    "url": "https://www.nabilmentalista.com",
+    "telephone": "+573057679511",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressCountry": "Colombia"
+    },
+    "areaServed": "Colombia",
+    "sameAs": [
+      "https://www.instagram.com/nabilmentalista/",
+      "https://www.linkedin.com/in/nabilmentalista/"
+    ]
+  }
+  </script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    body { margin:0; font-family:'Open Sans', Arial, sans-serif; color:#222; line-height:1.6; }
+
+    /* Header con logo y menú */
+    header { position:sticky; top:0; z-index:1000; background:white; }
+    header .top-bar {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:10px 20px;
+    }
+    header .title { display:flex; align-items:center; font-weight:700; font-size:1.4rem; }
+    header .title img { height:40px; margin-right:10px; }
+    nav { display:flex; }
+    nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
+    .menu-toggle { display:none; font-size:28px; cursor:pointer; background:none; border:none; }
+
+    @media (max-width:768px) {
+      .menu-toggle { display:block; }
+      nav { display:none; flex-direction:column; position:absolute; top:60px; right:20px; background:white; border:1px solid #ddd; padding:10px; }
+      nav.show { display:flex; }
+      nav a { margin:10px 0; }
     }
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .accordion-item {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-
-    .accordion-header {
-      background-color: #f7f7f7;
-      padding: 15px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .accordion-content {
-      padding: 15px;
-      display: none;
-    }
-
-    /* Footer */
-    .footer {
-      background-color: #fff;
-      padding: 20px 0;
-      border-top: 1px solid #ccc;
-    }
-
-    .footer-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .footer-logo {
-      max-height: 50px;
-    }
-
-    .footer-text {
-      font-size: 14px;
-      color: #333;
+    /* Banner */
+    .banner {
+      background: url('imagenes/banner.webp') center/cover no-repeat;
+      padding: 100px 20px;
       text-align: center;
     }
+    .banner h1 { font-size: 2rem; font-weight:700; color:white; margin:0; }
+    .banner h2 { font-size: 1rem; font-weight:500; color:white; margin:10px 0 0 0; }
+    .banner .divider { width:50%; border:2px solid #800020; margin:15px auto; }
 
-    .footer-whatsapp {
-      position: absolute;
-      right: 20px;
+    @media (max-width: 768px) {
+      .banner { padding:60px 15px; }
+      .banner h1 { font-size:1.5rem; }
+      .banner h2 { font-size:0.9rem; }
     }
 
-    @media (max-width: 600px) {
-      .footer-container {
-        flex-direction: column;
-        position: static;
+    /* Main */
+    main { max-width:900px; margin:auto; padding:40px 20px; }
+    h2.faq-title { font-size:2rem; text-align:center; margin-bottom:10px; }
+    h3.faq-subtitle { font-size:1rem; text-align:center; margin-bottom:20px; color:#333; font-weight:500; }
+    hr.faq-divider { width:50%; border:2px solid #800020; margin:10px auto 30px auto; }
+
+    /* Acordeón */
+    .accordion { margin-top:30px; border:1px solid #ddd; border-radius:8px; overflow:hidden; }
+    .accordion-item { border-bottom:1px solid #ddd; }
+    .accordion-header {
+      background:#f8f8f8; cursor:pointer; padding:15px; font-weight:600; display:flex; align-items:center;
+    }
+    .accordion-header:hover { background:#eee; }
+    .accordion-header::before {
+      content: "►"; color: #800020; display:inline-block; margin-right:10px; transition: transform 0.3s ease;
+    }
+    .accordion-header.active::before { transform: rotate(90deg); }
+    .accordion-content { display:none; padding:15px; background:white; }
+
+    /* Footer */
+    footer { background:#800020; color:white; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
+    footer .whatsapp-logo { flex:0 0 auto; margin-right:20px; }
+    footer .whatsapp-logo img { width:90px; height:auto; }
+    footer .footer-text { flex:1; text-align:center; }
+    footer a { color:white; font-weight:bold; text-decoration:none; }
+
+    footer {
+      background:#800020;
+      color:white;
+      padding:20px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center; /* Centra horizontalmente */
+      text-align:center;      /* Centra el texto dentro del div */
+      gap:20px;               /* Espacio entre logo y texto */
+    }
+    
+    footer .whatsapp-logo {
+      flex:0 0 auto;          /* No crece, ocupa solo su tamaño */
+    }
+    
+    footer .whatsapp-logo img {
+      width:90px;
+      height:auto;
+    }
+    
+    footer .footer-text {
+      flex:1 1 300px;        /* Ocupa resto del espacio, mínimo 300px */
+    }
+    
+    @media (max-width:768px) {
+      footer {
+        flex-direction:column;  /* Logo arriba, texto abajo */
+        text-align:center;      /* Asegura centrado en mobile */
       }
-      .footer-whatsapp {
-        margin-top: 10px;
+    
+      footer .whatsapp-logo {
+        margin-bottom:15px;    /* Separación entre logo y texto */
+      }
+    
+      footer .footer-text {
+        flex:1 1 100%;         /* Ocupa todo el ancho */
       }
     }
+    
   </style>
 </head>
 <body>
 
+<header>
+  <div class="top-bar">
+    <div class="title">
+      <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
+        <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista">
+        Nabil Mentalista
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
+      <a href="servicios.html">Servicios</a>
+      <a href="propuestas.html">Propuestas de Valor</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <h1>Preguntas Frecuentes sobre Mis Shows de Mentalismo (FAQ)</h1>
+  <hr class="divider">
+  <h2>Mentalismo Corporativo | Costos del Show para Empresas | Area de Cobertura</h2>
+</section>
+
 <main>
-  <h1>Preguntas Frecuentes (FAQ)</h1>
 
-  <div class="accordion-item">
-    <div class="accordion-header">¿Puedes personalizar el show con el mensaje de mi marca o producto?</div>
-    <div class="accordion-content">
-      <p>Esa es mi especialidad! Integro elementos visuales, efectos y un guion que resalta tu marca, producto o el mensaje que deseas comunicar.</p>
-      <p>El objetivo es que su marca sea 'La Mejor Elección' dentro del show.</p>
+  <div class="accordion">
+    <!-- Aquí van tus items del acordeón tal como los definimos antes -->
+    <div class="accordion-item">
+      <div class="accordion-header">¿Cuánto dura el show?</div>
+      <div class="accordion-content">
+        Puedo adaptar mis presentaciones a sus necesidades, desde intervenciones impactantes de 15-20 minutos hasta presentaciones más extensas de hasta 60 minutos.
+      </div>
     </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">¿El show es interactivo?</div>
-    <div class="accordion-content">
-      <p>¡Absolutamente! La participación de los invitados es el corazón de mis shows.</p>
-      <p>Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.</p>
+          
+    <div class="accordion-item">
+      <div class="accordion-header">¿Puedes personalizar el show con el mensaje de mi marca o producto?</div>
+      <div class="accordion-content">
+        <p>Esa es mi especialidad! Integro elementos visuales, efectos y un guion que resalta tu marca, producto o el mensaje que deseas comunicar.</p>
+        <p>El objetivo es que su marca sea 'La Mejor Elección' dentro del show.</p>
+      </div>
     </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">¿Dónde realizas tus shows? ¿Solo en Bogotá?</div>
-    <div class="accordion-content">
-      <p>Si bien radico en Bogotá, me apasiona viajar y llevar la magia del mentalismo a eventos corporativos en otras ciudades de Colombia y a nivel internacional.</p>
-      <p>Si tu evento está fuera de Bogotá, <a href="https://wa.me/573057679511" target="_blank"><strong>¡conversemos sin problema!</strong></a></p>
+    
+    <div class="accordion-item">
+      <div class="accordion-header">¿El show es interactivo?</div>
+      <div class="accordion-content">
+        <p>¡Absolutamente! La participación de los invitados es el corazón de mis shows.</p>
+        <p>Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.</p>
+      </div>
     </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">¿Qué necesito para el show (espacio, sonido, etc.)?</div>
-    <div class="accordion-content">
-      <p>Dependerá del formato de presentación, mis shows son flexibles y se adaptan a diversos escenarios.</p>
-      <p>Para un show central generalmente solo necesito un espacio de presentación que me permita estar siempre de frente al público y un sistema de sonido donde conectar mi micrófono.</p>
-      <p>Para talleres es necesario contar además del espacio de show con un espacio para realizar las actividades.</p>
-      <p>Y para campañas en puestos de trabajo no hay requerimientos técnicos pues está pensado para ser totalmente itinerante.</p>
-      <p>Pero los detalles los coordinaremos para asegurar que todo sea perfecto.</p>
+    
+    <div class="accordion-item">
+      <div class="accordion-header">¿Dónde realizas tus shows? ¿Solo en Bogotá?</div>
+      <div class="accordion-content">
+        <p>Si bien radico en Bogotá, me apasiona viajar y llevar la magia del mentalismo a eventos corporativos en otras ciudades de Colombia y a nivel internacional.</p>
+        <p>Si tu evento está fuera de Bogotá, <a href="https://wa.me/573057679511" target="_blank"><strong>¡conversemos sin problema!</strong></a></p>
+      </div>
     </div>
-  </div>
-
-  <div class="accordion-item">
-    <div class="accordion-header">¿Cuál es el precio de un show de mentalismo para mi evento corporativo?</div>
-    <div class="accordion-content">
-      <p>El único precio fijo es el de un show central personalizado en Bogotá, que se establece por el show, no por el número de asistentes ni por la duración.</p>
-      <p>Esto se debe a que el nivel de personalización, el trabajo de diseño, la preparación, el transporte y la ocupación de agenda son consistentes.</p>
-      <p>Para el año 2025 el precio del Show Central en Bogotá es de 2.000.000 COP (Dos Millones de pesos colombianos).</p>
-      <p>En cuanto a talleres y campañas en puesto de trabajo, el precio es variable y depende del número de sesiones, duración, materiales, etc.</p>
-      <p>Pero en todos los casos el valor radica en la creación de una experiencia única y a medida para su marca.</p>
-      <p>Para obtener una cotización precisa y discutir los detalles de tu evento, te invito a <a href="https://wa.me/573057679511" target="_blank"><strong>contactarme directamente vía WhatsApp</strong></a>.</p>
+    
+    <div class="accordion-item">
+      <div class="accordion-header">¿Qué necesito para el show (espacio, sonido, etc.)?</div>
+      <div class="accordion-content">
+        <p>Dependerá del formato de presentación, mis shows son flexibles y se adaptan a diversos escenarios.</p>
+        <p>Para un show central generalmente solo necesito un espacio de presentación que me permita estar siempre de frente al público y un sistema de sonido donde conectar mi micrófono.</p>
+        <p>Para talleres es necesario contar además del espacio de show con un espacio para realizar las actividades.</p>
+        <p>Y para campañas en puestos de trabajo no hay requerimientos técnicos pues está pensado para ser totalmente itinerante.</p>
+        <p>Pero los detalles los coordinaremos para asegurar que todo sea perfecto.</p>
+      </div>
+    </div>
+    
+    <div class="accordion-item">
+      <div class="accordion-header">¿Cuál es el precio de un show de mentalismo para mi evento corporativo?</div>
+      <div class="accordion-content">
+        <p>El único precio fijo es el de un show central personalizado en Bogotá, que se establece por el show, no por el número de asistentes ni por la duración.</p>
+        <p>Esto se debe a que el nivel de personalización, el trabajo de diseño, la preparación, el transporte y la ocupación de agenda son consistentes.</p>
+        <p>Para el año 2025 el precio del Show Central en Bogotá es de 2.000.000 COP (Dos Millones de pesos colombianos).</p>
+        <p>En cuanto a talleres y campañas en puesto de trabajo, el precio es variable y depende del número de sesiones, duración, materiales, etc.</p>
+        <p>Pero en todos los casos el valor radica en la creación de una experiencia única y a medida para su marca.</p>
+        <p>Para obtener una cotización precisa y discutir los detalles de tu evento, te invito a <a href="https://wa.me/573057679511" target="_blank"><strong>contactarme directamente vía WhatsApp</strong></a>.</p>
+      </div>    
     </div>
   </div>
 </main>
 
-<footer class="footer">
-  <div class="footer-container">
-    <img src="logo.png" alt="Nabil Mentalista - Shows de mentalismo corporativo" class="footer-logo">
-    <p class="footer-text">© 2025 Nabil Mentalista | Mentalismo Corporativo en Bogotá</p>
-    <a href="https://wa.me/573057679511" target="_blank" class="footer-whatsapp">
-      <img src="whatsapp.png" alt="Contactar a Nabil Mentalista vía WhatsApp" title="Enviar mensaje por WhatsApp">
+<footer>
+  <div class="whatsapp-logo">
+    <a href="https://wa.me/573057679511" target="_blank">
+      <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
     </a>
+  </div>
+  <div class="footer-text">
+    <p>Conversemos sobre tu Próximo Evento</p>
+    <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+    <p><strong>Contáctanos:</strong><br>
+    WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
+    Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+    <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
   </div>
 </footer>
 
 <script>
-  // Script básico para accordion
-  const headers = document.querySelectorAll('.accordion-header');
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
+  // Menú hamburguesa
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  // Acordeón
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
   });
