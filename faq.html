@@ -69,47 +69,27 @@
       nav a { margin:10px 0; }
     }
 
-    /* Banner general */
+    /* Banner */
     .banner {
       background: url('imagenes/banner.webp') center/cover no-repeat;
       padding: 100px 20px;
       text-align: center;
     }
+    .banner h1 { font-size: 2rem; font-weight:700; color:white; margin:0; }
+    .banner h2 { font-size: 1rem; font-weight:500; color:white; margin:10px 0 0 0; }
+    .banner .divider { width:50%; border:2px solid #800020; margin:15px auto; }
 
-    /* Título dentro del banner */
-    .banner h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: white;
-      /* fondo negro eliminado */
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    /* Ajustes para tabletas */
-    @media (max-width: 1024px) {
-      .banner { padding: 70px 20px; }
-      .banner h1 { font-size: 1.9rem; padding: 12px 20px; }
-    }
-
-    /* Ajustes para móviles */
     @media (max-width: 768px) {
-      .banner { padding: 40px 15px; }
-      .banner h1 { font-size: 1.5rem; padding: 10px 15px; }
-    }
-
-    /* Ajustes para móviles muy pequeños */
-    @media (max-width: 480px) {
-      .banner { padding: 30px 10px; }
-      .banner h1 { font-size: 1.2rem; padding: 8px 10px; }
+      .banner { padding:60px 15px; }
+      .banner h1 { font-size:1.5rem; }
+      .banner h2 { font-size:0.9rem; }
     }
 
     /* Main */
     main { max-width:900px; margin:auto; padding:40px 20px; }
-    main img { display:block; margin:30px auto; max-width:100%; height:auto; border-radius:3px; }
-    h2 { text-align:center; margin-top:40px; font-size:1.8rem; }
+    h2.faq-title { font-size:2rem; text-align:center; margin-bottom:10px; }
+    h3.faq-subtitle { font-size:1rem; text-align:center; margin-bottom:20px; color:#333; font-weight:500; }
+    hr.faq-divider { width:50%; border:2px solid #800020; margin:10px auto 30px auto; }
 
     /* Acordeón */
     .accordion { margin-top:30px; border:1px solid #ddd; border-radius:8px; overflow:hidden; }
@@ -134,43 +114,44 @@
 </head>
 <body>
 
-  <header>
-    <div class="top-bar">
-      <div class="title">
-        <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
-          <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista">
-          Nabil Mentalista
-        </a>
-      </div>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-      <nav class="menu">
-        <a href="servicios.html">Servicios</a>
-        <a href="propuestas.html">Propuestas de Valor</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+<header>
+  <div class="top-bar">
+    <div class="title">
+      <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
+        <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista">
+        Nabil Mentalista
+      </a>
     </div>
-  </header>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
+      <a href="servicios.html">Servicios</a>
+      <a href="propuestas.html">Propuestas de Valor</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Banner integrado como sección -->
-  <section class="banner">
-    <h1>
-      Preguntas Frecuentes (FAQ)<br>
-      Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá
-    </h1>
-  </section>
+<!-- Banner -->
+<section class="banner">
+  <h1>Preguntas Frecuentes (FAQ)</h1>
+  <hr class="divider">
+  <h2>Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá</h2>
+</section>
 
 <main>
-  <h2>Preguntas Frecuentes sobre Mis Shows de Mentalismo</h2>
+  <h2 class="faq-title">Preguntas Frecuentes sobre Mis Shows de Mentalismo</h2>
+  <hr class="faq-divider">
+  <h3 class="faq-subtitle">Que Mentalismo Corporativo | Costo Show para Empresas | Mentalista Bogotá</h3>
 
   <div class="accordion">
+    <!-- Aquí van tus items del acordeón tal como los definimos antes -->
     <div class="accordion-item">
       <div class="accordion-header">¿Cuánto dura el show?</div>
       <div class="accordion-content">
         Puedo adaptar el show a sus necesidades, desde intervenciones impactantes de 15-20 minutos hasta presentaciones más extensas de hasta 60 minutos.
       </div>
     </div>
-
     <div class="accordion-item">
       <div class="accordion-header">¿Puedes personalizar el show con el mensaje de mi marca o producto?</div>
       <div class="accordion-content">
@@ -178,14 +159,12 @@
         El objetivo es que su marca sea 'La Mejor Elección' dentro del show.
       </div>
     </div>
-
     <div class="accordion-item">
       <div class="accordion-header">¿El show es interactivo?</div>
       <div class="accordion-content">
         ¡Absolutamente! La participación de los invitados es el corazón de mis shows. Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.
       </div>
     </div>
-
     <div class="accordion-item">
       <div class="accordion-header">¿Dónde realizas tus shows? ¿Solo en Bogotá?</div>
       <div class="accordion-content">
@@ -193,7 +172,6 @@
         Si tu evento está fuera de Bogotá, <strong>¡conversemos sin problema!</strong>
       </div>
     </div>
-
     <div class="accordion-item">
       <div class="accordion-header">¿Qué necesito para el show (espacio, sonido, etc.)?</div>
       <div class="accordion-content">
@@ -204,7 +182,6 @@
         Pero los detalles los coordinaremos para asegurar que todo sea perfecto.
       </div>
     </div>
-
     <div class="accordion-item">
       <div class="accordion-header">¿Cuál es el precio de un show de mentalismo para mi evento corporativo?</div>
       <div class="accordion-content">
@@ -219,39 +196,39 @@
   </div>
 </main>
 
-  <footer>
-    <div class="whatsapp-logo">
-      <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
-      </a>
-    </div>
-    <div class="footer-text">
-      <p>Conversemos sobre tu Próximo Evento</p>
-      <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
-      <p><strong>Contáctanos:</strong><br>
-      WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
-      Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
-      <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
-    </div>
-  </footer>
+<footer>
+  <div class="whatsapp-logo">
+    <a href="https://wa.me/573057679511" target="_blank">
+      <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
+    </a>
+  </div>
+  <div class="footer-text">
+    <p>Conversemos sobre tu Próximo Evento</p>
+    <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+    <p><strong>Contáctanos:</strong><br>
+    WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
+    Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+    <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-  <script>
-    // Menú hamburguesa
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
+<script>
+  // Menú hamburguesa
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
 
-    // Acordeón
-    document.querySelectorAll('.accordion-header').forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
+  // Acordeón
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
