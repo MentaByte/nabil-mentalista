@@ -17,24 +17,22 @@
     header .title { font-size:1.4rem; font-weight:700; display:flex; align-items:center; }
     nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
 
-    .contact-banner { padding:50px 20px; }
-    .contact-banner img { max-width:400px; width:100%; height:auto; border-radius:8px; margin-bottom:20px; }
+    /* Banner de contacto */
+    .banner { 
+      text-align:center; 
+      background:url('imagenes/banner.webp') center/cover no-repeat; 
+      color:white; 
+      padding:100px 20px; 
+    }
+    .banner h1 { font-size:2.2rem; font-weight:700; margin-bottom:15px; }
+    .banner p.small { font-size:1rem; margin-bottom:20px; }
+    .banner p.medium { font-size:1.3rem; font-weight:600; margin:15px 0; }
 
-    .contact-banner h1 { font-size:2rem; font-weight:700; margin-bottom:15px; }
-    .contact-banner p.small { font-size:1rem; margin-bottom:20px; }
-    .contact-banner p.medium { font-size:1.3rem; font-weight:600; margin:15px 0; }
-
-    .contact-banner a { color:#800020; font-weight:700; text-decoration:none; }
+    .banner a { color:#800020; font-weight:700; text-decoration:none; } /* vinotinto */
 
     .divider { width:80%; height:4px; background:#800020; margin:30px auto; border-radius:2px; }
 
-    .whatsapp-logo img { width:80px; height:auto; margin:20px 0; }
-
-    footer { background:#800020; color:white; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
-    footer .whatsapp-logo { flex:0 0 auto; margin-right:20px; }
-    footer .whatsapp-logo img { width:90px; height:auto; }
-    footer .footer-text { flex:1; text-align:center; }
-    footer a { color:white; font-weight:bold; text-decoration:none; }
+    .whatsapp-logo img { width:140px; height:auto; margin:20px 0; } /* más grande */
   </style>
 </head>
 <body>
@@ -54,45 +52,27 @@
     </nav>
   </header>
 
-  <main class="contact-banner">
-    <img src="imagenes/contacto-mentalismo-corporativo.webp" 
-         alt="Contacto Nabil Mentalista para eventos corporativos en Bogotá" 
-         title="Conversemos sobre tu próximo evento de mentalismo corporativo en Bogotá">
+  <main>
+    <section class="banner">
+      <h1>Conversemos sobre tu Próximo Evento</h1>
+      <p class="small">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
 
-    <h1>Conversemos sobre tu Próximo Evento</h1>
-    <p class="small">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+      <p class="medium">
+        WhatsApp: <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">+57 305 7679511</a><br>
+        (Clic para iniciar una conversación)
+      </p>
 
-    <p class="medium">
-      WhatsApp: <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">+57 305 7679511</a><br>
-      (Clic para iniciar una conversación)
-    </p>
+      <p class="small">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
 
-    <p class="small">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+      <div class="divider"></div>
 
-    <div class="divider"></div>
-
-    <div class="whatsapp-logo">
-      <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp contacto directo con Nabil Mentalista" title="Escríbenos por WhatsApp para tu evento corporativo">
-      </a>
-    </div>
+      <div class="whatsapp-logo">
+        <a href="https://wa.me/573057679511" target="_blank">
+          <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp contacto directo con Nabil Mentalista" title="Escríbenos por WhatsApp para tu evento corporativo">
+        </a>
+      </div>
+    </section>
   </main>
-
-  <footer>
-    <div class="whatsapp-logo">
-      <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
-      </a>
-    </div>
-    <div class="footer-text">
-      <p>Conversemos sobre tu Próximo Evento</p>
-      <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
-      <p><strong>Contáctanos:</strong><br>
-      WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
-      Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
-      <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
-    </div>
-  </footer>
 
 </body>
 </html>
