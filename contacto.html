@@ -17,22 +17,26 @@
     header .title { font-size:1.4rem; font-weight:700; display:flex; align-items:center; }
     nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
 
-    /* Banner de contacto */
+    /* Banner */
     .banner { 
       text-align:center; 
       background:url('imagenes/banner.webp') center/cover no-repeat; 
       color:white; 
       padding:100px 20px; 
     }
-    .banner h1 { font-size:2.2rem; font-weight:700; margin-bottom:15px; }
-    .banner p.small { font-size:1rem; margin-bottom:20px; }
-    .banner p.medium { font-size:1.3rem; font-weight:600; margin:15px 0; }
+    .banner h1 { font-size:2.5rem; font-weight:700; margin:0; }
 
-    .banner a { color:#800020; font-weight:700; text-decoration:none; } /* vinotinto */
+    /* Sección principal */
+    main { padding:50px 20px; }
+    main h2 { font-size:2rem; margin-bottom:15px; }
+    main p.small { font-size:1rem; margin-bottom:20px; }
+    main p.medium { font-size:1.3rem; font-weight:600; margin:15px 0; color:#800020; } /* vinotinto */
+
+    main a { color:#800020; font-weight:700; text-decoration:none; } /* vinotinto */
 
     .divider { width:80%; height:4px; background:#800020; margin:30px auto; border-radius:2px; }
 
-    .whatsapp-logo img { width:140px; height:auto; margin:20px 0; } /* más grande */
+    .whatsapp-logo img { width:140px; height:auto; margin:20px 0; }
   </style>
 </head>
 <body>
@@ -52,26 +56,28 @@
     </nav>
   </header>
 
+  <section class="banner">
+    <h1>Contacto</h1>
+  </section>
+
   <main>
-    <section class="banner">
-      <h1>Conversemos sobre tu Próximo Evento</h1>
-      <p class="small">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+    <h2>Conversemos sobre tu Próximo Evento</h2>
+    <p class="small">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
 
-      <p class="medium">
-        WhatsApp: <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">+57 305 7679511</a><br>
-        (Clic para iniciar una conversación)
-      </p>
+    <p class="medium">
+      WhatsApp: <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">+57 305 7679511</a><br>
+      (Clic para iniciar una conversación)
+    </p>
 
-      <p class="small">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+    <p class="small">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
 
-      <div class="divider"></div>
+    <div class="divider"></div>
 
-      <div class="whatsapp-logo">
-        <a href="https://wa.me/573057679511" target="_blank">
-          <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp contacto directo con Nabil Mentalista" title="Escríbenos por WhatsApp para tu evento corporativo">
-        </a>
-      </div>
-    </section>
+    <div class="whatsapp-logo">
+      <a href="https://wa.me/573057679511" target="_blank">
+        <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp contacto directo con Nabil Mentalista" title="Escríbenos por WhatsApp para tu evento corporativo">
+      </a>
+    </div>
   </main>
 
 </body>
