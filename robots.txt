@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://nabilmentalista.com/pages-sitemap.xml
