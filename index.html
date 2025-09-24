@@ -84,28 +84,45 @@
     </nav>
   </header>
 
+<!--botón flotante whsatapp-->
+  
   <style>
-  @media (max-width: 600px) {
-    .whatsapp-float img {
-      width: 24px !important;
-      height: 24px !important;
-    }
-    .whatsapp-float {
-      padding: 8px !important;
-    }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  width: 56px;          /* ancho fijo */
+  height: 56px;         /* alto fijo */
+  border-radius: 50%;   /* círculo perfecto */
+  display: flex;        /* centrar icono */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 44px;
+    height: 44px;
   }
+  .whatsapp-float img {
+    width: 24px;
+    height: 24px;
+  }
+}
 </style>
 
-<a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" 
-   class="whatsapp-float"
-   style="position:fixed; bottom:20px; right:20px; 
-          background:#25D366; padding:12px; 
-          border-radius:50%; z-index:1000;">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-        alt="WhatsApp" style="width:32px; height:32px;">
+<a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
-
+<!--termina botón whsatapp-->
   
   <section class="banner">
     <h1>Eleva tu Evento Corporativo: 
