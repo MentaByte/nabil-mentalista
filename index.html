@@ -6,7 +6,7 @@
   <title>Nabil Mentalista - Mentalismo Corporativo en Bogotá</title>
   <meta name="description" content="Shows de mentalismo personalizados para eventos corporativos en Bogotá y a nivel nacional. Sorprende y conecta con tus invitados.">
 
-  <!-- script JSON-LD -->
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,44 +29,14 @@
   }
   </script>
   
-  <!-- Fuente Open Sans desde Google Fonts -->
+  <!-- Fuente Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body { margin:0; font-family:'Open Sans', Arial, sans-serif; line-height:1.6; color:#222; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#fff; position:sticky; top:0; z-index:1000; }
-    header img { height:40px; margin-right:10px; }
-    header .title { font-size:1.4rem; font-weight:700; display:flex; align-items:center; }
-
-    nav { display:flex; }
-    nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
-    
-    /* Menú móvil */
-    .menu-toggle { display:none; font-size:28px; cursor:pointer; background:none; border:none; }
-    .menu { display:flex; }
-    
-    @media (max-width:768px) {
-      .menu-toggle { display:block; }
-      .menu { display:none; flex-direction:column; position:absolute; top:60px; right:20px; background:white; border:1px solid #ddd; padding:10px; }
-      .menu a { margin:10px 0; }
-      .menu.show { display:flex; }
-    }
-
-    .banner { text-align:center; background:url('imagenes/banner.webp') center/cover no-repeat; color:white; padding:80px 20px; }
-    .banner h1 { font-size:1.8rem; font-weight:700; line-height:1.4; white-space:pre-line; }
-    .subbanner { background:#f4f4f4; padding:20px; text-align:center; }
-    .btn-whatsapp { display:inline-block; margin:20px auto; padding:12px 20px; background:#25D366; color:white; font-weight:700; border-radius:8px; text-decoration:none; }
-    
-    .features, .links { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:8px; padding:20px; text-align:center; }
-    .features img, .links img { width:60%; border-radius:3px; }
-    .features p, .links p { font-size:1.1rem; font-weight:700; color:#000; text-decoration:none; margin-top:10px; }
-
-    footer { background:#800020; color:white; padding:20px; display:flex; align-items:center; flex-wrap:wrap; }
-    footer .whatsapp-logo { flex:0 0 auto; margin-right:20px; }
-    footer .whatsapp-logo img { width:90px; height:auto; }
-    footer .footer-text { flex:1; text-align:center; }
-    footer a { color:white; font-weight:bold; text-decoration:none; }
-  </style>
+  
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Icono de pestaña (opcional) -->
+  <!-- <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
 
@@ -84,46 +54,11 @@
     </nav>
   </header>
 
-<!--botón flotante whsatapp-->
-  
-  <style>
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 56px;          /* ancho fijo */
-  height: 56px;         /* alto fijo */
-  border-radius: 50%;   /* círculo perfecto */
-  display: flex;        /* centrar icono */
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
-
-@media (max-width: 600px) {
-  .whatsapp-float {
-    width: 44px;
-    height: 44px;
-  }
-  .whatsapp-float img {
-    width: 24px;
-    height: 24px;
-  }
-}
-</style>
-
-<a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<!--termina botón whsatapp-->
-  
   <section class="banner">
     <h1>Eleva tu Evento Corporativo: 
 Shows de Mentalismo Personalizado que Dejan Huella.</h1>
@@ -136,7 +71,7 @@ Shows de Mentalismo Personalizado que Dejan Huella.</h1>
   </section>
 
   <section>
-    <h2 style="text-align:center; margin-top:40px;">Shows de mentalismo personalizados que potencian tu marca</h2>
+    <h2 class="section-title">Shows de mentalismo personalizados que potencian tu marca</h2>
     <div class="features">
       <div>
         <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp" alt="Show de mentalismo corporativo con pancarta para empresas en Bogotá" title="Show de mentalismo profesional para eventos corporativos" loading="lazy">
@@ -153,7 +88,7 @@ Shows de Mentalismo Personalizado que Dejan Huella.</h1>
     </div>
   </section>
 
-  <section style="padding:20px; text-align:center;">
+  <section class="description">
     <p>En el competitivo mundo corporativo, destacar y conectar con tu audiencia es clave.</p>
     <p>Mis shows de mentalismo están diseñados para ser mucho más que entretenimiento:</p>
     <p>Son una herramienta estratégica para potenciar tu marca, motivar a tus equipos y cautivar a tus invitados.</p>
@@ -197,12 +132,7 @@ Shows de Mentalismo Personalizado que Dejan Huella.</h1>
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-  </script>
+  <!-- JavaScript externo -->
+  <script src="js/main.js"></script>
 </body>
 </html>
