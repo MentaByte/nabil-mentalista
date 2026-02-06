@@ -5,92 +5,421 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | Nabil Mentalista - Mentalismo Corporativo</title>
   <meta name="description" content="Conversemos sobre tu próximo evento. Mentalismo corporativo en Bogotá y a nivel nacional para sorprender y conectar con tu audiencia.">
+  <meta name="keywords" content="contacto mentalismo corporativo, contratar mentalista Bogotá, show empresa, WhatsApp Nabil Mentalista">
+  <meta name="author" content="Nabil Mentalista">
 
-  <!-- Fuente Open Sans -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contacto | Nabil Mentalista - Mentalismo Corporativo">
+  <meta property="og:description" content="Conversemos sobre tu próximo evento. Contrata shows de mentalismo corporativo en Bogotá y a nivel nacional.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nabilmentalista.com/contacto.html">
+  <meta property="og:image" content="https://www.nabilmentalista.com/imagenes/contacto-mentalismo-corporativo.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto | Nabil Mentalista - Mentalismo Corporativo">
+  <meta name="twitter:description" content="Conversemos sobre tu próximo evento. Shows de mentalismo corporativo en Bogotá y a nivel nacional.">
+  <meta name="twitter:image" content="https://www.nabilmentalista.com/imagenes/contacto-mentalismo-corporativo.webp">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nabil Mentalista - Mentalismo Corporativo",
+    "image": "https://www.nabilmentalista.com/imagenes/contacto-mentalismo-corporativo.webp",
+    "description": "Contacta a Nabil Mentalista para shows de mentalismo corporativo personalizados en Bogotá y a nivel nacional.",
+    "url": "https://www.nabilmentalista.com/contacto.html",
+    "telephone": "+573057679511",
+    "email": "nabilmentalista@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressCountry": "Colombia"
+    },
+    "areaServed": "Colombia",
+    "sameAs": [
+      "https://www.instagram.com/nabilmentalista/",
+      "https://www.linkedin.com/in/nabilmentalista/"
+    ]
+  }
+  </script>
+
+  <!-- Fuente Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+  
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- CSS específico para contacto.html -->
   <style>
-    body { margin:0; font-family:'Open Sans', Arial, sans-serif; text-align:center; color:#222; line-height:1.6; }
-
-    header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#fff; position:sticky; top:0; z-index:1000; }
-    header img { height:40px; margin-right:10px; }
-    header .title { font-size:1.4rem; font-weight:700; display:flex; align-items:center; }
-    nav a { margin-left:15px; text-decoration:none; color:#222; font-weight:600; }
-
-    /* Banner */
-    .banner { 
-      text-align:center; 
-      background:url('imagenes/banner.webp') center/cover no-repeat; 
-      color:white; 
-      padding:100px 20px; 
+    /* Estilos específicos para contacto.html */
+    
+    /* Banner para contacto */
+    .banner-contacto {
+      background: url('../imagenes/banner.webp') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
     }
-    .banner h1 { font-size:2.5rem; font-weight:700; margin:0; }
-
-    /* Imagen después del banner */
-    .contact-image { margin:20px auto; max-width:900px; }
-    .contact-image img { width:60%; border-radius:3px; }
-
-    /* Sección principal */
-    main { padding:15px 20px; }
-    main h2 { font-size:2rem; margin-bottom:15px; }
-    main p.small { font-size:1rem; margin-bottom:20px; }
-    main p.medium { font-size:1.3rem; font-weight:600; margin:15px 0; color:#800020; } /* vinotinto */
-
-    main a { color:#800020; font-weight:700; text-decoration:none; } /* vinotinto */
-
-    .divider { width:80%; height:4px; background:#800020; margin:30px auto; border-radius:2px; }
-
-    .whatsapp-logo img { width:140px; height:auto; margin:20px 0; }
+    
+    .banner-contacto::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .banner-contacto h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    /* Imagen de contacto */
+    .contact-image {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    
+    .contact-image img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s;
+    }
+    
+    .contact-image img:hover {
+      transform: scale(1.02);
+    }
+    
+    /* Contenido principal de contacto */
+    .contact-content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    
+    .contact-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #800020;
+    }
+    
+    .contact-subtitle {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    
+    .contact-whatsapp {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 25px 0;
+      color: #800020;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border-left: 4px solid #800020;
+    }
+    
+    .contact-whatsapp a {
+      color: #800020;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .contact-whatsapp a:hover {
+      color: #a00028;
+      text-decoration: underline;
+    }
+    
+    .contact-info {
+      font-size: 1rem;
+      margin: 15px 0;
+      color: #444;
+    }
+    
+    .contact-divider {
+      width: 80%;
+      max-width: 400px;
+      height: 4px;
+      background: #800020;
+      margin: 40px auto;
+      border-radius: 2px;
+    }
+    
+    /* Logo de WhatsApp grande */
+    .whatsapp-logo-large {
+      margin: 30px auto;
+      text-align: center;
+    }
+    
+    .whatsapp-logo-large img {
+      width: 140px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    
+    .whatsapp-logo-large img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Botón de WhatsApp en contacto */
+    .contact-whatsapp-btn {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 20px 0;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    }
+    
+    .contact-whatsapp-btn:hover {
+      background: #1da851;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+    }
+    
+    /* Información adicional */
+    .additional-info {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 25px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .additional-info h3 {
+      color: #800020;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .additional-info p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    
+    /* Responsividad para contacto */
+    @media (max-width: 768px) {
+      .banner-contacto {
+        padding: 80px 20px;
+      }
+      
+      .banner-contacto h1 {
+        font-size: 2rem;
+      }
+      
+      .contact-title {
+        font-size: 1.6rem;
+      }
+      
+      .contact-whatsapp {
+        font-size: 1.1rem;
+        padding: 15px;
+      }
+      
+      .contact-image img {
+        width: 95%;
+      }
+      
+      .whatsapp-logo-large img {
+        width: 100px;
+      }
+      
+      .contact-whatsapp-btn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .banner-contacto {
+        padding: 60px 15px;
+      }
+      
+      .banner-contacto h1 {
+        font-size: 1.6rem;
+      }
+      
+      .contact-title {
+        font-size: 1.4rem;
+      }
+      
+      .contact-whatsapp {
+        font-size: 1rem;
+      }
+      
+      .whatsapp-logo-large img {
+        width: 80px;
+      }
+      
+      .contact-whatsapp-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="title">
-      <img src="imagenes/logo-nabil-mentalista-bogota.webp" 
-           alt="Logo Nabil Mentalista - Mentalismo Corporativo en Bogotá" 
-           title="Logo de Nabil Mentalista, experto en mentalismo corporativo en Bogotá"> 
-      Nabil Mentalista
+      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+        <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista - Mentalismo Corporativo en Bogotá" title="Logo de Nabil Mentalista, experto en mentalismo corporativo en Bogotá"> 
+        Nabil Mentalista
+      </a>
     </div>
-    <nav>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
       <a href="servicios.html">Servicios</a>
-      <a href="propuestas.html">Propuestas</a>
+      <a href="propuestas.html">Propuestas de Valor</a>
       <a href="faq.html">FAQ</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
-  <section class="banner">
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- Banner para contacto -->
+  <section class="banner-contacto">
     <h1>Contacto</h1>
   </section>
 
-  <!-- Imagen con SEO después del banner -->
+  <!-- Imagen con SEO -->
   <div class="contact-image">
     <img src="imagenes/contacto-mentalismo-corporativo.webp" 
          alt="Nabil Mentalista en show corporativo en Bogotá" 
-         title="Contacto directo con Nabil Mentalista para eventos corporativos en Bogotá y a nivel nacional">
+         title="Contacto directo con Nabil Mentalista para eventos corporativos en Bogotá y a nivel nacional"
+         loading="lazy">
   </div>
 
-  <main>
-    <h2>Conversemos sobre tu Próximo Evento</h2>
-    <p class="small">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+  <!-- Contenido principal -->
+  <div class="contact-content">
+    <h2 class="contact-title">Conversemos sobre tu Próximo Evento</h2>
+    <p class="contact-subtitle">Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
 
-    <p class="medium">
-      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">WhatsApp</a>: 
-      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">+57 305 7679511</a><br>
-      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">(Clic para iniciar una conversación)</a><br>
-    </p>
+    <!-- Botón principal de WhatsApp -->
+    <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" 
+       target="_blank" 
+       class="contact-whatsapp-btn">
+      Contactar por WhatsApp
+    </a>
 
-    <p class="small">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+    <!-- Información de contacto -->
+    <div class="contact-whatsapp">
+      <p>
+        <strong>WhatsApp:</strong> 
+        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" target="_blank">
+          +57 305 7679511
+        </a>
+      </p>
+      <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">
+        (Haz clic en el número para iniciar una conversación)
+      </p>
+    </div>
 
-    <div class="divider"></div>
+    <p class="contact-info">Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
 
-    <div class="whatsapp-logo">
+    <div class="contact-divider"></div>
+
+    <!-- Logo de WhatsApp grande -->
+    <div class="whatsapp-logo-large">
       <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo WhatsApp contacto directo con Nabil Mentalista" title="Escríbenos por WhatsApp para tu evento corporativo">
+        <img src="imagenes/whatsapp-logo.svg" 
+             alt="Logo WhatsApp contacto directo con Nabil Mentalista" 
+             title="Escríbenos por WhatsApp para tu evento corporativo">
       </a>
     </div>
-  </main>
 
+    <!-- Información adicional -->
+    <div class="additional-info">
+      <h3>¿Listo para sorprender a tu audiencia?</h3>
+      <p>Responde en menos de 24 horas durante días hábiles</p>
+      <p>Cotizaciones personalizadas según las necesidades de tu evento</p>
+      <p>Disponibilidad para eventos en Bogotá y a nivel nacional</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="whatsapp-logo">
+      <a href="https://wa.me/573057679511" target="_blank">
+        <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
+      </a>
+    </div>
+    <div class="footer-text">
+      <p>Conversemos sobre tu Próximo Evento</p>
+      <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
+      <p><strong>Contáctanos:</strong><br>
+      WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
+      Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
+      
+      <!-- Botón de WhatsApp adicional -->
+      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" 
+         target="_blank" 
+         class="footer-whatsapp-btn">
+        Contactar por WhatsApp
+      </a>
+      
+      <p style="margin-top: 20px;">Nabil Mentalista 2025 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript externo -->
+  <script src="js/main.js"></script>
+  
+  <!-- JavaScript específico para contacto.html (si es necesario) -->
+  <script>
+    // JavaScript específico para contacto.html
+    document.addEventListener('DOMContentLoaded', function() {
+      // Efecto de aparición para la imagen
+      const contactImage = document.querySelector('.contact-image img');
+      
+      if (contactImage) {
+        contactImage.style.opacity = '0';
+        contactImage.style.transform = 'translateY(20px)';
+        contactImage.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        
+        setTimeout(() => {
+          contactImage.style.opacity = '1';
+          contactImage.style.transform = 'translateY(0)';
+        }, 300);
+      }
+      
+      // Contador de clics en enlaces de WhatsApp (para analytics futuro)
+      const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+      
+      whatsappLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          // Aquí podrías agregar Google Analytics o otro tracking
+          console.log('WhatsApp link clicked: ' + this.href);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
