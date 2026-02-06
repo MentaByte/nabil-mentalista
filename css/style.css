@@ -232,32 +232,31 @@ nav a:hover {
   }
 }
 
-/* Footer */
+/* Footer - Versión simple centrada */
 footer {
   background: #800020;
   color: white;
-  padding: 30px 20px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 footer .whatsapp-logo {
-  flex: 0 0 auto;
-  margin-right: 30px;
   margin-bottom: 20px;
 }
 
 footer .whatsapp-logo img {
-  width: 90px;
+  width: 80px;
   height: auto;
+  transition: transform 0.3s;
+}
+
+footer .whatsapp-logo img:hover {
+  transform: scale(1.05);
 }
 
 footer .footer-text {
-  flex: 1;
-  text-align: center;
-  min-width: 300px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 footer a {
@@ -274,19 +273,25 @@ footer a:hover {
 
 footer p {
   margin: 10px 0;
+  line-height: 1.6;
 }
 
-/* Responsividad adicional */
-@media (max-width: 480px) {
-  .banner h1 {
-    font-size: 1.5rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-  }
-  
-  .features, .links {
-    grid-template-columns: 1fr;
-  }
+/* Botón de WhatsApp dentro del footer */
+.footer-whatsapp-btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+}
+
+.footer-whatsapp-btn:hover {
+  background: #1da851;
+  transform: translateY(-2px);
 }
