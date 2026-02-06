@@ -336,14 +336,7 @@
           }
         });
       });
-      
-      // Opcional: Abrir el primer ítem por defecto
-      if (accordionHeaders.length > 0) {
-        accordionHeaders[0].classList.add('active');
-        accordionHeaders[0].nextElementSibling.style.display = 'block';
-      }
-    });
-    
+
     // Añadir animación CSS para el acordeón
     const style = document.createElement('style');
     style.textContent = `
