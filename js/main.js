@@ -1,51 +1,137 @@
-// Toggle del menú móvil
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-  
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-      // Cambiar ícono del botón
-      toggle.textContent = menu.classList.contains('show') ? '✕' : '☰';
-    });
-    
-    // Cerrar menú al hacer clic en un enlace (solo en móvil)
-    if (window.innerWidth <= 768) {
-      const menuLinks = menu.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          menu.classList.remove('show');
-          toggle.textContent = '☰';
-        });
-      });
-    }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mago y Mentalista Corporativo en Bogotá | Nabil Mentalista</title>
+  <meta name="description" content="¿Buscas un mago para tu evento empresarial? Show de mentalismo de alto impacto diseñado para conectar equipos, sorprender clientes y potenciar tu marca en Bogotá.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nabil Mentalista - Entretenimiento Corporativo",
+    "image": "https://www.nabilmentalista.com/imagenes/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
+    "description": "Experiencias de mentalismo y magia para eventos corporativos y team building.",
+    "url": "https://www.nabilmentalista.com",
+    "telephone": "+573057679511",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressCountry": "Colombia"
+    },
+    "areaServed": "Colombia",
+    "sameAs": [
+      "https://www.instagram.com/nabilmentalista/",
+      "https://www.linkedin.com/in/nabilmentalista/"
+    ]
   }
+  </script>
   
-  // Efecto de scroll suave para enlaces internos (si los hubiera)
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="title">
+      <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Nabil Mentalista - Mago para Empresas" title="Nabil Mentalista - Entretenimiento de Impacto"> 
+      Nabil Mentalista
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
+      <a href="servicios.html">Servicios</a>
+      <a href="propuestas.html">Propuestas de Valor</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <section class="banner">
+    <h1>Hacemos que tu marca sea imposible de olvidar:
+Magia y Mentalismo de alto impacto para empresas.</h1>
+  </section>
+
+  <section class="subbanner">
+    <p>¿Planeando tu próximo evento? No solo contrates un show, crea una experiencia que conecte equipos y sorprenda a tus clientes de forma inteligente.</p>
+    <p><strong>Descarga gratis: "Guía de 7 errores que arruinan un evento empresarial"</strong></p>
+    <a class="btn-whatsapp" href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20la%20guía%20de%20eventos%20y%20conocer%20tus%20shows" target="_blank">Obtener Guía y Cotizar</a>
+  </section>
+
+  <section>
+    <h2 class="section-title">Soluciones diseñadas para los retos de tu empresa</h2>
+    <div class="features">
+      <div>
+        <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp" alt="Team Building con Mentalismo" title="Integración de equipos de alto nivel" loading="lazy">
+        <p>Integración de Equipos (Team Building)</p>
+      </div>
+      <div>
+        <img src="imagenes/show-mentalismo-corporativo-diversion-empresas.webp" alt="Show para Lanzamiento de Productos" title="Eventos de marketing y lanzamientos" loading="lazy">
+        <p>Lanzamiento de Productos y Marcas</p>
+      </div>
+      <div>
+        <img src="imagenes/mentalismo-corporativo-comunicacion-marca.webp" alt="Comunicación Estratégica" title="Mensajes de marca recordables" loading="lazy">
+        <p>Comunicación de Mensajes Clave</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="description">
+    <p>En el mercado de Bogotá, un evento común ya no es suficiente.</p>
+    <p>Uso el <strong>mentalismo y la psicología aplicada</strong> como una herramienta estratégica para motivar a tus equipos y cautivar a tus invitados.</p>
+    <p>Ya sea una cena VIP, una convención nacional o una jornada de bienestar, transformo lo tradicional en algo extraordinario donde tu marca es la protagonista.</p>
+    <p><strong>Menos aburrimiento, más conexión.</strong></p>
+  </section>
+
+  <section class="links">
+    <div>
+      <a href="servicios.html">
+        <img src="imagenes/servicios-mentalismo-corporativo.webp" alt="Shows para Fiestas de Fin de Año y Eventos" loading="lazy">
+        <p>Ver Formatos de Show</p>
+      </a>
+    </div>
+    <div>
+      <a href="propuestas.html">
+        <img src="imagenes/propuestas-valor-mentalismo-corporativo.webp" alt="Beneficios del mentalismo para empresas" loading="lazy">
+        <p>Por qué elegir Mentalismo</p>
+      </a>
+    </div>
+    <div>
+      <a href="faq.html">
+        <img src="imagenes/faq-mentalismo-corporativo.webp" alt="Dudas sobre contratación de magos en Bogotá" loading="lazy">
+        <p>Resuelve tus Dudas</p>
+      </a>
+    </div>
+  </section>
+
+<footer>
+  <div class="whatsapp-logo">
+    <a href="https://wa.me/573057679511" target="_blank">
+      <img src="imagenes/whatsapp-logo.svg" alt="Contacto directo Nabil Mentalista">
+    </a>
+  </div>
   
-  // Añadir clase de scroll al header
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-      header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
-    } else {
-      header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    }
-  });
-});
+  <div class="footer-text">
+    <p>¿Hablamos de tu próximo gran paso?</p>
+    <p>Diseñamos experiencias que tus colaboradores recordarán por años.</p>
+    <p><strong>Contacto Directo:</strong><br>
+    Atención inmediata para empresas en Bogotá y Colombia<br>
+    WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a></p>
+    
+    <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20necesito%20una%20propuesta%20para%20un%20evento%20corporativo" 
+       target="_blank" 
+       class="footer-whatsapp-btn">
+      Solicitar Propuesta Comercial
+    </a>
+    
+    <p style="margin-top: 20px;">Nabil Mentalista 2025 - Entretenimiento Inteligente para Empresas.</p>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
