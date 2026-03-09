@@ -15,7 +15,7 @@ jobs:
       - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://www.tudominio.com
+          base-url-path: https://www.nabilmentalista.com
           path-to-root: .
           sitemap-format: xml
 
