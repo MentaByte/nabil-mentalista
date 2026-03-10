@@ -131,7 +131,7 @@ nav a:hover {
   display: inline-block;
   margin: 20px auto;
   padding: 12px 20px;
-  background: #25D366;
+  background: #1a7a3c;
   color: white;
   font-weight: 700;
   border-radius: 8px;
@@ -140,7 +140,7 @@ nav a:hover {
 }
 
 .btn-whatsapp:hover {
-  background: #1da851;
+  background: #145c2e;
   transform: translateY(-2px);
 }
 
@@ -198,7 +198,7 @@ nav a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: #1a7a3c;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -211,7 +211,7 @@ nav a:hover {
 }
 
 .whatsapp-float:hover {
-  background: #1da851;
+  background: #145c2e;
   transform: scale(1.1);
 }
 
@@ -305,7 +305,7 @@ footer p {
 /* Botón de WhatsApp dentro del footer */
 .footer-whatsapp-btn {
   display: inline-block;
-  background: #25D366;
+  background: #1a7a3c;
   color: white;
   padding: 12px 25px;
   border-radius: 8px;
@@ -318,6 +318,6 @@ footer p {
 }
 
 .footer-whatsapp-btn:hover {
-  background: #1da851;
+  background: #145c2e;
   transform: translateY(-2px);
 }
