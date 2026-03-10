@@ -91,7 +91,26 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional" rel="stylesheet"></noscript>
 
     <!-- Font Awesome reemplazado por SVGs inline: 0 KB de CSS externo -->
-    
+
+    <!-- CSS crítico inline: reserva espacio para los videos ANTES de que cargue el CSS async.
+         Sin esto, el video-container tiene 0 altura en el primer render → CLS enorme. -->
+    <style>
+      .video-container {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        aspect-ratio: 2/3;
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
 
 </head>
 <body>
@@ -145,11 +164,14 @@
                             muted
                             playsinline
                             preload="none"
+                            width="480"
+                            height="720"
                             poster="https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp"
                             title="Mago para Magia de Cerca en Bogotá"
                             class="lazy-video">
 
                             <source data-src="https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm" type="video/webm">
+                            <track kind="captions" src="" srclang="es" label="Español" default>
                             Tu navegador no soporta el formato de video WebM.
                         </video>
                     </div>
@@ -168,11 +190,14 @@
                             muted
                             playsinline
                             preload="none"
+                            width="480"
+                            height="720"
                             poster="https://nabilmentalista.com/imagenes/show-de-magia-para-adultos-bogota-mago.webp"
                             title="Show de Magia para Adultos en Bogotá"
                             class="lazy-video">
 
                             <source data-src="https://nabilmentalista.com/imagenes/videos/show-de-magia-para-adultos-bogota.webm" type="video/webm">
+                            <track kind="captions" src="" srclang="es" label="Español" default>
                             Tu navegador no soporta el formato de video WebM.
                         </video>
                     </div>
@@ -281,7 +306,7 @@
                                 source.src = source.dataset.src;
                             });
                             video.load();
-                            video.play();
+                            video.play().catch(function(){});
                             videoObserver.unobserve(video);
                         }
                     });
@@ -297,7 +322,7 @@
                         source.src = source.dataset.src;
                     });
                     video.load();
-                    video.play();
+                    video.play().catch(function(){});
                 });
             }
         });
