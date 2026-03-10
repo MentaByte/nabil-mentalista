@@ -77,40 +77,15 @@
     }
     </script>
 
-    <!-- Preload LCP: banner con fetchpriority=high para que el navegador lo priorice -->
+    <!-- Preload LCP: banner con fetchpriority=high -->
     <link rel="preload" as="image" href="imagenes/banner.webp" fetchpriority="high">
 
-    <!-- CSS: carga asíncrona para no bloquear el renderizado inicial -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <!-- CSS: 2 KB, carga sync. El costo de render-blocking de 2 KB es ~10ms,
+         mucho menor que el CLS que generaba al cargarlo async. -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Fuente de Google: display=optional evita el CLS (no intercambia fuente después del primer paint) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional" rel="stylesheet"></noscript>
-
-    <!-- Font Awesome reemplazado por SVGs inline: 0 KB de CSS externo -->
-
-    <!-- CSS crítico inline: reserva espacio para los videos ANTES de que cargue el CSS async.
-         Sin esto, el video-container tiene 0 altura en el primer render → CLS enorme. -->
-    <style>
-      .video-container {
-        width: 100%;
-        max-width: 480px;
-        margin: 0 auto;
-        aspect-ratio: 2/3;
-        background: #000;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-    </style>
+    <!-- Google Fonts eliminado: 68 KB de terceros + posible CLS.
+         Se usa la pila de fuentes del sistema (sans-serif moderno en todos los SO). -->
 
 </head>
 <body>
