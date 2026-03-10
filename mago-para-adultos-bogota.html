@@ -77,17 +77,18 @@
     }
     </script>
 
-    <!-- Preload LCP: imagen del banner (crítico para rendimiento móvil) -->
-    <link rel="preload" as="image" href="imagenes/banner.webp">
+    <!-- Preload LCP: banner con fetchpriority=high para que el navegador lo priorice -->
+    <link rel="preload" as="image" href="imagenes/banner.webp" fetchpriority="high">
 
-    <!-- Enlace a la hoja de estilos CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS: carga asíncrona para no bloquear el renderizado inicial -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-    <!-- Fuente de Google - carga asíncrona para no bloquear el renderizado -->
+    <!-- Fuente de Google: display=optional evita el CLS (no intercambia fuente después del primer paint) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional" rel="stylesheet"></noscript>
 
     <!-- Font Awesome reemplazado por SVGs inline: 0 KB de CSS externo -->
     
