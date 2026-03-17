@@ -31,51 +31,50 @@
     </script>
 
     <!-- Schema Markup para VIDEOS (JSON-LD) con dimensiones correctas -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "VideoObject",
-          "name": "Mago para Magia de Cerca en Bogotá - Mago Nabil",
-          "description": "Video demostrativo de magia de cerca (close-up) para eventos corporativos y cócteles en Bogotá.",
-          "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp",
-          "uploadDate": "2026-03-09",
-          "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm",
-          "duration": "PT0M12S",
-          "width": 480,
-          "height": 720,
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mago Nabil",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
-            }
-          }
-        },
-        {
-          "@type": "VideoObject",
-          "name": "Show de Mago para Adultos en Bogotá - Mago Nabil",
-          "description": "Show central de magia para adultos y mentalismo para empresas en Bogotá. Entretenimiento de alto impacto.",
-          "thumbnailUrl": "https://nabilmentalista.com/imagenes/show-de-magia-para-adultos-bogota-mago.webp",
-          "uploadDate": "2026-03-09",
-          "contentUrl": "https://nabilmentalista.com/imagenes/videos/show-de-magia-para-adultos-bogota.webm",
-          "duration": "PT0M10S",
-          "width": 480,
-          "height": 720,
-          "publisher": {
-            "@type": "Organization",
-            "name": "Mago Nabil",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
-            }
-          }
-        }
-      ]
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Mago para Magia de Cerca en Bogotá - Mago Nabil",
+    "description": "Video demostrativo de magia de cerca (close-up) para eventos corporativos y cócteles en Bogotá.",
+    "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp",
+    "uploadDate": "2026-03-09T10:00:00-05:00",
+    "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm",
+    "duration": "PT12S",
+    "width": "480",
+    "height": "720",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mago Nabil",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
+      }
     }
-    </script>
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Show de Mago para Adultos en Bogotá - Mago Nabil",
+    "description": "Presentación de mentalismo y magia para adultos en eventos sociales y empresariales.",
+    "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-adultos-bogota.webp",
+    "uploadDate": "2026-03-09T11:00:00-05:00",
+    "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-adultos-bogota.webm",
+    "duration": "PT15S", 
+    "width": "480",
+    "height": "720",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mago Nabil",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
+      }
+    }
+  }
+]
+</script>
 
     <!-- Preload LCP: banner con fetchpriority=high -->
     <link rel="preload" as="image" href="imagenes/banner.webp" fetchpriority="high">
