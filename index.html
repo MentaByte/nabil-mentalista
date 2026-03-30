@@ -81,7 +81,13 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 20px 48px;
-  background: linear-gradient(to bottom, rgba(8,8,8,0.97), transparent);
+  background: transparent;
+  transition: background 0.3s, padding 0.3s;
+}
+nav.scrolled {
+  background: rgba(8,8,8,0.97);
+  padding: 14px 48px;
+  box-shadow: 0 1px 0 rgba(200,130,42,0.1);
 }
 .nav-logo {
   font-family: 'Barlow Condensed', sans-serif;
@@ -522,7 +528,7 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  nav { padding: 16px 24px; }
+  nav { padding: 14px 24px; }
   .nav-links { display: none; }
   section { padding: 80px 24px; }
   .hero { padding: 0 24px 80px; }
@@ -530,6 +536,9 @@ footer {
   .descripcion { grid-template-columns: 1fr; gap: 48px; }
   .sol-header { flex-direction: column; }
   .sol-grid { grid-template-columns: 1fr; }
+  .sol-card { padding: 32px 24px; }
+  .sol-card-img,
+  .sol-card-img-placeholder { aspect-ratio: 1/1; height: auto; width: 100%; }
   .guia-inner { grid-template-columns: 1fr; }
   .secciones-grid { grid-template-columns: 1fr; }
   .cta-contact-row { gap: 32px; }
@@ -859,5 +868,13 @@ footer {
   </div>
 </footer>
 
+<script>
+  (function(){
+    var nav = document.querySelector('nav');
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+    window.addEventListener('scroll', onScroll, {passive: true});
+    onScroll();
+  })();
+</script>
 </body>
 </html>
