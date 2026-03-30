@@ -81,8 +81,8 @@ nav {
 /* ── HERO ── */
 .hero {
   min-height: 100vh; position: relative;
-  display: flex; align-items: flex-end;
-  padding: 0 48px 90px; overflow: hidden;
+  display: flex; align-items: center;
+  padding: 80px 48px 80px; overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0;
@@ -108,22 +108,9 @@ nav {
   background: radial-gradient(circle, rgba(200,130,42,0.1) 0%, transparent 70%);
   pointer-events: none;
 }
-.hero-img-frame {
-  position: absolute; right: 5%; bottom: 0; width: 380px; height: 540px;
-  overflow: hidden; border: 1px solid rgba(200,130,42,0.15);
-  border-bottom: none;
-}
-.hero-img-frame img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center top;
-  filter: grayscale(20%) brightness(0.8);
-}
-.hero-img-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(8,8,8,0.2) 0%, transparent 30%, transparent 60%, rgba(8,8,8,0.5) 100%),
-              linear-gradient(to left, transparent 50%, rgba(8,8,8,0.7) 100%);
-}
 
-.hero-content { position: relative; z-index: 2; max-width: 680px; }
+
+.hero-content { position: relative; z-index: 2; max-width: 620px; }
 .hero-eyebrow {
   font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
   color: var(--amber); font-weight: 600; margin-bottom: 24px;
@@ -142,7 +129,7 @@ nav {
 }
 .hero-sub {
   font-size: 16px; line-height: 1.75; color: var(--grey-light);
-  max-width: 500px; margin-bottom: 48px;
+  max-width: 480px; margin-bottom: 48px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 .btn-primary {
@@ -161,7 +148,7 @@ nav {
 .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
 
 .hero-stats {
-  position: absolute; right: 48px; bottom: 90px; z-index: 2;
+  position: absolute; right: 48px; bottom: 80px; z-index: 3;
   display: flex; flex-direction: column; gap: 28px; text-align: right;
 }
 .stat-num {
@@ -215,7 +202,7 @@ section { padding: 120px 48px; }
 /* ── DESCRIPCION ── */
 .descripcion {
   background: var(--black);
-  display: grid; grid-template-columns: 55% 45%; gap: 80px; align-items: center;
+  display: grid; grid-template-columns: 60% 40%; gap: 60px; align-items: center;
   padding-top: 100px; padding-bottom: 100px;
 }
 .desc-left { }
@@ -259,7 +246,7 @@ section { padding: 120px 48px; }
 }
 /* Fallback if no image */
 .desc-image-fallback {
-  width: 100%; aspect-ratio: 4/3;
+  width: 100%; aspect-ratio: 1/1;
   background: linear-gradient(135deg, #1a1208, #111);
   border: 1px solid rgba(200,130,42,0.15);
   display: flex; align-items: center; justify-content: center; position: relative;
@@ -301,12 +288,12 @@ section { padding: 120px 48px; }
   color: var(--amber); letter-spacing: 3px; margin-bottom: 28px;
 }
 .sol-card-img {
-  width: 100%; height: 260px; object-fit: cover; margin-bottom: 24px;
+  width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; margin-bottom: 24px;
   filter: grayscale(20%) brightness(0.8);
   border: 1px solid rgba(200,130,42,0.1);
 }
 .sol-card-img-placeholder {
-  width: 100%; height: 260px; background: #222;
+  width: 100%; aspect-ratio: 1/1; background: #222;
   margin-bottom: 24px; border: 1px solid rgba(200,130,42,0.1);
   display: flex; align-items: center; justify-content: center;
   font-size: 32px; color: rgba(200,130,42,0.3);
@@ -376,7 +363,7 @@ section { padding: 120px 48px; }
 .secciones-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
 .seccion-card {
   position: relative; overflow: hidden; cursor: pointer;
-  aspect-ratio: 3/2; display: flex; align-items: flex-end;
+  aspect-ratio: 16/9; display: flex; align-items: flex-end;
   text-decoration: none;
 }
 .seccion-card img {
@@ -550,10 +537,6 @@ footer {
   <div class="hero-bg"></div>
   <div class="hero-geo"><div class="hero-geo-inner"></div></div>
   <div class="hero-glow"></div>
-  <div class="hero-img-frame">
-    <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp" alt="Nabil Mentalista">
-    <div class="hero-img-overlay"></div>
-  </div>
 
   <div class="hero-content">
     <div class="hero-eyebrow fade-up">Bogotá · Entretenimiento Corporativo</div>
@@ -632,7 +615,7 @@ footer {
     <div class="desc-tagline">Menos aburrimiento,<br>más conexión.</div>
   </div>
   <div class="desc-right">
-    <div class="desc-image-fallback" style="background: linear-gradient(135deg, #1a1208, #111); border: 1px solid rgba(200,130,42,0.15); width:100%; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; position:relative;">
+    <div class="desc-image-fallback" style="background: linear-gradient(135deg, #1a1208, #111); border: 1px solid rgba(200,130,42,0.15); width:100%; aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; position:relative;">
       <!-- Si tienes la imagen, reemplaza este bloque por <img src="imagenes/..." ...> -->
       <img src="imagenes/mentalismo-corporativo-comunicacion-marca.webp"
            alt="Nabil Mentalista en acción"
@@ -670,7 +653,7 @@ footer {
           <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp"
                alt="Team Building con Mentalismo"
                class="sol-card-img"
-               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(20%) brightness(0.8);border:1px solid rgba(200,130,42,0.1);"
                onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>◈</span>'">
         </div>
         <div class="sol-card-title">Integración de Equipos</div>
@@ -683,7 +666,7 @@ footer {
           <img src="imagenes/show-mentalismo-corporativo-diversion-empresas.webp"
                alt="Lanzamiento de Productos"
                class="sol-card-img"
-               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(20%) brightness(0.8);border:1px solid rgba(200,130,42,0.1);"
                onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>◇</span>'">
         </div>
         <div class="sol-card-title">Lanzamiento de Marcas</div>
@@ -696,7 +679,7 @@ footer {
           <img src="imagenes/mentalismo-corporativo-comunicacion-marca.webp"
                alt="Comunicación Estratégica"
                class="sol-card-img"
-               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(20%) brightness(0.8);border:1px solid rgba(200,130,42,0.1);"
                onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>♠</span>'">
         </div>
         <div class="sol-card-title">Comunicación de Mensajes</div>
