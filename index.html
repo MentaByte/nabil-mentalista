@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mago y Mentalista Corporativo en Bogotá | Nabil Mentalista</title>
+  <meta name="description" content="¿Buscas un mago para tu evento empresarial? Show de mentalismo de alto impacto diseñado para conectar equipos, sorprender clientes y potenciar tu marca en Bogotá.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nabil Mentalista - Entretenimiento Corporativo",
+    "image": "https://www.nabilmentalista.com/imagenes/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
+    "description": "Experiencias de mentalismo y magia para eventos corporativos y team building.",
+    "url": "https://www.nabilmentalista.com",
+    "telephone": "+573057679511",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressCountry": "Colombia"
+    },
+    "areaServed": "Colombia",
+    "sameAs": [
+      "https://www.instagram.com/nabilmentalista/",
+      "https://www.linkedin.com/in/nabilmentalista/"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #080808;
+  --dark: #111111;
+  --dark2: #1a1a1a;
+  --amber: #C8822A;
+  --amber-light: #E09840;
+  --white: #F5F0EA;
+  --grey: #888880;
+  --grey-light: #BBBBBB;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.97), transparent);
+}
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 22px; letter-spacing: 3px;
+  color: var(--white); text-decoration: none; text-transform: uppercase;
+}
+.nav-logo span { color: var(--amber); }
+.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--grey-light); text-decoration: none;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  font-weight: 500; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--amber); }
+.nav-cta {
+  background: var(--amber) !important; color: var(--black) !important;
+  padding: 10px 22px; font-weight: 700 !important;
+}
+.nav-cta:hover { background: var(--amber-light) !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; position: relative;
+  display: flex; align-items: flex-end;
+  padding: 0 48px 90px; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 65% at 72% 35%, rgba(200,130,42,0.13) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 50% at 15% 75%, rgba(200,130,42,0.06) 0%, transparent 50%),
+    linear-gradient(160deg, #1a1208 0%, #0d0d0d 45%, #080808 100%);
+}
+/* Decorative geometric shapes */
+.hero-geo {
+  position: absolute; right: 8%; top: 18%;
+  width: 340px; height: 340px;
+  border: 1px solid rgba(200,130,42,0.12);
+  transform: rotate(15deg);
+}
+.hero-geo-inner {
+  position: absolute; inset: 40px;
+  border: 1px solid rgba(200,130,42,0.08);
+}
+.hero-glow {
+  position: absolute; width: 600px; height: 600px;
+  right: 10%; top: 10%;
+  background: radial-gradient(circle, rgba(200,130,42,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-img-frame {
+  position: absolute; right: 6%; top: 12%; width: 360px; height: 460px;
+  overflow: hidden; border: 1px solid rgba(200,130,42,0.15);
+}
+.hero-img-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(30%) brightness(0.75);
+}
+.hero-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(8,8,8,0.6) 100%),
+              linear-gradient(to right, transparent 60%, rgba(8,8,8,0.3) 100%);
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 680px; }
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--amber); font-weight: 600; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--amber); }
+.hero-h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: clamp(48px, 7.5vw, 92px);
+  line-height: 0.92; text-transform: uppercase;
+  letter-spacing: -1px; margin-bottom: 28px;
+}
+.hero-h1 em {
+  font-style: italic; font-family: 'Playfair Display', serif;
+  color: var(--amber); font-size: 0.88em; display: block; letter-spacing: 0;
+}
+.hero-sub {
+  font-size: 16px; line-height: 1.75; color: var(--grey-light);
+  max-width: 500px; margin-bottom: 48px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.btn-primary {
+  background: var(--amber); color: var(--black);
+  padding: 18px 36px; font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; font-weight: 700; font-family: 'Barlow', sans-serif;
+  text-decoration: none; display: inline-block; transition: all 0.3s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); }
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,0.2); color: var(--white);
+  padding: 18px 36px; font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; font-weight: 500;
+  text-decoration: none; display: inline-block; transition: all 0.3s;
+}
+.btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+.hero-stats {
+  position: absolute; right: 48px; bottom: 90px; z-index: 2;
+  display: flex; flex-direction: column; gap: 28px; text-align: right;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif; font-size: 40px;
+  font-weight: 700; color: var(--amber); line-height: 1;
+}
+.stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey); margin-top: 4px; }
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--amber); padding: 14px 0; overflow: hidden; white-space: nowrap;
+}
+.ticker-inner {
+  display: inline-flex; animation: ticker 35s linear infinite;
+}
+.ticker-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 14px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--black); padding: 0 40px;
+}
+.ticker-dot { color: rgba(8,8,8,0.35); }
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ── COMMON ── */
+section { padding: 120px 48px; }
+.section-label {
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--amber); font-weight: 600; margin-bottom: 16px;
+}
+
+/* ── CLIENTES ── */
+.clientes {
+  background: var(--dark); padding: 60px 48px;
+  display: flex; align-items: center; gap: 48px; flex-wrap: wrap;
+}
+.clientes-label {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--grey); white-space: nowrap; flex-shrink: 0;
+}
+.clientes-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+.clientes-list {
+  display: flex; gap: 48px; flex-wrap: wrap; align-items: center;
+}
+.cliente-name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 18px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.2); transition: color 0.3s; cursor: default;
+}
+.cliente-name:hover { color: rgba(200,130,42,0.6); }
+
+/* ── DESCRIPCION ── */
+.descripcion {
+  background: var(--black);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;
+}
+.desc-left { }
+.desc-h2 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(36px, 5vw, 62px); line-height: 0.93; text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.desc-h2 em {
+  font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber); display: block;
+}
+.desc-body {
+  font-size: 16px; line-height: 1.85; color: var(--grey-light);
+  border-left: 2px solid var(--amber); padding-left: 28px; margin-bottom: 40px;
+}
+.desc-body strong { color: var(--white); font-weight: 600; }
+.desc-tagline {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 28px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--amber);
+}
+.desc-right {
+  position: relative;
+}
+.desc-image-frame {
+  width: 100%; aspect-ratio: 3/4; overflow: hidden;
+  border: 1px solid rgba(200,130,42,0.15); position: relative;
+}
+.desc-image-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(20%) brightness(0.8);
+}
+.desc-image-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(200,130,42,0.08) 0%, transparent 60%);
+}
+.desc-image-label {
+  position: absolute; bottom: 24px; left: 24px;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); background: rgba(8,8,8,0.85); padding: 8px 16px;
+}
+/* Fallback if no image */
+.desc-image-fallback {
+  width: 100%; aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #1a1208, #111);
+  border: 1px solid rgba(200,130,42,0.15);
+  display: flex; align-items: center; justify-content: center; position: relative;
+}
+.fallback-inner { text-align: center; }
+.fallback-icon { font-size: 64px; color: rgba(200,130,42,0.3); margin-bottom: 16px; }
+.fallback-text {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 22px; letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(200,130,42,0.4);
+}
+
+/* ── SOLUCIONES ── */
+.soluciones { background: var(--dark); position: relative; overflow: hidden; }
+.sol-bg-text {
+  position: absolute; top: 50%; left: -20px; transform: translateY(-50%);
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 220px; text-transform: uppercase; line-height: 1;
+  color: rgba(255,255,255,0.02); pointer-events: none; white-space: nowrap; letter-spacing: -5px;
+}
+.sol-inner { position: relative; z-index: 2; }
+.sol-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 72px; gap: 40px; flex-wrap: wrap;
+}
+.sol-h2 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(36px, 5vw, 60px); line-height: 0.93; text-transform: uppercase;
+}
+.sol-h2 em { font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber); }
+.sol-intro { max-width: 360px; font-size: 15px; color: var(--grey-light); line-height: 1.75; }
+.sol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.sol-card {
+  background: var(--dark2); padding: 48px 36px; transition: background 0.3s;
+}
+.sol-card:hover { background: #1f1f1f; }
+.sol-card-num {
+  font-family: 'Playfair Display', serif; font-size: 11px;
+  color: var(--amber); letter-spacing: 3px; margin-bottom: 28px;
+}
+.sol-card-img {
+  width: 100%; height: 160px; object-fit: cover; margin-bottom: 24px;
+  filter: grayscale(40%) brightness(0.7);
+  border: 1px solid rgba(200,130,42,0.1);
+}
+.sol-card-img-placeholder {
+  width: 100%; height: 160px; background: #222;
+  margin-bottom: 24px; border: 1px solid rgba(200,130,42,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; color: rgba(200,130,42,0.3);
+}
+.sol-card-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 22px; text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 12px; color: var(--white);
+}
+.sol-card-body { font-size: 14px; color: var(--grey); line-height: 1.7; }
+.sol-card-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 24px; font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--amber); text-decoration: none;
+  font-weight: 600; transition: gap 0.3s;
+}
+.sol-card-link:hover { gap: 14px; }
+
+/* ── GUIA LEAD MAGNET ── */
+.guia {
+  background: var(--black); position: relative; overflow: hidden;
+  padding: 100px 48px;
+}
+.guia-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(200,130,42,0.07), transparent);
+}
+.guia-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.guia-book {
+  background: linear-gradient(135deg, #1e1408, #140e04);
+  border: 1px solid rgba(200,130,42,0.25); padding: 48px 40px;
+  position: relative; overflow: hidden;
+}
+.guia-book::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to right, var(--amber), var(--amber-light), var(--amber));
+}
+.guia-book-tag {
+  display: inline-block; background: var(--amber); color: var(--black);
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  font-weight: 700; padding: 6px 14px; margin-bottom: 28px;
+}
+.guia-book-title {
+  font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+  line-height: 1.3; color: var(--white); margin-bottom: 24px;
+}
+.guia-book-title em { color: var(--amber); font-style: italic; }
+.guia-book-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.guia-book-list li {
+  font-size: 13px; color: var(--grey-light); padding-left: 20px; position: relative; line-height: 1.5;
+}
+.guia-book-list li::before { content: '◆'; position: absolute; left: 0; color: var(--amber); font-size: 8px; top: 3px; }
+.guia-content { }
+.guia-h2 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(34px, 4.5vw, 56px); text-transform: uppercase; line-height: 0.93;
+  margin-bottom: 24px;
+}
+.guia-h2 em { font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber); }
+.guia-body { font-size: 15px; color: var(--grey-light); line-height: 1.8; margin-bottom: 40px; }
+
+/* ── LINKS SECCIONES ── */
+.secciones { background: var(--dark); padding: 0; }
+.secciones-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.seccion-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  aspect-ratio: 3/4; display: flex; align-items: flex-end;
+  text-decoration: none;
+}
+.seccion-card img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; filter: grayscale(50%) brightness(0.5);
+  transition: transform 0.6s, filter 0.6s;
+}
+.seccion-card:hover img { transform: scale(1.05); filter: grayscale(20%) brightness(0.6); }
+.seccion-card-placeholder {
+  position: absolute; inset: 0;
+  transition: transform 0.6s;
+}
+.sc-placeholder-1 { background: linear-gradient(135deg, #1a1208, #0d0d0d); }
+.sc-placeholder-2 { background: linear-gradient(135deg, #0d1a08, #0d0d0d); }
+.sc-placeholder-3 { background: linear-gradient(135deg, #080d1a, #0d0d0d); }
+.seccion-card:hover .seccion-card-placeholder { transform: scale(1.05); }
+.seccion-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.2) 50%, transparent 100%);
+  transition: background 0.4s;
+}
+.seccion-card:hover .seccion-overlay {
+  background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.4) 60%, rgba(200,130,42,0.05) 100%);
+}
+.seccion-content {
+  position: relative; z-index: 2; padding: 32px;
+  transition: transform 0.3s;
+}
+.seccion-card:hover .seccion-content { transform: translateY(-8px); }
+.seccion-num {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 10px;
+}
+.seccion-icon { font-size: 28px; margin-bottom: 12px; color: rgba(200,130,42,0.5); }
+.seccion-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 26px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--white); margin-bottom: 8px;
+}
+.seccion-arrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--amber); font-weight: 600; margin-top: 16px;
+  border-bottom: 1px solid rgba(200,130,42,0.3); padding-bottom: 2px;
+}
+
+/* ── CTA FOOTER ── */
+.cta-footer {
+  background: linear-gradient(135deg, #1a1005, #0d0d0d);
+  padding: 120px 48px; text-align: center; position: relative; overflow: hidden;
+}
+.cta-footer-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 90% at 50% 50%, rgba(200,130,42,0.07), transparent);
+}
+.cta-footer-content { position: relative; z-index: 2; }
+.cta-h2 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(40px, 7vw, 86px); text-transform: uppercase; line-height: 0.92;
+  margin-bottom: 24px;
+}
+.cta-h2 em { font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber); }
+.cta-sub {
+  font-size: 16px; color: var(--grey-light); max-width: 500px;
+  margin: 0 auto 48px; line-height: 1.75;
+}
+.cta-contact-row {
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+  margin-top: 48px; padding-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.contact-item { text-align: center; }
+.contact-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+.contact-value {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 20px; letter-spacing: 1px; color: var(--white); text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-value:hover { color: var(--amber); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--dark); padding: 48px;
+  border-top: 1px solid rgba(200,130,42,0.12);
+}
+.footer-inner {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap: wrap; gap: 32px; margin-bottom: 32px;
+}
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: 26px; letter-spacing: 3px; text-transform: uppercase; color: var(--white);
+}
+.footer-logo span { color: var(--amber); }
+.footer-tagline { font-size: 12px; color: var(--grey); margin-top: 6px; letter-spacing: 1px; }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--grey); text-decoration: none; transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--amber); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px;
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 1px; flex-wrap: wrap; gap: 12px;
+}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float {
+  position: fixed; bottom: 32px; right: 32px; z-index: 200;
+  background: #25D366; width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.4); }
+.wa-float svg { width: 28px; height: 28px; fill: white; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 80px 24px; }
+  .hero { padding: 0 24px 80px; }
+  .hero-stats, .hero-img-frame, .hero-glow, .hero-geo { display: none; }
+  .descripcion { grid-template-columns: 1fr; gap: 48px; }
+  .sol-header { flex-direction: column; }
+  .sol-grid { grid-template-columns: 1fr; }
+  .guia-inner { grid-template-columns: 1fr; }
+  .secciones-grid { grid-template-columns: 1fr; }
+  .cta-contact-row { gap: 32px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-bottom { flex-direction: column; }
+  .clientes { padding: 40px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Nabil<span>Mentalista</span></a>
+  <ul class="nav-links">
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="propuestas.html">Propuestas de Valor</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="https://wa.me/573057679511" class="nav-cta">Cotizar</a></li>
+  </ul>
+</nav>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="wa-float" title="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-geo"><div class="hero-geo-inner"></div></div>
+  <div class="hero-glow"></div>
+  <div class="hero-img-frame">
+    <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp" alt="Nabil Mentalista">
+    <div class="hero-img-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow fade-up">Bogotá · Entretenimiento Corporativo</div>
+    <h1 class="hero-h1 fade-up delay-1">
+      Tu marca,<br>
+      <em>imposible</em>
+      de olvidar.
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      Magia y Mentalismo de alto impacto para empresas. No solo contrates un show, crea una experiencia que conecte equipos y sorprenda a tus clientes de forma inteligente.
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20la%20guía%20de%20eventos%20y%20conocer%20tus%20shows" class="btn-primary" target="_blank">Obtener Guía y Cotizar</a>
+      <a href="servicios.html" class="btn-ghost">Ver Servicios</a>
+    </div>
+  </div>
+
+  <div class="hero-stats fade-up delay-4">
+    <div>
+      <div class="stat-num">+20</div>
+      <div class="stat-label">Años de experiencia</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Formatos de show</div>
+    </div>
+    <div>
+      <div class="stat-num">COL</div>
+      <div class="stat-label">Cobertura nacional</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Mentalismo Corporativo <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Team Building <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Lanzamiento de Marcas <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Convenciones <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Cenas VIP <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Bogotá · Colombia <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Mentalismo Corporativo <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Team Building <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Lanzamiento de Marcas <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Convenciones <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Cenas VIP <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Bogotá · Colombia <span class="ticker-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- CLIENTES -->
+<div class="clientes">
+  <span class="clientes-label">Han confiado en Nabil</span>
+  <div class="clientes-divider"></div>
+  <div class="clientes-list">
+    <span class="cliente-name">Dunkin'</span>
+    <span class="cliente-name">Procter &amp; Gamble</span>
+    <span class="cliente-name">Holcim</span>
+    <span class="cliente-name">Kellanova</span>
+  </div>
+</div>
+
+<!-- DESCRIPCION -->
+<section class="descripcion" id="acerca">
+  <div class="desc-left">
+    <div class="section-label">El Enfoque</div>
+    <h2 class="desc-h2">
+      En Bogotá, un evento<br>común ya no es<br>
+      <em>suficiente.</em>
+    </h2>
+    <p class="desc-body">
+      Uso el <strong>mentalismo y la psicología aplicada</strong> como una herramienta estratégica para motivar a tus equipos y cautivar a tus invitados.<br><br>
+      Ya sea una cena VIP, una convención nacional o una jornada de bienestar, transformo lo tradicional en algo extraordinario donde tu marca es la protagonista.
+    </p>
+    <div class="desc-tagline">Menos aburrimiento,<br>más conexión.</div>
+  </div>
+  <div class="desc-right">
+    <div class="desc-image-fallback" style="background: linear-gradient(135deg, #1a1208, #111); border: 1px solid rgba(200,130,42,0.15); width:100%; aspect-ratio:3/4; display:flex; align-items:center; justify-content:center; position:relative;">
+      <!-- Si tienes la imagen, reemplaza este bloque por <img src="imagenes/..." ...> -->
+      <img src="imagenes/mentalismo-corporativo-comunicacion-marca.webp"
+           alt="Nabil Mentalista en acción"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(25%) brightness(0.75);"
+           onerror="this.style.display='none'">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,130,42,0.08),transparent);"></div>
+      <div style="position:absolute;bottom:24px;left:24px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);background:rgba(8,8,8,0.85);padding:8px 16px;">
+        Nabil Mentalista
+      </div>
+      <div style="position:relative;z-index:2;text-align:center;padding:40px;" class="fallback-only">
+        <div style="font-size:64px;color:rgba(200,130,42,0.25);margin-bottom:16px;">◈</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;letter-spacing:4px;text-transform:uppercase;color:rgba(200,130,42,0.3);">Nabil<br>Mentalista</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIONES -->
+<section class="soluciones" id="soluciones">
+  <div class="sol-bg-text">IMPACTO</div>
+  <div class="sol-inner">
+    <div class="section-label">Soluciones</div>
+    <div class="sol-header">
+      <h2 class="sol-h2">
+        Diseñado para los<br>retos de tu <em>empresa</em>
+      </h2>
+      <p class="sol-intro">
+        ¿Planeando tu próximo evento? Cada formato está diseñado para resolver un objetivo empresarial concreto, no solo para entretener.
+      </p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-card">
+        <div class="sol-card-num">01</div>
+        <div class="sol-card-img-placeholder">
+          <img src="imagenes/mentalismo-corporativo-bogota-profesionalismo.webp"
+               alt="Team Building con Mentalismo"
+               class="sol-card-img"
+               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>◈</span>'">
+        </div>
+        <div class="sol-card-title">Integración de Equipos</div>
+        <div class="sol-card-body">Team Building experiencial que rompe barreras, genera confianza y conecta a tus colaboradores a través del asombro compartido.</div>
+        <a href="servicios.html" class="sol-card-link">Ver formato →</a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-card-num">02</div>
+        <div class="sol-card-img-placeholder">
+          <img src="imagenes/show-mentalismo-corporativo-diversion-empresas.webp"
+               alt="Lanzamiento de Productos"
+               class="sol-card-img"
+               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>◇</span>'">
+        </div>
+        <div class="sol-card-title">Lanzamiento de Marcas</div>
+        <div class="sol-card-body">Convierte el mensaje de tu producto en una experiencia imposible de olvidar. El mentalismo como herramienta de marketing de alto impacto.</div>
+        <a href="servicios.html" class="sol-card-link">Ver formato →</a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-card-num">03</div>
+        <div class="sol-card-img-placeholder">
+          <img src="imagenes/mentalismo-corporativo-comunicacion-marca.webp"
+               alt="Comunicación Estratégica"
+               class="sol-card-img"
+               style="width:100%;height:160px;object-fit:cover;display:block;filter:grayscale(40%) brightness(0.7);border:1px solid rgba(200,130,42,0.1);"
+               onerror="this.parentElement.innerHTML='<span style=\'font-size:32px;color:rgba(200,130,42,0.3)\'>♠</span>'">
+        </div>
+        <div class="sol-card-title">Comunicación de Mensajes</div>
+        <div class="sol-card-body">Ancla los mensajes clave de tu empresa en la memoria de los asistentes usando psicología aplicada y efectos de mentalismo de autor.</div>
+        <a href="servicios.html" class="sol-card-link">Ver formato →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIA LEAD MAGNET -->
+<section class="guia" id="guia">
+  <div class="guia-bg"></div>
+  <div class="guia-inner">
+    <div class="guia-book">
+      <div class="guia-book-tag">Descarga Gratuita</div>
+      <div class="guia-book-title">
+        "7 errores que arruinan un<br><em>evento empresarial"</em>
+      </div>
+      <ul class="guia-book-list">
+        <li>Cómo evitar el entretenimiento genérico que aburre a tus invitados</li>
+        <li>Por qué el 80% de los eventos no generan recordación de marca</li>
+        <li>El error de timing que destruye el impacto de cualquier show</li>
+        <li>Qué preguntar antes de contratar cualquier artista</li>
+        <li>Cómo convertir un momento de show en una experiencia estratégica</li>
+      </ul>
+    </div>
+    <div class="guia-content">
+      <div class="section-label">Para Organizadores de Eventos</div>
+      <h2 class="guia-h2">
+        No cometas los<br>errores que ya<br><em>cometieron otros.</em>
+      </h2>
+      <p class="guia-body">
+        Después de 20 años haciendo eventos corporativos en Bogotá y Colombia, he visto los mismos errores repetirse una y otra vez. Esta guía es el punto de partida para que tu próximo evento sea verdaderamente memorable.
+      </p>
+      <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20la%20guía%20de%20eventos%20y%20conocer%20tus%20shows" target="_blank" class="btn-primary">
+        Obtener Guía Gratis y Cotizar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LINKS SECCIONES -->
+<div class="secciones">
+  <div class="secciones-grid">
+    <a href="servicios.html" class="seccion-card">
+      <img src="imagenes/servicios-mentalismo-corporativo.webp" alt="Formatos de Show" loading="lazy"
+           onerror="this.style.display='none'">
+      <div class="seccion-card-placeholder sc-placeholder-1"></div>
+      <div class="seccion-overlay"></div>
+      <div class="seccion-content">
+        <div class="seccion-num">01</div>
+        <div class="seccion-icon">◈</div>
+        <div class="seccion-title">Formatos de Show</div>
+        <div class="seccion-arrow">Explorar →</div>
+      </div>
+    </a>
+    <a href="propuestas.html" class="seccion-card">
+      <img src="imagenes/propuestas-valor-mentalismo-corporativo.webp" alt="Por qué Mentalismo" loading="lazy"
+           onerror="this.style.display='none'">
+      <div class="seccion-card-placeholder sc-placeholder-2"></div>
+      <div class="seccion-overlay"></div>
+      <div class="seccion-content">
+        <div class="seccion-num">02</div>
+        <div class="seccion-icon">◇</div>
+        <div class="seccion-title">Por qué Mentalismo</div>
+        <div class="seccion-arrow">Explorar →</div>
+      </div>
+    </a>
+    <a href="faq.html" class="seccion-card">
+      <img src="imagenes/faq-mentalismo-corporativo.webp" alt="Preguntas Frecuentes" loading="lazy"
+           onerror="this.style.display='none'">
+      <div class="seccion-card-placeholder sc-placeholder-3"></div>
+      <div class="seccion-overlay"></div>
+      <div class="seccion-content">
+        <div class="seccion-num">03</div>
+        <div class="seccion-icon">♠</div>
+        <div class="seccion-title">Resuelve tus Dudas</div>
+        <div class="seccion-arrow">Explorar →</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- CTA FOOTER -->
+<section class="cta-footer" id="contacto">
+  <div class="cta-footer-bg"></div>
+  <div class="cta-footer-content">
+    <div class="section-label" style="margin-bottom:24px;">¿Hablamos?</div>
+    <h2 class="cta-h2">
+      Diseñamos<br>experiencias que<br><em>no se olvidan.</em>
+    </h2>
+    <p class="cta-sub">
+      Atención inmediata para empresas en Bogotá y Colombia. Respuesta en menos de 24 horas para solicitudes corporativas.
+    </p>
+    <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20necesito%20una%20propuesta%20para%20un%20evento%20corporativo" target="_blank" class="btn-primary">
+      Solicitar Propuesta Comercial
+    </a>
+    <div class="cta-contact-row">
+      <div class="contact-item">
+        <div class="contact-label">WhatsApp</div>
+        <a href="https://wa.me/573057679511" class="contact-value">+57 305 767 9511</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Instagram</div>
+        <a href="https://www.instagram.com/nabilmentalista/" target="_blank" class="contact-value">@nabilmentalista</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/nabilmentalista/" target="_blank" class="contact-value">nabilmentalista</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Nabil<span>Mentalista</span></div>
+      <div class="footer-tagline">Entretenimiento Inteligente para Empresas · Bogotá, Colombia</div>
+    </div>
+    <div class="footer-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="propuestas.html">Propuestas de Valor</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Nabil Mentalista · Todos los derechos reservados</span>
+    <span>Bogotá, Colombia</span>
+  </div>
+</footer>
+
+</body>
+</html>
