@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mago Nabil – Magia de Cerca Exclusiva en Bogotá</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808;
+    --dark: #111111;
+    --dark2: #1a1a1a;
+    --amber: #C8822A;
+    --amber-light: #E09840;
+    --amber-pale: #F5C878;
+    --white: #F5F0EA;
+    --grey: #888880;
+    --grey-light: #BBBBBB;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 48px;
+    background: linear-gradient(to bottom, rgba(8,8,8,0.95), transparent);
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 22px; letter-spacing: 3px;
+    color: var(--white); text-decoration: none; text-transform: uppercase;
+  }
+  .nav-logo span { color: var(--amber); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--grey-light); text-decoration: none;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 500; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-cta {
+    background: var(--amber); color: var(--black) !important;
+    padding: 10px 22px; letter-spacing: 2px !important;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--amber-light) !important; color: var(--black) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh; position: relative;
+    display: flex; align-items: flex-end;
+    padding: 0 48px 80px;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 70% at 70% 40%, rgba(200,130,42,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,130,42,0.06) 0%, transparent 50%),
+      linear-gradient(165deg, #1a1208 0%, #0d0d0d 40%, #080808 100%);
+  }
+  /* Decorative card shapes */
+  .hero-card {
+    position: absolute; border: 1px solid rgba(200,130,42,0.2);
+    border-radius: 4px;
+  }
+  .hero-card-1 {
+    width: 120px; height: 170px; top: 25%; right: 28%;
+    transform: rotate(-15deg);
+    background: linear-gradient(135deg, rgba(200,130,42,0.15), rgba(200,130,42,0.03));
+    box-shadow: 0 0 40px rgba(200,130,42,0.08);
+  }
+  .hero-card-2 {
+    width: 100px; height: 145px; top: 32%; right: 22%;
+    transform: rotate(8deg);
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border-color: rgba(255,255,255,0.1);
+  }
+  .hero-card-3 {
+    width: 90px; height: 130px; top: 45%; right: 35%;
+    transform: rotate(-5deg);
+    background: linear-gradient(135deg, rgba(200,130,42,0.1), transparent);
+    border-color: rgba(200,130,42,0.15);
+  }
+  .hero-glow {
+    position: absolute; width: 500px; height: 500px;
+    right: 20%; top: 20%;
+    background: radial-gradient(circle, rgba(200,130,42,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+  .hero-eyebrow {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--amber); font-weight: 600; margin-bottom: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--amber);
+  }
+  .hero-h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: clamp(52px, 8vw, 96px);
+    line-height: 0.92; text-transform: uppercase;
+    letter-spacing: -1px; margin-bottom: 28px;
+  }
+  .hero-h1 em {
+    font-style: italic; font-family: 'Playfair Display', serif;
+    color: var(--amber); font-size: 0.85em; display: block;
+    letter-spacing: 0;
+  }
+  .hero-sub {
+    font-size: 16px; line-height: 1.7; color: var(--grey-light);
+    max-width: 520px; margin-bottom: 48px; font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--amber); color: var(--black);
+    padding: 18px 36px; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; font-weight: 700; font-family: 'Barlow', sans-serif;
+    text-decoration: none; display: inline-block; transition: all 0.3s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.2); color: var(--white);
+    padding: 18px 36px; font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; font-weight: 500;
+    text-decoration: none; display: inline-block; transition: all 0.3s;
+  }
+  .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+  .hero-stats {
+    position: absolute; right: 48px; bottom: 80px; z-index: 2;
+    display: flex; flex-direction: column; gap: 32px; text-align: right;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700;
+    color: var(--amber); line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--grey); margin-top: 4px;
+  }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: var(--amber); padding: 14px 0; overflow: hidden;
+    white-space: nowrap; position: relative;
+  }
+  .ticker-inner {
+    display: inline-flex; gap: 0;
+    animation: ticker 30s linear infinite;
+  }
+  .ticker-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 14px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--black);
+    padding: 0 40px;
+  }
+  .ticker-dot { color: rgba(8,8,8,0.4); }
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 120px 48px; }
+  .section-label {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--amber); font-weight: 600; margin-bottom: 16px;
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif; font-size: 13px;
+    color: var(--grey); margin-bottom: 8px;
+  }
+
+  /* ── AUTORIDAD ── */
+  .autoridad {
+    background: var(--dark);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .autoridad-left { }
+  .autoridad-h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: clamp(38px, 5vw, 64px);
+    line-height: 0.95; text-transform: uppercase; margin-bottom: 32px;
+  }
+  .autoridad-h2 span {
+    font-style: italic; font-family: 'Playfair Display', serif;
+    color: var(--amber); display: block; font-size: 0.9em;
+  }
+  .autoridad-body {
+    font-size: 16px; line-height: 1.85; color: var(--grey-light);
+    border-left: 2px solid var(--amber); padding-left: 28px;
+  }
+  .autoridad-right {
+    display: flex; flex-direction: column; gap: 40px;
+  }
+  .feature-item {
+    display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start;
+  }
+  .feature-icon {
+    width: 48px; height: 48px; border: 1px solid rgba(200,130,42,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .feature-title {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 18px; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .feature-desc { font-size: 14px; color: var(--grey); line-height: 1.6; }
+
+  /* ── FORMATO VIP ── */
+  .formato {
+    background: var(--black); position: relative; overflow: hidden;
+  }
+  .formato-bg-text {
+    position: absolute; top: 50%; left: -20px; transform: translateY(-50%);
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: 240px; text-transform: uppercase; line-height: 1;
+    color: rgba(255,255,255,0.02); pointer-events: none; white-space: nowrap;
+    letter-spacing: -5px;
+  }
+  .formato-inner { position: relative; z-index: 2; }
+  .formato-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 80px; gap: 40px; flex-wrap: wrap;
+  }
+  .formato-h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: clamp(36px, 5vw, 60px);
+    line-height: 0.95; text-transform: uppercase; max-width: 500px;
+  }
+  .formato-h2 em {
+    font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber);
+  }
+  .formato-intro {
+    max-width: 380px; font-size: 15px; line-height: 1.75; color: var(--grey-light);
+  }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .service-card {
+    background: var(--dark2); padding: 48px 36px;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: #1f1f1f; }
+  .service-card-num {
+    font-family: 'Playfair Display', serif; font-size: 11px;
+    color: var(--amber); letter-spacing: 3px; margin-bottom: 28px;
+  }
+  .service-card-title {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+    font-size: 26px; text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 16px; color: var(--white);
+  }
+  .service-card-body { font-size: 14px; color: var(--grey); line-height: 1.7; }
+  .service-card-tag {
+    display: inline-block; margin-top: 24px;
+    border: 1px solid rgba(200,130,42,0.3); padding: 6px 14px;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  /* ── SEO LOCAL ── */
+  .seo-local {
+    background: var(--dark); position: relative; overflow: hidden;
+    padding: 120px 48px;
+  }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .seo-image-mock {
+    position: relative; height: 480px;
+    background: linear-gradient(135deg, #1a1208, #111);
+    border: 1px solid rgba(200,130,42,0.15);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .seo-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(200,130,42,0.12) 0%, transparent 60%);
+  }
+  .seo-map-text {
+    position: relative; z-index: 2; text-align: center;
+  }
+  .seo-map-pin { font-size: 48px; margin-bottom: 16px; }
+  .seo-map-title {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: 22px; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--amber); margin-bottom: 8px;
+  }
+  .seo-zones {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px;
+  }
+  .zone-tag {
+    border: 1px solid rgba(200,130,42,0.3); padding: 6px 14px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-light);
+  }
+  .seo-content { }
+  .seo-h3 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: clamp(32px, 4vw, 52px); text-transform: uppercase;
+    line-height: 0.95; margin-bottom: 28px;
+  }
+  .seo-h3 span { color: var(--amber); font-style: italic; font-family: 'Playfair Display', serif; }
+  .seo-body { font-size: 15px; color: var(--grey-light); line-height: 1.85; margin-bottom: 40px; }
+  .price-display {
+    background: var(--dark2); padding: 32px 36px;
+    border-left: 3px solid var(--amber); margin-bottom: 32px;
+  }
+  .price-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey); margin-bottom: 8px; }
+  .price-amount {
+    font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700;
+    color: var(--amber); line-height: 1;
+  }
+  .price-desc { font-size: 13px; color: var(--grey); margin-top: 8px; }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: linear-gradient(135deg, #1a0f02, #0d0d0d);
+    padding: 120px 48px; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-band-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(200,130,42,0.08), transparent);
+  }
+  .cta-band-content { position: relative; z-index: 2; }
+  .cta-h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: clamp(40px, 7vw, 88px); text-transform: uppercase;
+    line-height: 0.92; margin-bottom: 24px;
+  }
+  .cta-h2 em {
+    font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber);
+  }
+  .cta-sub {
+    font-size: 16px; color: var(--grey-light); max-width: 520px;
+    margin: 0 auto 48px; line-height: 1.7;
+  }
+  .cta-note {
+    margin-top: 28px; font-size: 12px; color: var(--grey);
+    letter-spacing: 1px; display: flex; align-items: center; gap: 10px; justify-content: center;
+  }
+  .cta-note::before, .cta-note::after {
+    content: ''; flex: 1; max-width: 80px; height: 1px; background: rgba(255,255,255,0.1);
+  }
+
+  /* ── FAQ ── */
+  .faq { background: var(--black); }
+  .faq-header { margin-bottom: 60px; }
+  .faq-h2 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: clamp(36px, 5vw, 64px); text-transform: uppercase; line-height: 0.95;
+  }
+  .faq-h2 em { font-style: italic; font-family: 'Playfair Display', serif; color: var(--amber); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .faq-item {
+    background: var(--dark2); padding: 40px 36px;
+    border-top: 1px solid rgba(200,130,42,0.2);
+    cursor: pointer; transition: background 0.3s;
+  }
+  .faq-item:hover { background: #1e1e1e; }
+  .faq-q {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+    font-size: 17px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--white); margin-bottom: 16px; line-height: 1.3;
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+  }
+  .faq-q-icon { color: var(--amber); font-size: 20px; flex-shrink: 0; margin-top: -2px; }
+  .faq-a { font-size: 14px; color: var(--grey-light); line-height: 1.75; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark); padding: 60px 48px 40px;
+    border-top: 1px solid rgba(200,130,42,0.15);
+  }
+  .footer-inner {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    flex-wrap: wrap; gap: 40px; margin-bottom: 40px;
+  }
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+    font-size: 28px; letter-spacing: 3px; text-transform: uppercase; color: var(--white);
+  }
+  .footer-logo span { color: var(--amber); }
+  .footer-tagline { font-size: 13px; color: var(--grey); margin-top: 6px; letter-spacing: 1px; }
+  .footer-links { display: flex; gap: 32px; flex-wrap: wrap; }
+  .footer-links a {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--grey); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--amber); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px; display: flex; justify-content: space-between;
+    font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 1px;
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed; bottom: 32px; right: 32px; z-index: 200;
+    background: #25D366; width: 56px; height: 56px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.4); }
+  .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    opacity: 0; animation: fadeUp 0.8s ease forwards;
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 80px 24px; }
+    .hero { padding: 0 24px 80px; }
+    .hero-stats { display: none; }
+    .hero-card-1, .hero-card-2, .hero-card-3, .hero-glow { display: none; }
+    .autoridad { grid-template-columns: 1fr; gap: 48px; }
+    .formato-header { flex-direction: column; }
+    .services-grid { grid-template-columns: 1fr; }
+    .seo-grid { grid-template-columns: 1fr; }
+    .seo-image-mock { height: 280px; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-bottom { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Mago<span>Nabil</span></a>
+  <ul class="nav-links">
+    <li><a href="#autoridad">Experiencia</a></li>
+    <li><a href="#formato">El Show</a></li>
+    <li><a href="#faq">Preguntas</a></li>
+    <li><a href="#cta" class="nav-cta">Reservar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-card hero-card-1"></div>
+  <div class="hero-card hero-card-2"></div>
+  <div class="hero-card hero-card-3"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow fade-up">Norte de Bogotá · Experiencia Privada</div>
+    <h1 class="hero-h1 fade-up delay-1">
+      Magia de cerca<br>
+      <em>exclusiva.</em>
+      Mentalismo
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      Una experiencia de lujo diseñada para audiencias selectas. El arte de lo imposible, presentado a centímetros de sus ojos para un máximo de 15 invitados.
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="https://api.whatsapp.com/send?phone=573057679511" class="btn-primary">Consultar disponibilidad</a>
+      <a href="#formato" class="btn-ghost">Ver el show</a>
+    </div>
+  </div>
+
+  <div class="hero-stats fade-up delay-4">
+    <div>
+      <div class="stat-num">+20</div>
+      <div class="stat-label">Años de trayectoria</div>
+    </div>
+    <div>
+      <div class="stat-num">15</div>
+      <div class="stat-label">Máx. invitados</div>
+    </div>
+    <div>
+      <div class="stat-num">60'</div>
+      <div class="stat-label">De asombro continuo</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item">Cartomagia de Autor <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Mentalismo Psicológico <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Shows Privados <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Norte de Bogotá <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Cenas Exclusivas <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Eventos Corporativos <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Cartomagia de Autor <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Mentalismo Psicológico <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Shows Privados <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Norte de Bogotá <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Cenas Exclusivas <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Eventos Corporativos <span class="ticker-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- AUTORIDAD -->
+<section class="autoridad" id="autoridad">
+  <div class="autoridad-left">
+    <div class="section-label">El Artista</div>
+    <h2 class="autoridad-h2">
+      Más de 20 años<br>
+      <span>redefiniendo</span>
+      el Ilusionismo
+    </h2>
+    <p class="autoridad-body">
+      En eventos de alto perfil, la experiencia no es negociable. Mago Nabil combina dos décadas de trayectoria con una propuesta de magia elegante que fusiona la destreza de las cartas con el misterio del mentalismo.<br><br>
+      No es un espectáculo convencional; es una intervención artística privada donde la sofisticación y el asombro se encuentran en el mismo lugar.
+    </p>
+  </div>
+  <div class="autoridad-right">
+    <div class="feature-item">
+      <div class="feature-icon">♠</div>
+      <div>
+        <div class="feature-title">Cartomagia de Autor</div>
+        <div class="feature-desc">Juegos de cartas de alta precisión técnica desarrollados y perfeccionados en más de dos décadas de práctica.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">◈</div>
+      <div>
+        <div class="feature-title">Mentalismo Psicológico</div>
+        <div class="feature-desc">Lectura de pensamiento, predicciones imposibles y experiencias que desafían toda explicación racional.</div>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">◇</div>
+      <div>
+        <div class="feature-title">Exclusividad Garantizada</div>
+        <div class="feature-desc">Un formato cerrado de 15 personas que prioriza la calidad de la interacción sobre la cantidad de público.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATO VIP -->
+<section class="formato" id="formato">
+  <div class="formato-bg-text">CLOSE-UP</div>
+  <div class="formato-inner">
+    <div class="section-label">El Formato</div>
+    <div class="formato-header">
+      <h2 class="formato-h2">
+        Magia diferente<br>para cenas privadas<br>y eventos de <em>lujo</em>
+      </h2>
+      <p class="formato-intro">
+        ¿Busca un mago para adultos que rompa los esquemas? Este show de magia de cerca está optimizado para espacios íntimos en el Norte de Bogotá, garantizando que cada uno de los 15 asistentes viva el milagro en sus propias manos.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-num">01</div>
+        <div class="service-card-title">Cartomagia de Autor</div>
+        <div class="service-card-body">Efectos de naipes de alta precisión técnica presentados a centímetros de los ojos del espectador. Cada rutina es una obra en sí misma.</div>
+        <div class="service-card-tag">Destreza · Precisión</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-num">02</div>
+        <div class="service-card-title">Mentalismo Psicológico</div>
+        <div class="service-card-body">Lectura de pensamiento, predicciones y efectos mentales que crean una experiencia profundamente personal e irrepetible.</div>
+        <div class="service-card-tag">Misterio · Impacto</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-num">03</div>
+        <div class="service-card-title">Show Central Close-Up</div>
+        <div class="service-card-body">60 minutos de asombro continuo como momento principal del evento. Toda la atención, toda la magia, toda la mesa.</div>
+        <div class="service-card-tag">60 Min · 15 Personas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO LOCAL -->
+<section class="seo-local" id="local">
+  <div class="seo-grid">
+    <div class="seo-image-mock">
+      <div class="seo-image-overlay"></div>
+      <div class="seo-map-text">
+        <div class="seo-map-pin">◉</div>
+        <div class="seo-map-title">Norte de Bogotá</div>
+        <div class="seo-zones">
+          <span class="zone-tag">Chicó</span>
+          <span class="zone-tag">Santa Ana</span>
+          <span class="zone-tag">Rosales</span>
+          <span class="zone-tag">Chía</span>
+          <span class="zone-tag">Cajicá</span>
+          <span class="zone-tag">La Calera</span>
+        </div>
+      </div>
+    </div>
+    <div class="seo-content">
+      <div class="section-label">Cobertura</div>
+      <h3 class="seo-h3">
+        El mejor show de<br>magia en el<br><span>Norte de Bogotá</span>
+      </h3>
+      <p class="seo-body">
+        Si planea una reunión social en las zonas más exclusivas de la ciudad y busca magia de cerca profesional, Nabil ofrece una puesta en escena impecable que se adapta a la etiqueta de su evento. La solución perfecta para quienes exigen un entretenimiento a la altura de sus invitados.
+      </p>
+      <div class="price-display">
+        <div class="price-label">Inversión por experiencia</div>
+        <div class="price-amount">$700.000 COP</div>
+        <div class="price-desc">60 minutos · hasta 15 invitados · materiales de alta gama</div>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=573057679511" class="btn-primary">Consultar mi fecha</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="cta">
+  <div class="cta-band-bg"></div>
+  <div class="cta-band-content">
+    <div class="section-label" style="text-align:center; margin-bottom:24px;">Reservas</div>
+    <h2 class="cta-h2">
+      Reserve una<br>experiencia<br><em>irrepetible</em>
+    </h2>
+    <p class="cta-sub">Exclusividad real: solo se agendan un número limitado de presentaciones privadas por mes para mantener el estándar de calidad.</p>
+    <a href="https://api.whatsapp.com/send?phone=573057679511" class="btn-primary">Consultar fechas disponibles para mi evento exclusivo</a>
+    <div class="cta-note">Agenda limitada · Respuesta en menos de 24 horas</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-header">
+    <div class="section-label">Preguntas Frecuentes</div>
+    <h2 class="faq-h2">
+      Todo lo que necesita<br><em>saber</em>
+    </h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿Qué requisitos técnicos tiene el show?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">Solo se requiere una mesa donde puedan estar sentados tanto los invitados como el mago. Este formato permite que los 15 asistentes tengan una visión perfecta de los efectos, creando una atmósfera íntima y participativa.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿Cuánto dura la experiencia y qué formato tiene?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">El show tiene una duración de 1 hora de asombro continuo. Se presenta como show central donde toda la atención se centra en la mesa, permitiendo una conexión profunda y personalizada con cada invitado.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿Realiza eventos fuera del Norte de Bogotá?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">Sí. Además de las zonas exclusivas del Norte de Bogotá (Chicó, Rosales, Santa Ana), cubro zonas aledañas como Chía, Cajicá y La Calera. El aliado ideal para eventos campestres y recepciones privadas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿Cuál es el precio del show?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">La inversión para una experiencia exclusiva de 60 minutos es de $700.000 COP. Este valor refleja más de 20 años de trayectoria, materiales de alta gama y atención totalmente personalizada.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿El contenido es apto para todas las edades?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">Absolutamente. Aunque el enfoque y la narrativa son para un público adulto y sofisticado, el show es 100% familiar. Adolescentes y niños pueden disfrutar junto a los adultos sin ningún inconveniente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>¿Con cuánta anticipación debo reservar?</span>
+        <span class="faq-q-icon">◈</span>
+      </div>
+      <div class="faq-a">Se recomienda reservar con la mayor antelación posible, especialmente para fines de semana en el Norte de Bogotá. Sin embargo, siempre puede consultar disponibilidad inmediata para eventos de último minuto.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Mago<span>Nabil</span></div>
+      <div class="footer-tagline">Magia de Cerca · Mentalismo · Norte de Bogotá</div>
+    </div>
+    <div class="footer-links">
+      <a href="#autoridad">Experiencia</a>
+      <a href="#formato">El Show</a>
+      <a href="#local">Cobertura</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://api.whatsapp.com/send?phone=573057679511">WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Mago Nabil · Todos los derechos reservados</span>
+    <span>Bogotá, Colombia</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://api.whatsapp.com/send?phone=573057679511" class="wa-float" target="_blank" rel="noopener" title="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</body>
+</html>
