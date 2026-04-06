@@ -27,288 +27,21 @@
     ]
   }
   </script>
-  <!-- Preconectar a Google Fonts CDN antes de que el parser llegue al link diferido -->
+  <!--
+    ESTRATEGIA ANTI-CLS DEFINITIVA:
+    1. style.css carga de forma SINCRÓNICA → sin CLS por CSS diferido.
+    2. Google Fonts NO está en el <head> → no bloquea render ni provoca CLS.
+    3. Las fuentes web se inyectan por JS después del evento 'load' → solo
+       afectan repaints post-LCP, cuando el usuario ya está interactuando.
+    4. font-display: optional en el @font-face del CSS asegura que si el
+       browser ya tiene las fuentes en caché, las usa sin ningún swap.
+  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preconectar a Google Fonts para que la conexión TCP/TLS esté lista
+       cuando el JS inyecte el <link> después del load event -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       CSS CRÍTICO INLINE — Solo lo que aparece above-the-fold.
-       Elimina el bloqueo de render de style.css (170 ms).
-       El resto del CSS se carga de forma no bloqueante más abajo.
-  ══════════════════════════════════════════════════════════════ -->
-  <style>
-    /* ── FALLBACK FONTS calibrados (anti-CLS mientras llega Google Fonts) ── */
-    @font-face {
-      font-family: 'Barlow-fallback';
-      src: local('Arial Narrow'), local('Arial');
-      size-adjust: 96%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-    @font-face {
-      font-family: 'BarlowCondensed-fallback';
-      src: local('Arial Narrow Bold'), local('Impact'), local('Arial');
-      size-adjust: 88%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-
-    /* ── TOKENS ── */
-    :root {
-      --black:       #080808;
-      --dark:        #111111;
-      --dark2:       #1a1a1a;
-      --amber:       #C8822A;
-      --amber-light: #E09840;
-      --white:       #F5F0EA;
-      --grey:        #888880;
-      --grey-light:  #BBBBBB;
-      --section-px:  48px;
-      --section-py:  120px;
-    }
-
-    /* ── RESET mínimo ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'Barlow', 'Barlow-fallback', 'Arial Narrow', Arial, sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px var(--section-px);
-      background: transparent;
-    }
-    nav::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(8,8,8,0.97);
-      box-shadow: 0 1px 0 rgba(200,130,42,0.1);
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: -1;
-      pointer-events: none;
-    }
-    nav.scrolled::before { opacity: 1; }
-    .nav-logo {
-      font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', Impact, sans-serif;
-      font-weight: 900;
-      font-size: 22px;
-      letter-spacing: 3px;
-      color: var(--white);
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .nav-logo span { color: var(--amber); }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      color: var(--grey-light);
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--amber); }
-    .nav-cta {
-      background: var(--amber) !important;
-      color: var(--black) !important;
-      padding: 10px 22px;
-      font-weight: 700 !important;
-    }
-    .nav-cta:hover { background: var(--amber-light) !important; }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 80px var(--section-px);
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 55% 65% at 72% 35%, rgba(200,130,42,0.13) 0%, transparent 60%),
-        radial-gradient(ellipse 35% 50% at 15% 75%, rgba(200,130,42,0.06) 0%, transparent 50%),
-        linear-gradient(160deg, #1a1208 0%, #0d0d0d 45%, #080808 100%);
-    }
-    .hero-geo {
-      position: absolute;
-      right: 8%; top: 18%;
-      width: 340px; height: 340px;
-      border: 1px solid rgba(200,130,42,0.12);
-      transform: rotate(15deg);
-      pointer-events: none;
-    }
-    .hero-geo-inner {
-      position: absolute;
-      inset: 40px;
-      border: 1px solid rgba(200,130,42,0.08);
-    }
-    .hero-glow {
-      position: absolute;
-      width: 600px; height: 600px;
-      right: 10%; top: 10%;
-      background: radial-gradient(circle, rgba(200,130,42,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 620px;
-    }
-    .hero-eyebrow {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--amber);
-      font-weight: 600;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 40px; height: 1px;
-      background: var(--amber);
-    }
-    .hero-h1 {
-      font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', Impact, sans-serif;
-      font-weight: 900;
-      font-size: clamp(48px, 7.5vw, 92px);
-      line-height: 0.92;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      margin-bottom: 28px;
-    }
-    .hero-h1 em {
-      font-style: italic;
-      font-family: 'Playfair Display', serif;
-      color: var(--amber);
-      font-size: 0.88em;
-      display: block;
-      letter-spacing: 0;
-    }
-    .hero-sub {
-      font-size: 16px;
-      line-height: 1.75;
-      color: var(--grey-light);
-      max-width: 480px;
-      margin-bottom: 48px;
-    }
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .hero-stats {
-      position: absolute;
-      right: var(--section-px);
-      bottom: 80px;
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      text-align: right;
-    }
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: var(--amber);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--grey);
-      margin-top: 4px;
-    }
-
-    /* ── BOTONES (visibles en hero) ── */
-    .btn-primary {
-      background: var(--amber);
-      color: var(--black);
-      padding: 18px 36px;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-family: 'Barlow', sans-serif;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s, transform 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); }
-    .btn-ghost {
-      border: 1px solid rgba(255,255,255,0.2);
-      color: var(--white);
-      padding: 18px 36px;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-      transition: border-color 0.3s, color 0.3s;
-    }
-    .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
-
-    /* ── HERO: siempre visible (no fade-up en above-the-fold) ── */
-    .hero .fade-up {
-      opacity: 1 !important;
-      transform: none !important;
-      animation: none !important;
-    }
-
-    /* ── RESPONSIVE crítico (nav mobile) ── */
-    @media (max-width: 900px) {
-      :root { --section-px: 24px; --section-py: 80px; }
-      nav { padding: 14px 24px; }
-      .nav-links { display: none; }
-      .hero { padding: 0 24px 80px; }
-      .hero-stats, .hero-glow, .hero-geo { display: none; }
-    }
-  </style>
-
-  <!-- Google Fonts diferido (no bloqueante). Los fallbacks calibrados arriba
-       evitan CLS si las fuentes llegan tarde o no llegan en primera visita. -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=optional" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=optional"></noscript>
-
-  <!-- CSS completo diferido (no bloqueante). El CSS crítico inline ya cubre el
-       first paint; este archivo añade el resto (ticker, clientes, cards, footer…) -->
-  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
   
 </head>
 <body>
@@ -632,5 +365,23 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script>
+  // Inyectar Google Fonts DESPUÉS del evento load (post-LCP).
+  // Así las fuentes no bloquean el render ni provocan CLS en el hero.
+  // display=swap aquí es seguro porque el LCP ya terminó cuando se aplican.
+  (function() {
+    function loadFonts() {
+      var l = document.createElement('link');
+      l.rel  = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap';
+      document.head.appendChild(l);
+    }
+    if (document.readyState === 'complete') {
+      loadFonts();
+    } else {
+      window.addEventListener('load', loadFonts);
+    }
+  })();
+</script>
 </body>
 </html>
