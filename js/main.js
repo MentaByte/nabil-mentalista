@@ -1,41 +1,48 @@
 (function () {
   'use strict';
 
-  // Usamos una constante en lugar de medir offsetHeight (evita reflow)
-  var NAV_OFFSET = 80; 
+  // Usamos una constante para el alto del nav (aprox 80px) para evitar 'offsetHeight' (Reflow)
+  var NAV_FIXED_HEIGHT = 80; 
   var nav = document.querySelector('nav');
 
-  // Throttling básico para el scroll
+  /* ── NAV — Scroll simple sin cálculos pesados ── */
   window.addEventListener('scroll', function() {
     if (nav) {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
+      // Toggle de clase basado en scroll
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
     }
   }, { passive: true });
 
-  // Intersection Observer: Solo para elementos fuera del Hero
+  /* ── FADE-UP — Solo para elementos que NO están en el Hero ── */
   if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.05 });
 
+    // IMPORTANTE: No observar elementos del Hero para evitar saltos visuales
     document.querySelectorAll('.fade-up:not(.hero .fade-up)').forEach(function(el) {
-      obs.observe(el);
+      observer.observe(el);
     });
   }
 
-  // Smooth scroll simplificado
+  /* ── SMOOTH SCROLL — Usando el offset fijo ── */
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
-      var target = document.querySelector(this.getAttribute('href'));
+      var targetId = this.getAttribute('href');
+      var target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        var pos = target.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET;
-        window.scrollTo({ top: pos, behavior: 'smooth' });
+        var top = target.getBoundingClientRect().top + window.pageYOffset - NAV_FIXED_HEIGHT;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       }
     });
   });
