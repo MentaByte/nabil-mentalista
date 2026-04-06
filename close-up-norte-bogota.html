@@ -5,11 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mago Nabil – Magia de Cerca Exclusiva en Bogotá</title>
 
+<!-- Preconnect a Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<!-- style.css: se carga sin bloquear; el noscript garantiza compatibilidad -->
+<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+<!-- Google Fonts: carga no bloqueante via media trick -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
 
 <!-- Estilos específicos de esta página (lo que NO está en style.css compartido) -->
 <style>
@@ -700,7 +706,7 @@
   </svg>
 </a>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 <script>
   // Acordeón FAQ — autosuficiente, no depende de main.js
   (function () {
