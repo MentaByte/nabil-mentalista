@@ -34,26 +34,21 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap"></noscript>
-  <style>
-    /* Reducir CLS durante carga de fuentes web con size-adjust en fallbacks */
-    @font-face {
-      font-family: 'Barlow-fallback';
-      src: local('Arial Narrow'), local('Arial');
-      size-adjust: 96%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-    @font-face {
-      font-family: 'BarlowCondensed-fallback';
-      src: local('Arial Narrow Bold'), local('Impact'), local('Arial');
-      size-adjust: 88%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-  </style>
-
+<style>
+  /* Evita que el texto desaparezca mientras carga la fuente (CLS fix) */
+  body {
+    font-family: 'Barlow-fallback', sans-serif;
+    opacity: 1 !important; 
+    display: block !important;
+  }
+  
+  /* Asegura que los elementos .fade-up en el Hero sean visibles desde el segundo 0 */
+  .hero .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+</style>
 
 <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
