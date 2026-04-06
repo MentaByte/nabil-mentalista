@@ -77,12 +77,21 @@ nav {
   justify-content: space-between;
   padding: 20px var(--section-px);
   background: transparent;
-  transition: background 0.3s, padding 0.3s;
 }
-nav.scrolled {
+/* Fondo animado via pseudo-element (opacity only → compositor, sin reflow) */
+nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(8,8,8,0.97);
-  padding: 14px var(--section-px);
   box-shadow: 0 1px 0 rgba(200,130,42,0.1);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+  pointer-events: none;
+}
+nav.scrolled::before {
+  opacity: 1;
 }
 .nav-logo {
   font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', Impact, sans-serif;
