@@ -34,19 +34,28 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap"></noscript>
+
 <style>
-  /* Evita que el texto desaparezca mientras carga la fuente (CLS fix) */
+  /* 1. Forzar visibilidad inmediata para evitar que el body "salte" al cargar */
   body {
-    font-family: 'Barlow-fallback', sans-serif;
-    opacity: 1 !important; 
+    opacity: 1 !important;
     display: block !important;
+    font-family: 'Barlow-fallback', sans-serif; /* Fuente de respaldo inmediata */
   }
-  
-  /* Asegura que los elementos .fade-up en el Hero sean visibles desde el segundo 0 */
+
+  /* 2. Evitar que el Hero se mueva. El Hero DEBE ser estático al inicio */
   .hero .fade-up {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    visibility: visible !important;
+  }
+
+  /* 3. Ajuste de escala para que la fuente de respaldo ocupe lo mismo que la final */
+  @font-face {
+    font-family: 'Barlow-fallback';
+    src: local('Arial');
+    size-adjust: 96%; /* Ajusta este valor para que el texto no salte al cambiar a Barlow */
   }
 </style>
 
