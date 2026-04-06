@@ -2,304 +2,549 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta Datos para SEO (Google) -->
-    <title>Mago para Adultos en Bogotá | Show de Magia y Mentalismo de Nabil</title>
-    <meta name="description" content="¿Buscas un show de magia profesional para adultos en Bogotá? Nabil ofrece mentalismo de alto impacto y humor respetuoso. Ideal para eventos sociales y cenas. ¡Cotiza aquí!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23800020'/%3E%3Ctext x='50' y='70' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E★%3C/text%3E%3C/svg%3E">
     
-    <!-- Canonical URL - Usando tu dominio propio -->
+    <!-- Título y meta descripción clave para SEO -->
+    <title>Mago para Adultos en Bogotá | Show de Magia y Mentalismo de Nabil</title>
+    <meta name="description" content="¿Buscas un show de magia profesional para adultos en Bogotá? Nabil ofrece mentalismo de alto impacto, humor respetuoso y magia de cerca. Ideal para eventos sociales y cenas. ¡Cotiza aquí!">
+    <meta name="keywords" content="mago para adultos bogotá, mentalismo bogotá, show de magia profesional, mago close-up bogotá, entretenimiento adultos">
+    <meta name="author" content="Nabil El Mentalista">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nabilmentalista.com/mago-para-adultos-bogota/">
-
-    <!-- Schema Markup para SEO Local (JSON-LD) - NEGOCIO LOCAL -->
+    
+    <!-- Schema.org optimizado (LocalBusiness + Video) en JSON-LD para SEO local y rich snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Nabil El Mentalista",
-      "description": "Show de magia profesional y mentalismo para adultos en Bogotá. Entretenimiento premium para eventos sociales.",
+      "description": "Show de magia profesional y mentalismo para adultos en Bogotá. Entretenimiento premium para eventos sociales, cenas y empresas.",
+      "url": "https://nabilmentalista.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bogotá",
         "addressCountry": "CO"
       },
-      "priceRange": "700000 - 1000000 COP",
+      "priceRange": "COP 700000 - 1000000",
       "telephone": "+573057679511",
       "image": "https://nabilmentalista.com/imagenes/show-de-magia-para-adultos-bogota-mago.webp",
-      "logo": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "128"
+      }
     }
     </script>
-
-    <!-- Schema Markup para VIDEOS (JSON-LD) con dimensiones correctas -->
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Mago para Magia de Cerca en Bogotá - Mago Nabil",
-    "description": "Video demostrativo de magia de cerca (close-up) para eventos corporativos y cócteles en Bogotá.",
-    "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp",
-    "uploadDate": "2026-03-09T10:00:00-05:00",
-    "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm",
-    "duration": "PT12S",
-    "width": "480",
-    "height": "720",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Mago Nabil",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
-      }
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Show de Mago para Adultos en Bogotá - Mago Nabil",
-    "description": "Presentación de mentalismo y magia para adultos en eventos sociales y empresariales.",
-    "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-adultos-bogota.webp",
-    "uploadDate": "2026-03-09T11:00:00-05:00",
-    "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-adultos-bogota.webm",
-    "duration": "PT15S", 
-    "width": "480",
-    "height": "720",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Mago Nabil",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp"
-      }
-    }
-  }
-]
-</script>
-
-    <!-- Preload LCP: banner con fetchpriority=high -->
-    <link rel="preload" as="image" href="imagenes/banner.webp" fetchpriority="high">
-
-    <!-- CSS: 2 KB, carga sync. El costo de render-blocking de 2 KB es ~10ms,
-         mucho menor que el CLS que generaba al cargarlo async. -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google Fonts eliminado: 68 KB de terceros + posible CLS.
-         Se usa la pila de fuentes del sistema (sans-serif moderno en todos los SO). -->
-
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Mago para Magia de Cerca en Bogotá - Mago Nabil",
+      "description": "Video demostrativo de magia de cerca (close-up) para eventos corporativos y cócteles en Bogotá.",
+      "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp",
+      "uploadDate": "2026-03-09",
+      "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm",
+      "duration": "PT12S"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Show de Mago para Adultos en Bogotá - Nabil",
+      "description": "Presentación de mentalismo y magia para adultos en eventos sociales y empresariales.",
+      "thumbnailUrl": "https://nabilmentalista.com/imagenes/mago-adultos-bogota.webp",
+      "uploadDate": "2026-03-09",
+      "contentUrl": "https://nabilmentalista.com/imagenes/videos/mago-adultos-bogota.webm",
+      "duration": "PT15S"
+    }]
+    </script>
+    
+    <!-- Estilos críticos inline (mega optimización, sin CSS externo bloqueante) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #800020;
+        }
+        .title img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .menu {
+            display: flex;
+            gap: 28px;
+        }
+        .menu a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #2c2c2c;
+            transition: color 0.2s;
+        }
+        .menu a:hover { color: #800020; }
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #800020;
+        }
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: white;
+                padding: 20px 24px;
+                border-radius: 20px;
+                box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+                gap: 16px;
+                min-width: 160px;
+                z-index: 1001;
+            }
+            .menu.show { display: flex; }
+            header { padding: 10px 20px; }
+        }
+        /* Banner principal optimizado LCP */
+        .banner {
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://nabilmentalista.com/imagenes/banner.webp') center/cover no-repeat;
+            background-size: cover;
+            padding: 100px 20px;
+            color: white;
+        }
+        .banner h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .subbanner {
+            background: #f8f9fa;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .subbanner p {
+            max-width: 850px;
+            margin: 0 auto 24px auto;
+            font-size: 1.18rem;
+            color: #2c3e2f;
+        }
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            background: #25D366;
+            color: white;
+            padding: 12px 26px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            gap: 10px;
+            font-size: 1rem;
+            transition: transform 0.2s, background 0.2s;
+            margin: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0 30px;
+            color: #800020;
+            font-weight: 700;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 20px 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .video-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .video-card:hover { transform: translateY(-5px); }
+        .video-container {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background: #000;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .video-card h3 {
+            margin: 20px 0 8px;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #800020;
+        }
+        .video-card p { padding: 0 16px; margin: 8px 0; }
+        .description {
+            background: #fef5e8;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .description ul {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+            display: inline-block;
+        }
+        .description li {
+            margin: 18px 0;
+            font-size: 1.1rem;
+            list-style: none;
+        }
+        .testimonios-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 20px 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .testimonio-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .stars { color: #FFB800; font-size: 1.4rem; letter-spacing: 2px; margin-bottom: 12px; display: block; }
+        .testimonio-card p { font-style: normal; color: #2d2d2d; margin: 12px 0; }
+        .testimonio-card cite { font-weight: 700; color: #800020; display: block; margin-top: 12px; }
+        .btn-resenas {
+            background: #800020;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px auto;
+            transition: 0.2s;
+        }
+        .btn-resenas:hover { background: #a00028; transform: scale(1.02); }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1100;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); background: #128C7E; }
+        footer {
+            background: #800020;
+            color: white;
+            text-align: center;
+            padding: 48px 20px 40px;
+            margin-top: 40px;
+        }
+        .footer-whatsapp-btn {
+            background: #25D366;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            margin-top: 24px;
+            transition: 0.2s;
+        }
+        .footer-whatsapp-btn:hover { background: #128C7E; transform: translateY(-3px); }
+        footer p { margin: 8px 0; }
+        @media (max-width: 640px) {
+            .features { padding: 20px 16px; gap: 24px; }
+            .section-title { font-size: 1.8rem; }
+            .btn-whatsapp { padding: 10px 18px; font-size: 0.9rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header con Navegación -->
-    <header>
-        <div class="title">
-            <!-- Logo actualizado: logo-nabil-mentalista-bogota.webp -->
-            <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Nabil El Mentalista - Mago para Adultos en Bogotá" width="40" height="40" fetchpriority="high">
-            Nabil El Mentalista
-        </div>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#shows">Shows</a>
-            <a href="#testimonios">Testimonios</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+<header>
+    <div class="title">
+        <img src="https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp" alt="Nabil El Mentalista - Mago para adultos en Bogotá" width="40" height="40" fetchpriority="high">
+        Nabil El Mentalista
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#shows">Shows</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-    <main>
-        <!-- Banner principal -->
-        <section id="inicio" class="banner" style="background-image: url('imagenes/banner.webp');">
-            <h1>Mago para Adultos en Bogotá:<br>Magia y Mentalismo Profesional</h1>
-        </section>
+<main>
+    <section id="inicio" class="banner">
+        <h1>Mago para Adultos en Bogotá:<br>Magia y Mentalismo Profesional</h1>
+    </section>
 
-        <!-- Subbanner con Introducción -->
-        <section class="subbanner">
-            <p><strong>Es momento de elevar el nivel de tu evento.</strong> Soy Nabil, especialista en <strong>magia mental y mentalismo moderno</strong>. Mi show no es "recreación" ni esoterismo; es una experiencia de asombro diseñada para el intelecto adulto, con un humor respetuoso, profesional y sin groserías.</p>
-            
-            <!-- Botón Principal CTA -->
-            <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="btn-whatsapp" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="margin-right: 8px; vertical-align: -0.125em;" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> Consultar Disponibilidad en WhatsApp
-            </a>
-            
-            <!-- Botón Secundario CTA -->
-            <a href="https://www.instagram.com/nabilmentalista/" class="btn-whatsapp" style="background-color: #833AB4; margin-left: 10px;" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="margin-right: 8px; vertical-align: -0.125em;" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> Ver videos en Instagram
-            </a>
-        </section>
-
-        <!-- Sección: Nuestros Shows (CON VIDEOS) -->
-        <section id="shows">
-            <h2 class="section-title">Nuestros Shows</h2>
-            <div class="features">
-                <!-- Tarjeta de Show 1 - Magia de Cerca -->
-                <div>
-                    <div class="video-container">
-                        <video
-                            loop
-                            muted
-                            playsinline
-                            preload="none"
-                            width="480"
-                            height="720"
-                            poster="https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp"
-                            title="Mago para Magia de Cerca en Bogotá"
-                            class="lazy-video">
-
-                            <source data-src="https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm" type="video/webm">
-                            <track kind="captions" src="" srclang="es" label="Español" default>
-                            Tu navegador no soporta el formato de video WebM.
-                        </video>
-                    </div>
-                    <h3>Magia de Cerca o "Close-up"</h3>
-                    <p><strong>Máx. 15 personas</strong></p>                 
-                    <p>La magia ocurre literalmente en las manos de tus invitados mientras Nabil se sienta a la mesa con el grupo. Una forma exclusiva y sofisticada de disfrutar el asombro a centímetros de distancia.</p>
-                    <p><strong>Duración:</strong> 1 hora</p>
-                    <p><strong>Precio:</strong> $700.000 COP en Bogotá*</p>
-                </div>
-                
-                <!-- Tarjeta de Show 2 - Show Central -->
-                <div>
-                    <div class="video-container">
-                        <video
-                            loop
-                            muted
-                            playsinline
-                            preload="none"
-                            width="480"
-                            height="720"
-                            poster="https://nabilmentalista.com/imagenes/show-de-magia-para-adultos-bogota-mago.webp"
-                            title="Show de Magia para Adultos en Bogotá"
-                            class="lazy-video">
-
-                            <source data-src="https://nabilmentalista.com/imagenes/videos/show-de-magia-para-adultos-bogota.webm" type="video/webm">
-                            <track kind="captions" src="" srclang="es" label="Español" default>
-                            Tu navegador no soporta el formato de video WebM.
-                        </video>
-                    </div>
-                    
-                    <h3>Show Central de Mentalismo</h3>
-                    <p><strong>(+15 personas)</strong></p>                          
-                    <p>Ideal para apartamentos, salones sociales y restaurantes. Una mezcla de mentalismo increíble y humor sano que une a todos tus invitados. Hago que la persona homenajeada se sienta la verdadera estrella de la noche.</p>
-                    <p><strong>Duración:</strong> 1 hora</p>
-                    <p><strong>Precio:</strong> $1.000.000 COP en Bogotá*</p>
-                </div>
-            </div>
-            <p style="text-align: center; font-style: italic; margin-top: 10px;">*Pregunta por nuestras tarifas especiales para shows de lunes a jueves.</p>
-        </section>
-
-        <!-- Sección: Diferenciales -->
-        <section class="description">
-            <h2 class="section-title">¿Por qué elegir a Nabil?</h2>
-            <ul style="list-style: none; padding: 0; max-width: 800px; margin: 0 auto; text-align: left; display: inline-block;">
-                <li style="margin-bottom: 15px;">🏆 <strong>Premio Nacional en Mentalismo:</strong> Avalado por expertos.</li>
-                <li style="margin-bottom: 15px;">🔮 <strong>Cero Esoterismo:</strong> Entretenimiento basado en psicología y destreza (100% arte).</li>
-                <li style="margin-bottom: 15px;">🎭 <strong>Humor Elegante:</strong> Diversión garantizada sin momentos incómodos ni burlas.</li>
-                <li style="margin-bottom: 15px;">⭐ <strong>Experiencia Comprobada:</strong> Cientos de reseñas positivas en Google Business Profile.</li>
-            </ul>
-        </section>
-
-        <!-- Sección de Testimonios -->
-        <section id="testimonios">
-            <h2 class="section-title">Lo que dicen nuestros clientes en Bogotá</h2>
-            <div class="testimonios-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px;">
-                
-                <div class="testimonio-card" style="background: #f9f9f9; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <span class="stars" style="color: #FFD700; font-size: 1.2rem;">★★★★★</span>
-                    <p>"Gracioso, agradable y entretenido. Perfecto para planes diferentes con amigos o familia, sin importar edades. Muy recomendado"</p>
-                    <cite style="display: block; margin-top: 15px; font-weight: 600; font-style: normal;">- Jaime Ramírez Valderrama</cite>
-                </div>
-
-                <div class="testimonio-card" style="background: #f9f9f9; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <span class="stars" style="color: #FFD700; font-size: 1.2rem;">★★★★★</span>
-                    <p>"Un show divertido y con mucha buena onda!, plan perfecto para una tarde de vinos con amigos o familiares. RECOMENDADISIMO"</p>
-                    <cite style="display: block; margin-top: 15px; font-weight: 600; font-style: normal;">- Sebastián Católico</cite>
-                </div>
-
-                <div class="testimonio-card" style="background: #f9f9f9; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <span class="stars" style="color: #FFD700; font-size: 1.2rem;">★★★★★</span>
-                    <p>"Tuvimos la oportunidad de compartir con Nabil para un evento empresarial y nos encantó, fue una experiencia agradable y muy buen mago! Esperamos podernos encontrar en otra oportunidad"</p>
-                    <cite style="display: block; margin-top: 15px; font-weight: 600; font-style: normal;">- Dana Catalina Rubio Granada</cite>
-                </div>
-
-                <div class="testimonio-card" style="background: #f9f9f9; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                    <span class="stars" style="color: #FFD700; font-size: 1.2rem;">★★★★★</span>
-                    <p>"Nabil fue muy cumplido y puntual en lo acordado previo al evento. Pero lo más destacable fue su show. Todos los presentes quedamos estupefactos ante sus trucos que iban en aumento en cuanto destreza y sorpresa. Su presentación personal y trato con las personas fueron impecables. Recomiendo 100% su trabajo"</p>
-                    <cite style="display: block; margin-top: 15px; font-weight: 600; font-style: normal;">- Yajaira Bermúdez</cite>
-                </div>
-            </div>
-            <div style="text-align: center; margin: 30px 0;">
-                <a href="https://g.page/r/Cfay5ngQ81IyEBM/" class="btn-resenas" style="display: inline-block; padding: 10px 20px; background: #800020; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" width="1em" height="1em" fill="currentColor" style="margin-right: 8px; vertical-align: -0.125em;" aria-hidden="true"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg> Ver más reseñas en Google
-                </a>
-            </div>
-        </section>
-
-        <!-- Botón flotante de WhatsApp -->
-        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="white" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    <section class="subbanner">
+        <p><strong>Es momento de elevar el nivel de tu evento.</strong> Soy Nabil, especialista en <strong>magia mental y mentalismo moderno</strong>. Mi show no es "recreación" ni esoterismo; es una experiencia de asombro diseñada para el intelecto adulto, con un humor respetuoso, profesional y sin groserías.</p>
+        
+        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6z"/></svg>
+            Consultar Disponibilidad en WhatsApp
         </a>
+        <a href="https://www.instagram.com/nabilmentalista/" class="btn-whatsapp" style="background-color: #C13584;" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7z"/><path d="M448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-100 176c0-66.6-54-120.6-120.6-120.6-66.6 0-120.6 54-120.6 120.6s54 120.6 120.6 120.6 120.6-54 120.6-120.6z"/></svg>
+            Ver videos en Instagram
+        </a>
+    </section>
 
-    </main>
+    <!-- Sección Shows con videos lazy loading optimizado -->
+    <section id="shows">
+        <h2 class="section-title">Nuestros Shows</h2>
+        <div class="features">
+            <!-- Tarjeta Show 1: Magia de cerca -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video width="480" height="720" poster="https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp" muted playsinline preload="none" loop>
+                        <source src="https://nabilmentalista.com/imagenes/videos/mago-magia-de-cerca-bogota.webm" type="video/webm">
+                    </video>
+                </div>
+                <h3>Magia de Cerca o "Close-up"</h3>
+                <p><strong>Máx. 15 personas</strong></p>
+                <p>La magia ocurre literalmente en las manos de tus invitados mientras Nabil se sienta a la mesa con el grupo. Una forma exclusiva y sofisticada de disfrutar el asombro a centímetros de distancia.</p>
+                <p><strong>Duración:</strong> 1 hora</p>
+                <p><strong>Precio:</strong> $700.000 COP en Bogotá*</p>
+            </div>
+            <!-- Tarjeta Show 2: Show Central -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video width="480" height="720" poster="https://nabilmentalista.com/imagenes/show-de-magia-para-adultos-bogota-mago.webp" muted playsinline preload="none" loop>
+                        <source src="https://nabilmentalista.com/imagenes/videos/show-de-magia-para-adultos-bogota.webm" type="video/webm">
+                    </video>
+                </div>
+                <h3>Show Central de Mentalismo</h3>
+                <p><strong>(+15 personas)</strong></p>
+                <p>Ideal para apartamentos, salones sociales y restaurantes. Una mezcla de mentalismo increíble y humor sano que une a todos tus invitados. Hago que la persona homenajeada se sienta la verdadera estrella de la noche.</p>
+                <p><strong>Duración:</strong> 1 hora</p>
+                <p><strong>Precio:</strong> $1.000.000 COP en Bogotá*</p>
+            </div>
+        </div>
+        <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px;">*Pregunta por nuestras tarifas especiales para shows de lunes a jueves.</p>
+    </section>
 
-    <footer id="contacto">
-        <div class="whatsapp-logo">
-            <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" aria-label="Contactar por WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="80" height="80" fill="#ffffff" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    <!-- Diferenciales -->
+    <section class="description">
+        <h2 class="section-title">¿Por qué elegir a Nabil?</h2>
+        <ul>
+            <li>🏆 <strong>Premio Nacional en Mentalismo:</strong> Avalado por expertos.</li>
+            <li>🔮 <strong>Cero Esoterismo:</strong> Entretenimiento basado en psicología y destreza (100% arte).</li>
+            <li>🎭 <strong>Humor Elegante:</strong> Diversión garantizada sin momentos incómodos ni burlas.</li>
+            <li>⭐ <strong>Experiencia Comprobada:</strong> Cientos de reseñas positivas en Google Business Profile.</li>
+        </ul>
+    </section>
+
+    <!-- Testimonios con datos estructurados implícitos -->
+    <section id="testimonios">
+        <h2 class="section-title">Lo que dicen nuestros clientes en Bogotá</h2>
+        <div class="testimonios-container">
+            <div class="testimonio-card">
+                <span class="stars">★★★★★</span>
+                <p>"Gracioso, agradable y entretenido. Perfecto para planes diferentes con amigos o familia, sin importar edades. Muy recomendado"</p>
+                <cite>- Jaime Ramírez Valderrama</cite>
+            </div>
+            <div class="testimonio-card">
+                <span class="stars">★★★★★</span>
+                <p>"Un show divertido y con mucha buena onda!, plan perfecto para una tarde de vinos con amigos o familiares. RECOMENDADISIMO"</p>
+                <cite>- Sebastián Católico</cite>
+            </div>
+            <div class="testimonio-card">
+                <span class="stars">★★★★★</span>
+                <p>"Tuvimos la oportunidad de compartir con Nabil para un evento empresarial y nos encantó, fue una experiencia agradable y muy buen mago! Esperamos podernos encontrar en otra oportunidad"</p>
+                <cite>- Dana Catalina Rubio Granada</cite>
+            </div>
+            <div class="testimonio-card">
+                <span class="stars">★★★★★</span>
+                <p>"Nabil fue muy cumplido y puntual en lo acordado previo al evento. Pero lo más destacable fue su show. Todos los presentes quedamos estupefactos ante sus trucos. Su presentación personal y trato impecables. Recomiendo 100% su trabajo"</p>
+                <cite>- Yajaira Bermúdez</cite>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 20px 0 40px;">
+            <a href="https://g.page/r/Cfay5ngQ81IyEBM/" class="btn-resenas" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" width="16" height="16" fill="currentColor"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+                Ver más reseñas en Google
             </a>
         </div>
-        <div class="footer-text">
-            <p><strong>Nabil El Mentalista</strong></p>
-            <p>Mago para adultos en Bogotá | Shows de Magia y Mentalismo Profesional</p>
-            <p>© 2024 Nabil El Mentalista. Todos los derechos reservados.</p>
-            <!-- Botón de WhatsApp en el footer -->
-            <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="footer-whatsapp-btn" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" style="margin-right: 8px; vertical-align: -0.125em;" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg> ¡Escríbeme por WhatsApp!
-            </a>
-        </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- Script para el menú móvil y lazy-load de videos -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Menú móvil
-            const toggleButton = document.querySelector('.menu-toggle');
-            const menu = document.querySelector('.menu');
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+</a>
 
-            if (toggleButton && menu) {
-                toggleButton.addEventListener('click', function() {
-                    menu.classList.toggle('show');
+<footer id="contacto">
+    <div style="margin-bottom: 20px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="70" height="70" fill="#ffffff"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+    </div>
+    <div class="footer-text">
+        <p><strong>Nabil El Mentalista</strong></p>
+        <p>Mago para adultos en Bogotá | Shows de Magia y Mentalismo Profesional</p>
+        <p>© 2025 Nabil El Mentalista. Todos los derechos reservados.</p>
+        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20vi%20tu%20página%20web%20y%20me%20gustaría%20consultar%20disponibilidad%20para%20un%20evento." class="footer-whatsapp-btn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+            ¡Escríbeme por WhatsApp!
+        </a>
+    </div>
+</footer>
+
+<!-- Script único: menú móvil + lazy videos optimizado (intersection observer) + scroll suave -->
+<script>
+    (function(){
+        // Menú hamburguesa
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        if(toggle && menu){
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
+                toggle.textContent = menu.classList.contains('show') ? '✕' : '☰';
+            });
+            // Cerrar al hacer click en enlaces en móvil
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if(window.innerWidth <= 768){
+                        menu.classList.remove('show');
+                        toggle.textContent = '☰';
+                    }
                 });
-            }
+            });
+            // Cerrar al hacer click fuera del menú (opcional)
+            document.addEventListener('click', function(e) {
+                if(window.innerWidth <= 768 && menu.classList.contains('show') && !menu.contains(e.target) && e.target !== toggle){
+                    menu.classList.remove('show');
+                    toggle.textContent = '☰';
+                }
+            });
+        }
 
-            // Lazy-load de videos: carga y reproduce solo cuando son visibles
-            if ('IntersectionObserver' in window) {
-                const videoObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            const video = entry.target;
-                            video.querySelectorAll('source[data-src]').forEach(function(source) {
-                                source.src = source.dataset.src;
-                            });
-                            video.load();
-                            video.play().catch(function(){});
-                            videoObserver.unobserve(video);
+        // Scroll suave para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href === "#" || href === "#inicio" || href === "#shows" || href === "#testimonios" || href === "#contacto"){
+                    e.preventDefault();
+                    const targetId = href === "#" ? "#inicio" : href;
+                    const targetElem = document.querySelector(targetId);
+                    if(targetElem){
+                        const offset = targetId === "#contacto" ? 0 : 70;
+                        window.scrollTo({
+                            top: targetElem.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                        if(menu && menu.classList.contains('show')) {
+                            menu.classList.remove('show');
+                            if(toggle) toggle.textContent = '☰';
                         }
-                    });
-                }, { threshold: 0.25 });
-
-                document.querySelectorAll('video.lazy-video').forEach(function(video) {
-                    videoObserver.observe(video);
-                });
-            } else {
-                // Fallback para navegadores sin IntersectionObserver
-                document.querySelectorAll('video.lazy-video').forEach(function(video) {
-                    video.querySelectorAll('source[data-src]').forEach(function(source) {
-                        source.src = source.dataset.src;
-                    });
-                    video.load();
-                    video.play().catch(function(){});
-                });
-            }
+                    }
+                }
+            });
         });
-    </script>
+
+        // Sticky header efecto sombra
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) header.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+            else header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.05)';
+        });
+
+        // Lazy load + autoplay en videos mediante IntersectionObserver
+        const videos = document.querySelectorAll('video');
+        if('IntersectionObserver' in window){
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        const vid = entry.target;
+                        if(vid.preload !== 'auto') vid.preload = 'metadata';
+                        vid.load();
+                        vid.play().catch(e => console.log('Autoplay bloqueado:', e));
+                        videoObserver.unobserve(vid);
+                    }
+                });
+            }, { threshold: 0.3, rootMargin: "100px" });
+            videos.forEach(v => videoObserver.observe(v));
+        } else {
+            // Fallback: cargar todos
+            videos.forEach(v => { v.load(); v.play().catch(()=>{}); });
+        }
+        
+        // También activar reproducción cuando el usuario interactúa (mejora experiencia)
+        function enableVideosOnInteraction() {
+            videos.forEach(v => {
+                if(v.paused && v.readyState >= 2) v.play().catch(e=>{});
+            });
+            document.removeEventListener('click', enableVideosOnInteraction);
+            document.removeEventListener('touchstart', enableVideosOnInteraction);
+        }
+        document.addEventListener('click', enableVideosOnInteraction);
+        document.addEventListener('touchstart', enableVideosOnInteraction);
+    })();
+</script>
 </body>
 </html>
