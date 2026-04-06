@@ -30,10 +30,13 @@
   <!-- Preconectar a ambos orígenes de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Cargar fuentes de forma no bloqueante (media=print → onload → all) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap"></noscript>
+  <!--
+    display=optional: el navegador NUNCA hace swap después del primer render.
+    Si la fuente no llegó a tiempo, usa el fallback permanentemente en esa carga.
+    Esto elimina el CLS por completo (a costa de que en la primera visita
+    sin caché se vea el fallback, que ya está calibrado en el CSS).
+  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=optional">
 
 <style>
   /* 1. Evita que el cuerpo de la página salte al cargar */
@@ -59,8 +62,7 @@
   }
 </style>
 
-<link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+<link rel="stylesheet" href="css/style.css">
   
 </head>
 <body>
