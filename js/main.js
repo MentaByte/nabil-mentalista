@@ -5,15 +5,21 @@
   var NAV_FIXED_HEIGHT = 80; 
   var nav = document.querySelector('nav');
 
-  /* ── NAV — Scroll simple sin cálculos pesados ── */
+  /* ── NAV — Scroll con rAF throttle, sin leer propiedades geométricas ── */
+  var ticking = false;
   window.addEventListener('scroll', function() {
-    if (nav) {
-      // Toggle de clase basado en scroll
-      if (window.scrollY > 40) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        if (nav) {
+          if (window.scrollY > 40) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 
