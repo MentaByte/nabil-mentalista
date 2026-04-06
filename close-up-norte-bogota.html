@@ -305,6 +305,53 @@
     .seo-image-mock { height: 280px; }
     .faq-grid { grid-template-columns: 1fr; }
   }
+
+  /* ── FAQ: estados del acordeón ── */
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    line-height: 1.2;
+  }
+  .faq-toggle {
+    font-size: 24px;
+    color: var(--amber);
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  .faq-question[aria-expanded="true"] .faq-toggle {
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    opacity: 0;
+    margin-top: 0;
+    font-size: 15px;
+    color: var(--grey-light);
+    line-height: 1.8;
+  }
+  .faq-answer.is-open {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 20px;
+  }
 </style>
 </head>
 <body>
@@ -654,5 +701,46 @@
 </a>
 
 <script src="js/main.js"></script>
+<script>
+  // Acordeón FAQ — autosuficiente, no depende de main.js
+  (function () {
+    var questions = document.querySelectorAll('.faq-question');
+
+    function toggle(btn) {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // Cerrar todos
+      questions.forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+        var a = b.nextElementSibling;
+        if (a && a.classList.contains('faq-answer')) {
+          a.classList.remove('is-open');
+        }
+      });
+      // Abrir el clickeado (si estaba cerrado)
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        if (answer && answer.classList.contains('faq-answer')) {
+          answer.classList.add('is-open');
+        }
+      }
+    }
+
+    questions.forEach(function (btn) {
+      // Click en el botón
+      btn.addEventListener('click', function () { toggle(btn); });
+    });
+
+    // Click en el recuadro completo (.faq-item)
+    document.querySelectorAll('.faq-page .faq-item').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        // Evitar doble disparo si el click viene del propio botón
+        if (e.target.closest('.faq-question')) return;
+        var btn = item.querySelector('.faq-question');
+        if (btn) toggle(btn);
+      });
+    });
+  })();
+</script>
 </body>
 </html>
