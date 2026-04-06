@@ -36,14 +36,13 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800;900&display=swap"></noscript>
 
 <style>
-  /* 1. Forzar visibilidad inmediata para evitar que el body "salte" al cargar */
+  /* 1. Evita que el cuerpo de la página salte al cargar */
   body {
     opacity: 1 !important;
     display: block !important;
-    font-family: 'Barlow-fallback', sans-serif; /* Fuente de respaldo inmediata */
   }
 
-  /* 2. Evitar que el Hero se mueva. El Hero DEBE ser estático al inicio */
+  /* 2. ELIMINA EL CLS DEL HERO: Los elementos iniciales deben ser estáticos */
   .hero .fade-up {
     opacity: 1 !important;
     transform: none !important;
@@ -51,11 +50,12 @@
     visibility: visible !important;
   }
 
-  /* 3. Ajuste de escala para que la fuente de respaldo ocupe lo mismo que la final */
+  /* 3. Ajuste de fuentes para que el texto no cambie de ancho al cargar Google Fonts */
   @font-face {
     font-family: 'Barlow-fallback';
     src: local('Arial');
-    size-adjust: 96%; /* Ajusta este valor para que el texto no salte al cambiar a Barlow */
+    size-adjust: 96%;
+    ascent-override: 90%;
   }
 </style>
 
