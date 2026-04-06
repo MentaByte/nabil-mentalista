@@ -892,18 +892,50 @@ footer {
 .wa-float svg { width: 28px; height: 28px; fill: white; }
 
 /* ══════════════════════════════════════
-   ANIMACIONES
+   ANIMACIONES (Optimizado para Performance)
 ══════════════════════════════════════ */
+
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
-.fade-up { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+
+/* 1. Estado inicial: Oculto por defecto */
+.fade-up { 
+  opacity: 0; 
+  will-change: opacity, transform; /* Ayuda al navegador a preparar la GPU */
+}
+
+/* 2. Ejecución: Solo cuando el JS añade la clase .visible */
+.fade-up.visible { 
+  animation: fadeUp 0.8s ease forwards; 
+}
+
+/* 3. Excepción para el Hero: Se anima de inmediato sin esperar al JS */
+.hero .fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* 4. Delays (Solo se activan cuando la animación empieza) */
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.25s; }
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 
+/* 5. Accesibilidad: Respeta si el usuario prefiere no ver animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
 /* ══════════════════════════════════════
    COMPONENTES EXTRA (páginas internas)
 ══════════════════════════════════════ */
