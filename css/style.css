@@ -906,29 +906,32 @@ footer {
   }
 }
 
-/* Estado inicial seguro para evitar CLS */
+/* 1. Por defecto, todo es visible (evita CLS si el JS falla o tarda) */
 .fade-up {
-  opacity: 1; /* Cambiamos a 1 por defecto para que si el JS falla, se vea el contenido */
-}
-
-/* Solo ocultamos elementos que NO están en la pantalla inicial (Hero) */
-.fade-up:not(.hero .fade-up) {
-  opacity: 0;
-  transform: translateY(20px);
-  will-change: opacity, transform;
-}
-
-/* Clase que activa el IntersectionObserver */
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* El Hero se mantiene totalmente estático para asegurar CLS = 0 */
-.hero .fade-up {
   opacity: 1;
   transform: none;
+}
+
+/* 2. Solo ocultamos elementos fuera del Hero si hay soporte de Observer */
+@supports (intersection-observer: opacity) {
+  .fade-up:not(.hero .fade-up) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Clase que añade el JS */
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3. El Hero se mantiene siempre estático para un LCP y CLS perfecto */
+.hero .fade-up {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* 4. Delays (Solo se activan cuando la animación empieza) */
