@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mago Nabil – Magia de Cerca Exclusiva en Bogotá</title>
+<meta name="description" content="Mago Nabil: show de magia de cerca y mentalismo exclusivo para eventos privados en el Norte de Bogotá. Hasta 15 invitados, 60 minutos de asombro. Chicó, Rosales, Santa Ana, Chía.">
 
 <!-- Preconnect a Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +15,17 @@
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
 <!-- Google Fonts: carga no bloqueante via media trick -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=optional" rel="stylesheet"></noscript>
 
 <!-- Estilos específicos de esta página (lo que NO está en style.css compartido) -->
 <style>
 
   /* ── HERO decorativo (tarjetas) — reemplazado por .hero-geo del CSS compartido ── */
   .hero-geo { display: block; }
+
+  /* Animaciones compuestas: evita reflows, usa GPU */
+  .fade-up { will-change: transform, opacity; }
 
   /* ── AUTORIDAD ── */
   .autoridad {
