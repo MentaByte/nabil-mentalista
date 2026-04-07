@@ -10,6 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<!-- Preload de style.css: inicia descarga junto con el HTML, no espera al parser -->
+<link rel="preload" href="css/style.css" as="style">
 <!-- style.css: bloqueante intencional — es CSS estructural, 6 KiB, elimina CLS -->
 <link rel="stylesheet" href="css/style.css">
 
