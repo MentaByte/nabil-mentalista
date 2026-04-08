@@ -48,8 +48,7 @@
         
         /* 1. HERO SECTION CON SCROLL INFINITO */
         .hero {
-            /* Eliminamos el background-image estático para controlarlo con JS */
-            background-color: #000; /* Color de fondo sólido mientras carga o como respaldo */
+            background-color: #000;
             min-height: 85vh;
             display: flex;
             flex-direction: column;
@@ -58,36 +57,32 @@
             text-align: center;
             padding: 0 20px;
             position: relative;
-            overflow: hidden; /* Importante: oculta el desbordamiento de la imagen en movimiento */
+            overflow: hidden;
         }
 
-        /* Elemento de fondo animado (la imagen que hará scroll) */
         .hero-bg-scroll {
             position: absolute;
             top: 0;
             left: 0;
-            width: 200%; /* El doble para permitir el desplazamiento infinito */
+            width: 200%;
             height: 100%;
             background-image: url('https://nabilmentalista.com/imagenes/show-de-magia-primera-comunion-colombia.webp');
-            background-repeat: repeat-x; /* Repite la imagen horizontalmente */
-            background-size: auto 100%; /* Mantiene la altura completa y el ancho automático para repetir */
+            background-repeat: repeat-x;
+            background-size: auto 100%;
             background-position: 0 0;
             z-index: 0;
-            transition: none; /* Sin transición, movimiento continuo por JS */
         }
 
-        /* Capa de gradiente oscuro para mejorar la legibilidad del texto */
         .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
             z-index: 1;
         }
 
-        /* Contenido del hero (textos y botón) para que esté por encima del fondo */
         .hero-content {
             position: relative;
             z-index: 2;
@@ -95,7 +90,6 @@
             padding: 20px;
         }
 
-        /* 2. TEXTOS HERO */
         .hero h1 {
             color: #FFD700;
             font-size: 3.5rem; 
@@ -126,7 +120,6 @@
             padding-top: 10px;
         }
 
-        /* 3. RESPONSIVE */
         @media (max-width: 768px) {
             .hero {
                 min-height: 70vh;
@@ -146,9 +139,35 @@
         .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
         .section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; border-bottom: 3px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
         
-        .benefits-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .benefits-list li { background: var(--gray); padding: 25px; border-radius: 8px; position: relative; }
-        .benefits-list li::before { content: '✓'; color: var(--gold); font-weight: bold; margin-right: 10px; font-size: 1.2rem; }
+        /* === CORRECCIÓN: 2 COLUMNAS FIJAS EN DESKTOP === */
+        .benefits-list { 
+            list-style: none; 
+            padding: 0; 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+            gap: 20px; 
+        }
+        
+        /* En móvil: 1 columna */
+        @media (max-width: 768px) {
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .benefits-list li { 
+            background: var(--gray); 
+            padding: 25px; 
+            border-radius: 8px; 
+            position: relative; 
+        }
+        .benefits-list li::before { 
+            content: '✓'; 
+            color: var(--gold); 
+            font-weight: bold; 
+            margin-right: 10px; 
+            font-size: 1.2rem; 
+        }
 
         .trust-box { background: var(--dark); color: var(--white); padding: 60px 20px; text-align: center; }
         .testimonial { font-style: italic; font-size: 1.2rem; max-width: 700px; margin: 20px auto; }
@@ -165,7 +184,6 @@
 <body>
 
     <header class="hero">
-        <!-- Fondo con scroll infinito -->
         <div class="hero-bg-scroll" id="heroBgScroll"></div>
         <div class="hero-overlay"></div>
         
@@ -228,14 +246,11 @@
             const bgElement = document.getElementById('heroBgScroll');
             if (!bgElement) return;
 
-            // Velocidad del scroll en píxeles por segundo
-            const SCROLL_SPEED = 40; // Ajusta este valor para mayor o menor velocidad
-            
+            const SCROLL_SPEED = 40;
             let currentPosition = 0;
             let animationId = null;
             let lastTimestamp = 0;
 
-            // Función que actualiza la posición de fondo
             function animateScroll(currentTime) {
                 if (!lastTimestamp) {
                     lastTimestamp = currentTime;
@@ -243,44 +258,31 @@
                     return;
                 }
 
-                // Calcular delta de tiempo en segundos
                 const deltaTime = Math.min(0.05, (currentTime - lastTimestamp) / 1000);
                 lastTimestamp = currentTime;
 
-                // Incrementar posición
                 currentPosition += SCROLL_SPEED * deltaTime;
                 
-                // Obtener el ancho de la imagen para saber cuándo reiniciar
-                // Nota: como la imagen puede no estar cargada al inicio, usamos un valor genérico
-                // que se ajustará dinámicamente
-                let imageWidth = bgElement.offsetWidth / 2; // La mitad porque el ancho del div es 200%
-                
-                // Si no podemos calcular el ancho (por ejemplo, display none), usamos un valor por defecto
+                let imageWidth = bgElement.offsetWidth / 2;
                 if (imageWidth === 0 || !isFinite(imageWidth)) {
-                    imageWidth = 1920; // Un ancho típico de pantalla, se recalculará después
+                    imageWidth = 1920;
                 }
                 
-                // Reiniciar posición cuando se haya desplazado el ancho de una imagen
                 if (currentPosition >= imageWidth) {
                     currentPosition -= imageWidth;
                 }
                 
-                // Aplicar la posición de fondo (desplazamiento horizontal)
                 bgElement.style.backgroundPosition = `${currentPosition}px 0`;
                 
-                // Continuar animación
                 animationId = requestAnimationFrame(animateScroll);
             }
             
-            // Iniciar la animación cuando la página esté lista
             window.addEventListener('load', () => {
-                // Pequeño delay para asegurar que los estilos estén aplicados
                 setTimeout(() => {
                     animationId = requestAnimationFrame(animateScroll);
                 }, 100);
             });
             
-            // Opcional: Pausar la animación cuando el mouse está sobre el hero
             const heroSection = document.querySelector('.hero');
             if (heroSection) {
                 heroSection.addEventListener('mouseenter', () => {
@@ -298,13 +300,10 @@
                 });
             }
             
-            // Recalcular en caso de cambio de tamaño de ventana
             let resizeTimeout;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(() => {
-                    // No es necesario hacer nada especial, la animación continuará
-                    // Solo aseguramos que la posición no se desfase
                     if (animationId) {
                         cancelAnimationFrame(animationId);
                         animationId = null;
