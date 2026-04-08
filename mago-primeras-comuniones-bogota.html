@@ -1,0 +1,319 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mago para Primeras Comuniones en Bogotá 2026 | Show Profesional</title>
+    <meta name="description" content="Reserva el mejor show de magia para primera comunión en Bogotá. Diversión garantizada para niños y adultos. Agenda abierta mayo 2026. ¡Cupos limitados!">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mago Profesional para Primeras Comuniones",
+      "description": "Show de magia e ilusionismo de alto nivel para eventos familiares y primeras comuniones en Bogotá.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "areaServed": ["Bogotá", "Chía", "Cajicá", "Sopó"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Shows de Magia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Magia para Primera Comunión"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #121212;
+            --gray: #f4f4f4;
+            --text: #333;
+            --white: #ffffff;
+            --whatsapp: #25d366;
+        }
+
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: var(--text); scroll-behavior: smooth; }
+        
+        /* 1. HERO SECTION CON SCROLL INFINITO */
+        .hero {
+            /* Eliminamos el background-image estático para controlarlo con JS */
+            background-color: #000; /* Color de fondo sólido mientras carga o como respaldo */
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden; /* Importante: oculta el desbordamiento de la imagen en movimiento */
+        }
+
+        /* Elemento de fondo animado (la imagen que hará scroll) */
+        .hero-bg-scroll {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%; /* El doble para permitir el desplazamiento infinito */
+            height: 100%;
+            background-image: url('https://nabilmentalista.com/imagenes/show-de-magia-primera-comunion-colombia.webp');
+            background-repeat: repeat-x; /* Repite la imagen horizontalmente */
+            background-size: auto 100%; /* Mantiene la altura completa y el ancho automático para repetir */
+            background-position: 0 0;
+            z-index: 0;
+            transition: none; /* Sin transición, movimiento continuo por JS */
+        }
+
+        /* Capa de gradiente oscuro para mejorar la legibilidad del texto */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+            z-index: 1;
+        }
+
+        /* Contenido del hero (textos y botón) para que esté por encima del fondo */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* 2. TEXTOS HERO */
+        .hero h1 {
+            color: #FFD700;
+            font-size: 3.5rem; 
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            color: var(--white);
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero .temporada {
+            display: block;
+            margin-top: 15px;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(255,215,0,0.3);
+            padding-top: 10px;
+        }
+
+        /* 3. RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 70vh;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .hero .temporada {
+                font-size: 1rem;
+            }
+        }
+
+        /* SECCIONES RESTANTES */
+        .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
+        .section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; border-bottom: 3px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
+        
+        .benefits-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .benefits-list li { background: var(--gray); padding: 25px; border-radius: 8px; position: relative; }
+        .benefits-list li::before { content: '✓'; color: var(--gold); font-weight: bold; margin-right: 10px; font-size: 1.2rem; }
+
+        .trust-box { background: var(--dark); color: var(--white); padding: 60px 20px; text-align: center; }
+        .testimonial { font-style: italic; font-size: 1.2rem; max-width: 700px; margin: 20px auto; }
+        
+        .faq-container { margin-top: 40px; }
+        .faq-item { margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+        .faq-item h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: var(--gold); }
+
+        .btn { background: var(--gold); color: var(--dark); padding: 20px 40px; text-decoration: none; font-weight: bold; border-radius: 50px; font-size: 1.2rem; transition: 0.3s; margin-top: 20px; display: inline-block; }
+        .btn:hover { background: var(--white); transform: translateY(-3px); }
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: var(--whatsapp); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 100; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <!-- Fondo con scroll infinito -->
+        <div class="hero-bg-scroll" id="heroBgScroll"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>Mago para Primeras Comuniones en Bogotá</h1>
+            <p>Asegura el éxito de tu evento con un show de magia profesional diseñado para sorprender a niños y adultos por igual. 
+               <span class="temporada">Temporada Mayo 2026</span>
+            </p>
+            <a href="#faq" class="btn">AGENDAR MI FECHA</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Lo que tu hijo vivirá en su Show de Magia</h2>
+        <ul class="benefits-list">
+            <li><strong>Magia Participativa:</strong> El niño o niña de la comunión será el asistente principal en los efectos más impactantes.</li>
+            <li><strong>Humor para toda la Familia:</strong> Un show inteligente que divierte a los pequeños sin aburrir a los adultos.</li>
+            <li><strong>Sin Estereotipos:</strong> Magia moderna y elegante, alejada del estilo de recreación infantil tradicional.</li>
+            <li><strong>Logística Completa:</strong> Incluimos sonido profesional y efectos especiales para que no te preocupes por nada.</li>
+        </ul>
+    </section>
+
+    <section class="trust-box">
+        <h2>Experiencia Comprobada</h2>
+        <p class="testimonial">"Nabil fue muy cumplido y puntual en lo acordado previo al evento. Pero lo más destacable fue su show. Todos los presentes quedamos estupefactos ante sus trucos que iban en aumento en cuanto destreza y sorpresa. Su presentación personal y trato con las personas fueron impecables. Recomiendo 100% su trabajo"</p>
+        <p><strong>- Yajaira Bermúdez.</strong></p>
+    </section>
+
+    <section class="section" id="faq">
+        <h2 style="border-bottom: none; text-align: left;">Preguntas Frecuentes sobre el Show</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>¿Cuánto dura el show de magia para una comunión?</h3>
+                <p>El espectáculo central tiene una duración de 45 a 60 minutos, tiempo ideal para mantener el asombro al máximo sin cansar a los invitados.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿En qué zonas de Bogotá prestan el servicio?</h3>
+                <p>Cubrimos todo Bogotá (especialmente el norte, Cedritos, Colina, Rosales) y municipios cercanos como Chía, Cajicá, Sopó y La Calera.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Con cuánta anticipación debo reservar para mayo?</h3>
+                <p>Mayo es temporada alta en Colombia. Recomendamos reservar con al menos 3 a 4 semanas de antelación para asegurar tu fecha.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#eee; padding: 40px 20px; text-align:center;">
+        <p><strong>Mago Profesional en Bogotá 2026</strong> | Especialista en eventos sociales y corporativos.</p>
+        <p style="font-size: 0.8rem; color: #777;">Servicio disponible en: Santa Ana, Usaquén, Chico, Salitre y alrededores.</p>
+    </footer>
+
+    <a href="https://wa.me/573057679511?text=Hola!%20Vi%20tu%20web%20y%20quiero%20cotizar%20un%20show%20para%20una%20primera%20comunion" class="wa-float" target="_blank" aria-label="Chat en WhatsApp">
+        <svg width="40" height="40" viewBox="0 0 448 512" fill="white">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script>
+        (function() {
+            const bgElement = document.getElementById('heroBgScroll');
+            if (!bgElement) return;
+
+            // Velocidad del scroll en píxeles por segundo
+            const SCROLL_SPEED = 40; // Ajusta este valor para mayor o menor velocidad
+            
+            let currentPosition = 0;
+            let animationId = null;
+            let lastTimestamp = 0;
+
+            // Función que actualiza la posición de fondo
+            function animateScroll(currentTime) {
+                if (!lastTimestamp) {
+                    lastTimestamp = currentTime;
+                    animationId = requestAnimationFrame(animateScroll);
+                    return;
+                }
+
+                // Calcular delta de tiempo en segundos
+                const deltaTime = Math.min(0.05, (currentTime - lastTimestamp) / 1000);
+                lastTimestamp = currentTime;
+
+                // Incrementar posición
+                currentPosition += SCROLL_SPEED * deltaTime;
+                
+                // Obtener el ancho de la imagen para saber cuándo reiniciar
+                // Nota: como la imagen puede no estar cargada al inicio, usamos un valor genérico
+                // que se ajustará dinámicamente
+                let imageWidth = bgElement.offsetWidth / 2; // La mitad porque el ancho del div es 200%
+                
+                // Si no podemos calcular el ancho (por ejemplo, display none), usamos un valor por defecto
+                if (imageWidth === 0 || !isFinite(imageWidth)) {
+                    imageWidth = 1920; // Un ancho típico de pantalla, se recalculará después
+                }
+                
+                // Reiniciar posición cuando se haya desplazado el ancho de una imagen
+                if (currentPosition >= imageWidth) {
+                    currentPosition -= imageWidth;
+                }
+                
+                // Aplicar la posición de fondo (desplazamiento horizontal)
+                bgElement.style.backgroundPosition = `${currentPosition}px 0`;
+                
+                // Continuar animación
+                animationId = requestAnimationFrame(animateScroll);
+            }
+            
+            // Iniciar la animación cuando la página esté lista
+            window.addEventListener('load', () => {
+                // Pequeño delay para asegurar que los estilos estén aplicados
+                setTimeout(() => {
+                    animationId = requestAnimationFrame(animateScroll);
+                }, 100);
+            });
+            
+            // Opcional: Pausar la animación cuando el mouse está sobre el hero
+            const heroSection = document.querySelector('.hero');
+            if (heroSection) {
+                heroSection.addEventListener('mouseenter', () => {
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                    }
+                });
+                
+                heroSection.addEventListener('mouseleave', () => {
+                    if (!animationId) {
+                        lastTimestamp = 0;
+                        animationId = requestAnimationFrame(animateScroll);
+                    }
+                });
+            }
+            
+            // Recalcular en caso de cambio de tamaño de ventana
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // No es necesario hacer nada especial, la animación continuará
+                    // Solo aseguramos que la posición no se desfase
+                    if (animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                        lastTimestamp = 0;
+                        animationId = requestAnimationFrame(animateScroll);
+                    }
+                }, 200);
+            });
+        })();
+    </script>
+</body>
+</html>
