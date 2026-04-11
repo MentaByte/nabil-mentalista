@@ -13,7 +13,7 @@
   <meta property="og:title" content="Shows de Mentalismo para Empresas | Nabil Mentalista">
   <meta property="og:description" content="Impacta a tu audiencia con mentalismo para eventos de empresa que conectan y generan recordación.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.nabilmentalista.com/">
+  <meta property="og:url" content="https://www.nabilmentalista.com/servicios.html">
   <meta property="og:image" content="https://www.nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp">
 
   <!-- Twitter Card -->
@@ -28,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Nabil Mentalista - Mentalismo Corporativo",
-    "image": "https://www.nabilmentalista.com/imagenes/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
+    "image": "https://www.nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
     "description": "Shows de mentalismo diseñados para empresas y eventos corporativos. Impacta a tu audiencia y genera conexión memorable.",
     "url": "https://www.nabilmentalista.com",
     "telephone": "+573057679511",
@@ -45,308 +45,223 @@
   }
   </script>
 
-  <!-- Fuente Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS externo -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- CSS específico para servicios.html -->
-  <style>
-    /* Estilos específicos para servicios.html */
-    
-    /* Banner con imagen diferente si quieres */
-    .banner-servicios {
-      background: url('../imagenes/banner.webp') center/cover no-repeat;
-      padding: 100px 20px;
-      text-align: center;
-      position: relative;
-    }
-    
-    .banner-servicios::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    
-    .banner-servicios h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: white;
-      position: relative;
-      z-index: 1;
-      background: rgba(128, 0, 32, 0.8);
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 10px;
-    }
-    
-    /* Contenido principal */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .main-image {
-      display: block;
-      margin: 30px auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .section-title {
-      text-align: center;
-      margin-top: 50px;
-      margin-bottom: 30px;
-      font-size: 1.8rem;
-      color: #800020;
-    }
-    
-    /* Acordeón */
-    .accordion {
-      margin-top: 30px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-    
-    .accordion-item {
-      border-bottom: 1px solid #ddd;
-    }
-    
-    .accordion-item:last-child {
-      border-bottom: none;
-    }
-    
-    .accordion-header {
-      background: #f8f8f8;
-      cursor: pointer;
-      padding: 18px 20px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      transition: background-color 0.3s;
-      color: #333;
-    }
-    
-    .accordion-header:hover {
-      background: #eee;
-    }
-    
-    .accordion-header::before {
-      content: "►";
-      color: #800020;
-      display: inline-block;
-      margin-right: 15px;
-      transition: transform 0.3s ease;
-      font-size: 0.9rem;
-    }
-    
-    .accordion-header.active {
-      background: #800020;
-      color: white;
-    }
-    
-    .accordion-header.active::before {
-      color: white;
-      transform: rotate(90deg);
-    }
-    
-    .accordion-content {
-      display: none;
-      padding: 20px;
-      background: white;
-      line-height: 1.7;
-      border-top: 1px solid #eee;
-    }
-    
-    .accordion-content p {
-      margin: 0 0 15px 0;
-    }
-    
-    .accordion-content p:last-child {
-      margin-bottom: 0;
-    }
-    
-    /* Responsividad para el acordeón */
-    @media (max-width: 768px) {
-      .banner-servicios h1 {
-        font-size: 1.5rem;
-        padding: 12px 20px;
-      }
-      
-      .accordion-header {
-        padding: 15px;
-        font-size: 1rem;
-      }
-      
-      .accordion-content {
-        padding: 15px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .banner-servicios {
-        padding: 60px 15px;
-      }
-      
-      .banner-servicios h1 {
-        font-size: 1.2rem;
-        padding: 10px 15px;
-      }
-      
-      .section-title {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <header>
-    <div class="title">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-        <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista - Mentalismo Corporativo en Bogotá" title="Logo de Nabil Mentalista, experto en mentalismo corporativo en Bogotá"> 
-        Nabil Mentalista
-      </a>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-    <nav class="menu">
-      <a href="servicios.html">Servicios</a>
-      <a href="propuestas.html">Propuestas de Valor</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo"
+     target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
-  <!-- Banner específico para servicios -->
-  <section class="banner-servicios">
-    <h1>Impacta a tu Audiencia: Mentalismo para Eventos de Empresa que Conectan</h1>
+  <!-- NAV — único elemento nav en la página -->
+  <nav>
+    <a href="index.html" class="nav-logo">Nabil<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+      <li><a href="propuestas.html">Propuestas de Valor</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-geo" aria-hidden="true"></div>
+
+    <div class="breadcrumb" role="navigation" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span aria-hidden="true">›</span>
+      Servicios
+    </div>
+
+    <p class="section-label fade-up">Mentalismo para empresas</p>
+    <h1 class="page-hero-title fade-up">
+      Impacta a tu<br>
+      <em>Audiencia</em>
+    </h1>
+    <p class="page-hero-sub fade-up">
+      Shows de mentalismo que conectan, motivan y dejan huella. La solución perfecta
+      para eventos corporativos en Bogotá y a nivel nacional.
+    </p>
   </section>
 
-  <main>
-    <img src="imagenes/mentalismo-eventos-empresas.webp" alt="Show de mentalismo para eventos corporativos en Bogotá" class="main-image" loading="lazy">
-    
-    <h2 class="section-title">Mis Shows de Mentalismo son la Solución Perfecta para:</h2>
-    
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-header">Reconocimiento de Logros y Celebraciones</div>
-        <div class="accordion-content">
-          <p>Una forma mágica de agradecer el esfuerzo de tu equipo, reconocer hitos importantes y celebrar fechas especiales.</p>
-          <p>El show rompe el hielo y genera un ambiente de cohesión inolvidable.</p>
+  <hr class="divider-amber">
+
+  <main id="main">
+
+    <!-- IMAGEN PRINCIPAL -->
+    <section style="padding: var(--section-py) var(--section-px);">
+      <div class="fade-up" style="max-width:860px; margin:0 auto;">
+        <img src="imagenes/mentalismo-eventos-empresas.webp"
+             alt="Show de mentalismo para eventos corporativos en Bogotá"
+             loading="lazy"
+             style="width:100%; display:block; border: 1px solid rgba(200,130,42,0.15);">
+      </div>
+    </section>
+
+    <hr class="divider-amber">
+
+    <!-- SERVICIOS — ACORDEÓN -->
+    <section style="padding: var(--section-py) var(--section-px); max-width:860px; margin:0 auto;">
+
+      <p class="section-label fade-up" style="text-align:center; margin-bottom:16px;">Aplicaciones</p>
+      <h2 class="fade-up" style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(28px,4vw,52px); text-transform:uppercase; text-align:center; line-height:0.95; margin-bottom:72px;">
+        La solución perfecta<br>
+        <em style="font-style:italic; font-family:'Playfair Display',serif; color:var(--amber);">para tu evento</em>
+      </h2>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Reconocimiento de Logros y Celebraciones
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Una forma mágica de agradecer el esfuerzo de tu equipo, reconocer hitos importantes y celebrar fechas especiales. El show rompe el hielo y genera un ambiente de cohesión inolvidable.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Campañas en Puestos de Trabajo</div>
-        <div class="accordion-content">
-          <p>Intervenciones breves y sorprendentes que ocurren directamente en el espacio laboral.</p>
-          <p>Utilizado con éxito en campañas de seguridad informática, conservación de recursos, protocolos internos y atención a clientes especiales.</p>
-          <p>La magia se integra al día a día sin interrumpir la rutina de tu equipo.</p>
-          <p>Cada acción refuerza de forma creativa tus mensajes corporativos clave en momentos que elevan el ánimo y dejan huella en la cultura interna.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Campañas en Puestos de Trabajo
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Intervenciones breves y sorprendentes que ocurren directamente en el espacio laboral. Utilizado con éxito en campañas de seguridad informática, conservación de recursos, protocolos internos y atención a clientes especiales.<br><br>
+          La magia se integra al día a día sin interrumpir la rutina de tu equipo. Cada acción refuerza de forma creativa tus mensajes corporativos clave en momentos que elevan el ánimo y dejan huella en la cultura interna.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Planteamiento de Desafíos y Objetivos</div>
-        <div class="accordion-content">
-          <p>Inspiro a tu equipo a ver nuevas posibilidades. Integro tus mensajes clave de forma sutil y potente, impulsando la motivación y el pensamiento innovador.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Planteamiento de Desafíos y Objetivos
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Inspiro a tu equipo a ver nuevas posibilidades. Integro tus mensajes clave de forma sutil y potente, impulsando la motivación y el pensamiento innovador.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Integración y Cohesión de Equipos</div>
-        <div class="accordion-content">
-          <p>Fomento la participación y la interacción, creando una experiencia compartida que fortalece los lazos entre tus colaboradores.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Integración y Cohesión de Equipos
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Fomento la participación y la interacción, creando una experiencia compartida que fortalece los lazos entre tus colaboradores.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Lanzamientos de Productos y Marcas</div>
-        <div class="accordion-content">
-          <p>Presenta tu nuevo producto o servicio de una forma tan impactante que tus invitados no podrán olvidarlo. Tu mensaje central se convierte en parte del asombro.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Lanzamientos de Productos y Marcas
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Presenta tu nuevo producto o servicio de una forma tan impactante que tus invitados no podrán olvidarlo. Tu mensaje central se convierte en parte del asombro.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Convenciones, Congresos y Ferias</div>
-        <div class="accordion-content">
-          <p>Atrae miradas, genera conversación y deja una impresión duradera. Mis shows captan la atención y dirigen el foco hacia tu marca o las ideas que quieres comunicar.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Convenciones, Congresos y Ferias
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Atrae miradas, genera conversación y deja una impresión duradera. Mis shows captan la atención y dirigen el foco hacia tu marca o las ideas que quieres comunicar.
         </div>
       </div>
-      
-      <div class="accordion-item">
-        <div class="accordion-header">Cenas de Gala y Eventos Exclusivos</div>
-        <div class="accordion-content">
-          <p>Ofrece un entretenimiento sofisticado y sorprendente que eleva la experiencia de tus clientes e invitados VIP.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          Cenas de Gala y Eventos Exclusivos
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Ofrece un entretenimiento sofisticado y sorprendente que eleva la experiencia de tus clientes e invitados VIP.
         </div>
       </div>
-    </div>
+
+    </section>
+
+    <hr class="divider-amber">
+
+    <!-- CTA FINAL -->
+    <section style="padding: var(--section-py) var(--section-px); text-align:center;">
+      <p class="section-label fade-up">¿Tu evento no está en la lista?</p>
+      <h2 class="fade-up" style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,6vw,72px); text-transform:uppercase; line-height:0.92; margin-bottom:24px;">
+        Conversemos y<br>
+        <em style="font-style:italic; font-family:'Playfair Display',serif; color:var(--amber);">lo diseñamos</em>
+      </h2>
+      <p class="fade-up" style="font-size:15px; color:var(--grey-light); max-width:480px; margin:0 auto 48px; line-height:1.8;">
+        Cada evento es único. Escríbeme y creamos una experiencia de mentalismo a la medida de tu marca y tu audiencia.
+      </p>
+      <div class="fade-up">
+        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo"
+           target="_blank" rel="noopener"
+           class="btn-primary" style="display:inline-flex; align-items:center; gap:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Contactar por WhatsApp
+        </a>
+        <a href="propuestas.html" class="btn-ghost" style="margin-left:16px;">Ver propuestas de valor</a>
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="whatsapp-logo">
-      <a href="https://wa.me/573057679511" target="_blank">
-        <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
-      </a>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Nabil<span>.</span></div>
+        <p class="footer-tagline">Mentalismo corporativo · Bogotá y Colombia</p>
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="propuestas.html">Propuestas</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="https://www.instagram.com/nabilmentalista/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/nabilmentalista/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-    <div class="footer-text">
-      <p>Conversemos sobre tu Próximo Evento</p>
-      <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
-      <p><strong>Contáctanos:</strong><br>
-      WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
-      Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
-      <p>Nabil Mentalista 2025 - Todos los derechos reservados.</p>
+    <div class="footer-bottom">
+      <span>© 2025 Nabil Mentalista — Todos los derechos reservados.</span>
+      <a href="https://wa.me/573057679511" target="_blank" rel="noopener"
+         style="color:var(--amber); text-decoration:none;">+57 305 7679511</a>
     </div>
   </footer>
 
-  <!-- JavaScript externo -->
+  <!-- JS principal -->
   <script src="js/main.js"></script>
-  
-  <!-- JavaScript específico para servicios.html (acordeón) -->
-  <script>
-    // Acordeón específico para servicios.html
-    document.addEventListener('DOMContentLoaded', function() {
-      const accordionHeaders = document.querySelectorAll('.accordion-header');
-      
-      accordionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-          this.classList.toggle('active');
-          const content = this.nextElementSibling;
-          
-          if (content.style.display === 'block') {
-            content.style.display = 'none';
-          } else {
-            content.style.display = 'block';
-            // Opcional: animación suave
-            content.style.animation = 'fadeIn 0.3s ease-in-out';
-          }
-        });
-      });
 
-    // Añadir animación CSS para el acordeón
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    `;
-    document.head.appendChild(style);
+  <!-- Acordeón servicios — reutiliza las clases .faq-item del CSS -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function (i) {
+          i.classList.remove('open');
+        });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
   </script>
+
 </body>
 </html>
