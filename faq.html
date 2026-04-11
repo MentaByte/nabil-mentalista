@@ -45,428 +45,202 @@
   }
   </script>
 
-  <!-- Fuente Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS externo -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- CSS específico para faq.html -->
-  <style>
-    /* Estilos específicos para FAQ */
-    
-    /* Banner para FAQ */
-    .banner-faq {
-      background: url('../imagenes/banner.webp') center/cover no-repeat;
-      padding: 100px 20px;
-      text-align: center;
-      position: relative;
-    }
-    
-    .banner-faq::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    
-    .banner-faq h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: white;
-      position: relative;
-      z-index: 1;
-      margin: 0;
-      background: rgba(128, 0, 32, 0.8);
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 10px;
-    }
-    
-    .banner-faq h2 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: white;
-      margin: 10px 0 0 0;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .banner-divider {
-      width: 50%;
-      border: 2px solid #800020;
-      margin: 15px auto;
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Contenido principal de FAQ */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .faq-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 10px;
-      color: #800020;
-    }
-    
-    .faq-subtitle {
-      font-size: 1rem;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-      font-weight: 500;
-    }
-    
-    .faq-divider {
-      width: 50%;
-      border: 2px solid #800020;
-      margin: 10px auto 30px auto;
-    }
-    
-    /* Acordeón específico para FAQ */
-    .accordion-faq {
-      margin-top: 30px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-    
-    .accordion-item-faq {
-      border-bottom: 1px solid #ddd;
-    }
-    
-    .accordion-item-faq:last-child {
-      border-bottom: none;
-    }
-    
-    .accordion-header-faq {
-      background: #f8f8f8;
-      cursor: pointer;
-      padding: 18px 20px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      transition: background-color 0.3s;
-      color: #333;
-    }
-    
-    .accordion-header-faq:hover {
-      background: #eee;
-    }
-    
-    .accordion-header-faq::before {
-      content: "►";
-      color: #800020;
-      display: inline-block;
-      margin-right: 15px;
-      transition: transform 0.3s ease;
-      font-size: 0.9rem;
-    }
-    
-    .accordion-header-faq.active {
-      background: #800020;
-      color: white;
-    }
-    
-    .accordion-header-faq.active::before {
-      color: white;
-      transform: rotate(90deg);
-    }
-    
-    .accordion-content-faq {
-      display: none;
-      padding: 20px;
-      background: white;
-      line-height: 1.7;
-      border-top: 1px solid #eee;
-    }
-    
-    .accordion-content-faq p {
-      margin: 0 0 15px 0;
-    }
-    
-    .accordion-content-faq p:last-child {
-      margin-bottom: 0;
-    }
-    
-    .accordion-content-faq a {
-      color: #800020;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    
-    .accordion-content-faq a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Footer específico para FAQ */
-    footer {
-      background: #800020;
-      color: white;
-      padding: 30px 20px;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-    }
-    
-    footer .whatsapp-logo {
-      flex: 0 0 auto;
-      margin-right: 30px;
-      margin-bottom: 20px;
-    }
-    
-    footer .whatsapp-logo img {
-      width: 90px;
-      height: auto;
-    }
-    
-    footer .footer-text {
-      flex: 1;
-      text-align: center;
-      min-width: 300px;
-    }
-    
-    footer a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-    
-    footer a:hover {
-      opacity: 0.9;
-      text-decoration: underline;
-    }
-    
-    /* Responsividad para FAQ */
-    @media (max-width: 768px) {
-      .banner-faq {
-        padding: 70px 20px;
-      }
-      
-      .banner-faq h1 {
-        font-size: 1.5rem;
-        padding: 12px 20px;
-      }
-      
-      .banner-faq h2 {
-        font-size: 0.9rem;
-      }
-      
-      .faq-title {
-        font-size: 1.5rem;
-      }
-      
-      .accordion-header-faq {
-        padding: 15px;
-        font-size: 1rem;
-      }
-      
-      .accordion-content-faq {
-        padding: 15px;
-      }
-      
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      footer .whatsapp-logo {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .banner-faq {
-        padding: 50px 15px;
-      }
-      
-      .banner-faq h1 {
-        font-size: 1.2rem;
-        padding: 10px 15px;
-      }
-      
-      .banner-faq h2 {
-        font-size: 0.8rem;
-      }
-      
-      .faq-title {
-        font-size: 1.2rem;
-      }
-      
-      .faq-subtitle {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <header>
-    <div class="title">
-      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-        <img src="imagenes/logo-nabil-mentalista-bogota.webp" alt="Logo Nabil Mentalista - Mentalismo Corporativo en Bogotá" title="Logo de Nabil Mentalista, experto en mentalismo corporativo en Bogotá"> 
-        Nabil Mentalista
-      </a>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-    <nav class="menu">
-      <a href="servicios.html">Servicios</a>
-      <a href="propuestas.html">Propuestas de Valor</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=573057679511" target="_blank" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo"
+     target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
   </a>
 
-  <!-- Banner para FAQ -->
-  <section class="banner-faq">
-    <h1>Preguntas Frecuentes sobre Mis Shows de Mentalismo (FAQ)</h1>
-    <hr class="banner-divider">
-    <h2>Mentalismo Corporativo | Costos del Show para Empresas | Area de Cobertura</h2>
+  <!-- NAV — único elemento nav en la página -->
+  <nav>
+    <a href="index.html" class="nav-logo">Nabil<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="propuestas.html">Propuestas de Valor</a></li>
+      <li><a href="faq.html" aria-current="page">FAQ</a></li>
+      <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-geo" aria-hidden="true"></div>
+
+    <div class="breadcrumb" role="navigation" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span aria-hidden="true">›</span>
+      FAQ
+    </div>
+
+    <p class="section-label fade-up">Todo lo que necesitas saber</p>
+    <h1 class="page-hero-title fade-up">
+      Preguntas<br>
+      <em>Frecuentes</em>
+    </h1>
+    <p class="page-hero-sub fade-up">
+      Mentalismo corporativo · Costos del show · Área de cobertura.<br>
+      Resolvemos tus dudas antes de que las tengas.
+    </p>
   </section>
 
-  <main>
-    <h2 class="faq-title">Preguntas Frecuentes</h2>
-    <h3 class="faq-subtitle">Todo lo que necesitas saber sobre mis shows de mentalismo corporativo</h3>
-    <hr class="faq-divider">
+  <hr class="divider-amber">
 
-    <div class="accordion-faq">
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿Cuánto dura el show?</div>
-        <div class="accordion-content-faq">
-          <p>Puedo adaptar mis presentaciones a sus necesidades, desde intervenciones impactantes de 15-20 minutos hasta presentaciones más extensas de hasta 60 minutos.</p>
+  <!-- FAQ -->
+  <main id="main">
+    <section style="padding: var(--section-py) var(--section-px); max-width: 860px; margin: 0 auto;">
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿Cuánto dura el show?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Puedo adaptar mis presentaciones a tus necesidades, desde intervenciones impactantes de 15–20 minutos hasta presentaciones más extensas de hasta 60 minutos.
         </div>
       </div>
-      
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿Puedes personalizar el show con el mensaje de mi marca o producto?</div>
-        <div class="accordion-content-faq">
-          <p>¡Esa es mi especialidad! Integro elementos visuales, efectos y un guion que resalta tu marca, producto o el mensaje que deseas comunicar.</p>
-          <p>El objetivo es que su marca sea 'La Mejor Elección' dentro del show.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿Puedes personalizar el show con el mensaje de mi marca o producto?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          ¡Esa es mi especialidad! Integro elementos visuales, efectos y un guion que resalta tu marca, producto o el mensaje que deseas comunicar. El objetivo es que tu marca sea <strong style="color:var(--white);">"La Mejor Elección"</strong> dentro del show.
         </div>
       </div>
-      
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿El show es interactivo?</div>
-        <div class="accordion-content-faq">
-          <p>¡Absolutamente! La participación de los invitados es el corazón de mis shows.</p>
-          <p>Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿El show es interactivo?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          ¡Absolutamente! La participación de los invitados es el corazón de mis shows. Sus decisiones y elecciones son clave para el desarrollo del mentalismo, haciendo la experiencia mucho más personal y memorable.
         </div>
       </div>
-      
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿Dónde realizas tus shows? ¿Solo en Bogotá?</div>
-        <div class="accordion-content-faq">
-          <p>Si bien radico en Bogotá, me apasiona viajar y llevar la magia del mentalismo a eventos corporativos en otras ciudades de Colombia y a nivel internacional.</p>
-          <p>Si tu evento está fuera de Bogotá, <a href="https://wa.me/573057679511" target="_blank"><strong>¡conversemos sin problema!</strong></a></p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿Dónde realizas tus shows? ¿Solo en Bogotá?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Si bien radico en Bogotá, me apasiona viajar y llevar la magia del mentalismo a eventos corporativos en otras ciudades de Colombia y a nivel internacional. Si tu evento está fuera de Bogotá, <a href="https://wa.me/573057679511" target="_blank" rel="noopener" style="color:var(--amber); font-weight:600;">¡conversemos sin problema!</a>
         </div>
       </div>
-      
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿Qué necesito para el show (espacio, sonido, etc.)?</div>
-        <div class="accordion-content-faq">
-          <p>Dependerá del formato de presentación, mis shows son flexibles y se adaptan a diversos escenarios.</p>
-          <p>Para un show central generalmente solo necesito un espacio de presentación que me permita estar siempre de frente al público y un sistema de sonido donde conectar mi micrófono.</p>
-          <p>Para talleres es necesario contar además del espacio de show con un espacio para realizar las actividades.</p>
-          <p>Y para campañas en puestos de trabajo no hay requerimientos técnicos pues está pensado para ser totalmente itinerante.</p>
-          <p>Pero los detalles los coordinaremos para asegurar que todo sea perfecto.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿Qué necesito para el show (espacio, sonido, etc.)?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          Dependerá del formato de presentación, mis shows son flexibles y se adaptan a diversos escenarios.<br><br>
+          Para un <strong style="color:var(--white);">show central</strong> generalmente solo necesito un espacio de presentación frente al público y un sistema de sonido donde conectar mi micrófono.<br><br>
+          Para <strong style="color:var(--white);">talleres</strong> es necesario contar además con un espacio para realizar las actividades.<br><br>
+          Para <strong style="color:var(--white);">campañas en puestos de trabajo</strong> no hay requerimientos técnicos, pues está pensado para ser totalmente itinerante.<br><br>
+          Los detalles los coordinaremos juntos para asegurar que todo sea perfecto.
         </div>
       </div>
-      
-      <div class="accordion-item-faq">
-        <div class="accordion-header-faq">¿Cuál es el precio de un show de mentalismo para mi evento corporativo?</div>
-        <div class="accordion-content-faq">
-          <p>El único precio fijo es el de un show central personalizado en Bogotá, que se establece por el show, no por el número de asistentes ni por la duración.</p>
-          <p>Esto se debe a que el nivel de personalización, el trabajo de diseño, la preparación, el transporte y la ocupación de agenda son consistentes.</p>
-          <p>Para el año 2026 el precio del Show Central en Bogotá es de 2.500.000 COP (Dos Millones Quinientos Mil Pesos Colombianos).</p>
-          <p>En cuanto a talleres y campañas en puesto de trabajo, el precio es variable y depende del número de sesiones, duración, materiales, etc.</p>
-          <p>Pero en todos los casos el valor radica en la creación de una experiencia única y a medida para su marca.</p>
-          <p>Para obtener una cotización precisa y discutir los detalles de tu evento, te invito a <a href="https://wa.me/573057679511" target="_blank"><strong>contactarme directamente vía WhatsApp</strong></a>.</p>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question">
+          ¿Cuál es el precio de un show de mentalismo para mi evento corporativo?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </div>
+        <div class="faq-answer">
+          El único precio fijo es el de un show central personalizado en Bogotá, que se establece por el show — no por el número de asistentes ni por la duración.<br><br>
+          Esto se debe a que el nivel de personalización, el trabajo de diseño, la preparación, el transporte y la ocupación de agenda son consistentes.<br><br>
+          Para el año 2026 el precio del <strong style="color:var(--white);">Show Central en Bogotá es de $2.500.000 COP.</strong><br><br>
+          En cuanto a talleres y campañas en puesto de trabajo, el precio es variable según número de sesiones, duración y materiales.<br><br>
+          Para una cotización precisa, <a href="https://wa.me/573057679511" target="_blank" rel="noopener" style="color:var(--amber); font-weight:600;">contáctame directamente por WhatsApp</a>.
         </div>
       </div>
-    </div>
+
+    </section>
+
+    <hr class="divider-amber">
+
+    <!-- CTA FINAL -->
+    <section style="padding: var(--section-py) var(--section-px); text-align:center;">
+      <p class="section-label fade-up">¿Tienes otra pregunta?</p>
+      <h2 class="fade-up" style="font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:clamp(36px,6vw,72px); text-transform:uppercase; line-height:0.92; margin-bottom:24px;">
+        Hablemos<br>
+        <em style="font-style:italic; font-family:'Playfair Display',serif; color:var(--amber);">directamente</em>
+      </h2>
+      <p class="fade-up" style="font-size:15px; color:var(--grey-light); max-width:480px; margin:0 auto 48px; line-height:1.8;">
+        Si no encontraste la respuesta que buscabas, escríbeme por WhatsApp y te respondo en menos de 24 horas.
+      </p>
+      <div class="fade-up">
+        <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo"
+           target="_blank" rel="noopener"
+           class="btn-primary" style="display:inline-flex; align-items:center; gap:12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Contactar por WhatsApp
+        </a>
+        <a href="contacto.html" class="btn-ghost" style="margin-left:16px;">Ver más info</a>
+      </div>
+    </section>
   </main>
 
-<footer>
-  <div class="whatsapp-logo">
-    <a href="https://wa.me/573057679511" target="_blank">
-      <img src="imagenes/whatsapp-logo.svg" alt="Logo de WhatsApp para contactar a Nabil Mentalista" title="Contáctame por WhatsApp para tu evento de mentalismo corporativo">
-    </a>
-  </div>
-  
-  <div class="footer-text">
-    <p>Conversemos sobre tu Próximo Evento</p>
-    <p>Diseñamos experiencias de mentalismo corporativo que conectan y sorprenden.</p>
-    <p><strong>Contáctanos:</strong><br>
-    WhatsApp: <a href="https://wa.me/573057679511">+57 305 7679511</a><br>
-    Mentalismo para eventos corporativos en Bogotá y a nivel nacional</p>
-    
-    <!-- Botón de WhatsApp adicional -->
-    <a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20información%20sobre%20tu%20show%20de%20mentalismo%20corporativo" 
-       target="_blank" 
-       class="footer-whatsapp-btn">
-      Contactar por WhatsApp
-    </a>
-    
-    <p style="margin-top: 20px;">Nabil Mentalista 2025 - Todos los derechos reservados.</p>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Nabil<span>.</span></div>
+        <p class="footer-tagline">Mentalismo corporativo · Bogotá y Colombia</p>
+      </div>
+      <div class="footer-links">
+        <a href="servicios.html">Servicios</a>
+        <a href="propuestas.html">Propuestas</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="https://www.instagram.com/nabilmentalista/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/nabilmentalista/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Nabil Mentalista — Todos los derechos reservados.</span>
+      <a href="https://wa.me/573057679511" target="_blank" rel="noopener"
+         style="color:var(--amber); text-decoration:none;">+57 305 7679511</a>
+    </div>
+  </footer>
 
-  <!-- JavaScript externo -->
+  <!-- JS principal -->
   <script src="js/main.js"></script>
-  
-  <!-- JavaScript específico para faq.html (acordeón) -->
+
+  <!-- Acordeón FAQ — usa las clases .faq-item / .faq-question / .faq-answer del CSS -->
   <script>
-    // Acordeón específico para faq.html - TODOS CERRADOS AL INICIO
-    document.addEventListener('DOMContentLoaded', function() {
-      const accordionHeaders = document.querySelectorAll('.accordion-header-faq');
-      
-      accordionHeaders.forEach(header => {
-        // Asegurarse de que todos empiecen cerrados
-        header.classList.remove('active');
-        const content = header.nextElementSibling;
-        content.style.display = 'none';
-        
-        header.addEventListener('click', function() {
-          this.classList.toggle('active');
-          const content = this.nextElementSibling;
-          
-          if (content.style.display === 'block') {
-            content.style.display = 'none';
-          } else {
-            content.style.display = 'block';
-            content.style.animation = 'fadeIn 0.3s ease-in-out';
-          }
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        // Cierra todos
+        document.querySelectorAll('.faq-item').forEach(function (i) {
+          i.classList.remove('open');
         });
+        // Abre el clickeado si estaba cerrado
+        if (!isOpen) item.classList.add('open');
       });
     });
-    
-    // Añadir animación CSS para el acordeón
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    `;
-    document.head.appendChild(style);
   </script>
+
 </body>
 </html>
