@@ -146,7 +146,10 @@
       --shadow:   0 8px 32px rgba(0,0,0,0.12);
       --shadow-lg:0 20px 60px rgba(0,0,0,0.18);
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto; }
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
+    }
     body {
       font-family: 'Nunito', system-ui, -apple-system, sans-serif;
       background: var(--cream);
@@ -169,8 +172,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,251,240,0.95);
-      backdrop-filter: blur(12px);
+      background: rgba(255,251,240,0.98);
       border-bottom: 2px solid var(--amber);
       display: flex;
       align-items: center;
@@ -233,7 +235,7 @@
     .shape-1 { width: 600px; height: 600px; background: var(--orange); top: -200px; right: -150px; }
     .shape-2 { width: 400px; height: 400px; background: var(--amber); bottom: -100px; left: -100px; }
     .shape-3 { width: 200px; height: 200px; background: var(--black); top: 40%; right: 28%; }
-    .confetti { position: absolute; width: 8px; height: 8px; border-radius: 50%; animation: float 4s ease-in-out infinite; }
+    .confetti { position: absolute; width: 8px; height: 8px; border-radius: 50%; animation: float 4s ease-in-out infinite; will-change: transform; }
     .confetti:nth-child(1) { background:#F97316; top:15%; left:8%;  animation-delay: 0s; }
     .confetti:nth-child(2) { background:#000000; top:25%; left:20%; animation-delay: 0.8s; }
     .confetti:nth-child(3) { background:#0EA5E9; top:60%; left:5%;  animation-delay: 1.5s; }
@@ -739,14 +741,15 @@
       justify-content: center;
       text-decoration: none;
       box-shadow: 0 6px 24px rgba(22,163,74,0.5);
-      transition: all 0.25s;
+      transition: transform 0.25s;
       animation: pulse-wa 2.5s ease-in-out infinite;
+      will-change: transform;
     }
     .wa-float:hover { transform: scale(1.1); }
     .wa-float svg { width: 30px; height: 30px; fill: var(--white); }
     @keyframes pulse-wa {
-      0%, 100% { box-shadow: 0 6px 24px rgba(22,163,74,0.5); }
-      50% { box-shadow: 0 6px 36px rgba(22,163,74,0.75), 0 0 0 10px rgba(22,163,74,0.1); }
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
     }
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
