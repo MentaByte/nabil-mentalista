@@ -117,10 +117,12 @@
     ]
   }
   </script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Google Fonts — carga no bloqueante -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" /></noscript>
   <style>
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -136,16 +138,17 @@
       --white:    #FFFFFF;
       --cream:    #FFFBF0;
       --dark:     #1C1917;
-      --gray:     #78716C;
+      --gray:     #57534E;
       --light-gray: #F5F5F4;
       --green:    #16A34A;
+      --orange-label: #C2410C;
       --radius:   16px;
       --shadow:   0 8px 32px rgba(0,0,0,0.12);
       --shadow-lg:0 20px 60px rgba(0,0,0,0.18);
     }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Nunito', system-ui, -apple-system, sans-serif;
       background: var(--cream);
       color: var(--dark);
       overflow-x: hidden;
@@ -176,7 +179,7 @@
       height: 68px;
     }
     .nav-logo {
-      font-family: 'Fredoka', sans-serif;
+      font-family: 'Fredoka', system-ui, sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--orange);
@@ -404,7 +407,7 @@
       margin-bottom: 16px;
       color: var(--amber);
     }
-    .authority p { font-size: 1.1rem; line-height: 1.7; color: #D4D0CC; }
+    .authority p { font-size: 1.1rem; line-height: 1.7; color: #E7E5E4; }
     /* ===== 3 PILARES ===== */
     .pillars {
       padding: 90px clamp(20px, 5vw, 60px);
@@ -416,7 +419,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--orange);
+      color: var(--orange-label);
       margin-bottom: 12px;
     }
     .section-title {
@@ -483,8 +486,8 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-    .dif-content .section-label, .dif-content .section-title { text-align: left; }
-    .dif-content .section-title { margin-bottom: 24px; }
+    .dif-content .section-label { text-align: left; color: var(--orange-label); }
+    .dif-content .section-title { text-align: left; margin-bottom: 24px; }
     .dif-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
     .dif-list li {
       display: flex;
@@ -560,7 +563,7 @@
       align-items: center;
       gap: 6px;
       margin-top: 14px;
-      color: var(--orange);
+      color: var(--orange-d);
       font-weight: 800;
       font-size: 0.88rem;
       text-decoration: none;
@@ -617,7 +620,7 @@
       padding: 90px clamp(20px, 5vw, 60px);
     }
     .testimonios .section-title { color: var(--white); }
-    .testimonios .section-sub { color: #A8A29E; }
+    .testimonios .section-sub { color: #D6D3D1; }
     .test-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -632,7 +635,7 @@
       border: 1px solid #44403C;
     }
     .test-stars { color: var(--amber); font-size: 1.1rem; margin-bottom: 14px; }
-    .test-card p { font-size: 0.95rem; color: #D6D3D1; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .test-card p { font-size: 0.95rem; color: #E7E5E4; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
     .test-author { display: flex; align-items: center; gap: 10px; }
     .test-avatar {
       width: 42px; height: 42px;
@@ -642,7 +645,7 @@
       font-weight: 800; color: var(--white); font-size: 1rem;
     }
     .test-author strong { display: block; color: var(--white); font-size: 0.9rem; }
-    .test-author span { color: #78716C; font-size: 0.78rem; }
+    .test-author span { color: #A8A29E; font-size: 0.78rem; }
     /* ===== CTA FINAL ===== */
     .cta-final {
       background: linear-gradient(135deg, var(--orange) 0%, var(--amber-d) 100%);
@@ -700,18 +703,18 @@
     /* ===== FOOTER ===== */
     footer {
       background: #0C0A09;
-      color: #78716C;
+      color: #A8A29E;
       padding: 40px clamp(20px, 5vw, 60px);
       text-align: center;
     }
     footer .footer-logo {
-      font-family: 'Fredoka', sans-serif;
+      font-family: 'Fredoka', system-ui, sans-serif;
       font-size: 1.6rem;
       color: var(--orange);
       margin-bottom: 10px;
     }
     footer p { font-size: 0.85rem; line-height: 1.7; margin-bottom: 6px; }
-    footer a { color: var(--amber); text-decoration: none; }
+    footer a { color: #FCD34D; text-decoration: none; }
     /* ===== BOTÓN WA FLOTANTE ===== */
     .wa-float {
       position: fixed;
@@ -776,6 +779,7 @@
     </div>
   </nav>
   <!-- HERO SECTION -->
+  <main id="main-content">
   <section class="hero" aria-label="Presentación principal">
     <div class="hero-bg-shapes" aria-hidden="true">
       <div class="shape shape-1"></div>
@@ -808,10 +812,14 @@
       </div>
       <div class="hero-image-wrap">
         <img src="https://nabilmentalista.com/imagenes/show-magia-familiar-bogota-mago-nabil.webp"
+             srcset="https://nabilmentalista.com/imagenes/show-magia-familiar-bogota-mago-nabil.webp 480w"
+             sizes="(max-width: 900px) 90vw, 480px"
              alt="Mago profesional realizando un truco de magia con una niña asistente en un show de magia familiar al aire libre en Bogotá. Espectáculo de entretenimiento para eventos infantiles y reuniones familiares."
              width="480"
              height="600"
              loading="eager"
+             fetchpriority="high"
+             decoding="sync"
              style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:32px 8px 32px 8px; box-shadow:var(--shadow-lg);" />
         <div class="hero-card" aria-label="Bogotá y Cundinamarca">
           <span class="hc-icon">📍</span>
@@ -908,6 +916,7 @@
       <a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quisiera%20una%20cotizaci%C3%B3n%20formal%20con%20todos%20los%20detalles%20del%20show" class="btn-cotizar" aria-label="Solicitar cotización formal por WhatsApp" rel="noopener">📋 Pedir Cotización Formal</a>
     </div>
   </section>
+  </main>
   <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-logo">Mago Nabil</div>
