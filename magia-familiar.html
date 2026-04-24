@@ -25,98 +25,109 @@
   <meta name="twitter:card" content="summary_large_image" />
   <!-- Robots -->
   <meta name="robots" content="index, follow" />
-  <!-- ============================================================ -->
-  <!-- SCHEMA MARKUP — AEO AVANZADO -->
-  <!-- ============================================================ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://nabilmentalista.com/magia-familiar#service",
-        "serviceType": "Mago para fiestas infantiles y familiares",
-        "name": "Show de Magia Familiar e Infantil",
-        "description": "Show de magia profesional para cumpleaños infantiles, primeras comuniones y eventos familiares en Bogotá y Cundinamarca.",
-        "provider": {
-          "@type": "LocalBusiness",
-          "@id": "https://nabilmentalista.com#negocio",
-          "name": "Mago Nabil",
-          "url": "https://nabilmentalista.com",
-          "telephone": "+573057679511",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bogotá",
-            "addressCountry": "CO"
-          },
-          "sameAs": []
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://nabilmentalista.com/magia-familiar#service",
+      "serviceType": "Mago para fiestas infantiles y familiares",
+      "name": "Show de Magia Familiar e Infantil",
+      "description": "Show de magia profesional para cumpleaños infantiles, primeras comuniones y eventos familiares en Bogotá y Cundinamarca.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://nabilmentalista.com#negocio",
+        "name": "Mago Nabil",
+        "url": "https://nabilmentalista.com",
+        "telephone": "+573057679511",
+        "priceRange": "$1.000.000 - $2.000.000",
+        "image": "https://nabilmentalista.com/img/mago-nabil-show-familiar.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogotá",
+          "addressCountry": "CO"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Bogotá" },
-          { "@type": "AdministrativeArea", "name": "Cundinamarca" }
-        ],
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "areaServed": "Bogotá y Cundinamarca"
-        }
+        "sameAs": []
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Para qué edades es recomendado el show de magia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Los shows están diseñados para niños de 4 años en adelante, adaptando el lenguaje y los efectos según la edad del grupo para asegurar que todos se diviertan."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cuánto dura el show de magia familiar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "El show principal tiene una duración aproximada de 45 a 60 minutos. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿El mago lleva su propio sonido?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí, lleva micrófono y un parlante con capacidad para hasta 80 personas, asegurando que todos los invitados escuchen perfectamente."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿En qué zonas de Bogotá presta el servicio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cubre todas las zonas de Bogotá y municipios aledaños en Cundinamarca, incluyendo Chía, Cajicá, Cota, La Calera y alrededores."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Es un show apto para adultos también?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutamente. Aunque el lenguaje es para niños, la calidad de los efectos de mentalismo y magia visual está diseñada para dejar a los adultos preguntándose '¿Cómo lo hizo?'. Es entretenimiento integral."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué necesito preparar antes de que llegue el mago?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Solo un espacio despejado para el show y 20 minutos para que el mago pueda armar todo en un sitio privado donde la preparación no sea vista por el público."
-            }
-          }
-        ]
+      "areaServed": [
+        { "@type": "City", "name": "Bogotá" },
+        { "@type": "AdministrativeArea", "name": "Cundinamarca" }
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "500000",
+        "highPrice": "1500000",
+        "priceCurrency": "COP",
+        "availability": "https://schema.org/InStock",
+        "offerCount": "1",
+        "areaServed": "Bogotá y Cundinamarca"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Para qué edades es recomendado el show de magia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los shows están diseñados para niños de 4 años en adelante, adaptando el lenguaje y los efectos según la edad del grupo para asegurar que todos se diviertan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura el show de magia familiar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El show principal tiene una duración aproximada de 1 hora. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El mago lleva su propio sonido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, lleva micrófono y un parlante con capacidad para hasta 80 personas, asegurando que todos los invitados escuchen perfectamente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué zonas de Bogotá presta el servicio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cubre todas las zonas de Bogotá y municipios aledaños en Cundinamarca, incluyendo Chía, Cajicá, Cota, La Calera y alrededores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es un show apto para adultos también?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutamente. Aunque el lenguaje es para niños, la calidad de los efectos de mentalismo y magia visual está diseñada para dejar a los adultos preguntándose '¿Cómo lo hizo?'. Es entretenimiento integral."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito preparar antes de que llegue el mago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo un espacio despejado para el show y 20 minutos para que el mago pueda armar todo en un sitio privado donde la preparación no sea vista por el público."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el precio del show de magia infantil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El show de magia familiar tiene un valor entre $1.000.000 y $2.000.000 pesos colombianos, dependiendo de la opción elegida para eventos en Bogotá y Cundinamarca."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   <!-- Google Fonts — carga no bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -898,7 +909,7 @@
       <p class="section-sub">Respuestas directas para que tomes la mejor decisión para el evento de tus hijos.</p>
       <div class="faq-list">
         <details><summary>¿Para qué edades es recomendado el show de magia?</summary><div class="faq-answer">Los shows están diseñados para niños de <strong>4 años en adelante</strong>, adaptando el lenguaje y los efectos según la edad del grupo para asegurar que todos se diviertan al máximo.</div></details>
-        <details><summary>¿Cuánto dura el show de magia familiar?</summary><div class="faq-answer">El show principal tiene una duración aproximada de <strong>45 a 60 minutos</strong>. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%.</div></details>
+        <details><summary>¿Cuánto dura el show de magia familiar?</summary><div class="faq-answer">El show principal tiene una duración aproximada de <strong>1 hora</strong>. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%.</div></details>
         <details><summary>¿El mago lleva su propio sonido?</summary><div class="faq-answer">Sí, el Mago Nabil lleva <strong>micrófono y un parlante con capacidad para hasta 80 personas</strong>, asegurando que todos los invitados escuchen perfectamente.</div></details>
         <details><summary>¿En qué zonas de Bogotá presta el servicio?</summary><div class="faq-answer">Cubre <strong>todas las zonas de Bogotá</strong> y municipios aledaños en Cundinamarca, incluyendo <strong>Chía, Cajicá, Cota, La Calera</strong> y alrededores.</div></details>
         <details><summary>¿Es un show apto para adultos también?</summary><div class="faq-answer">Absolutamente. Aunque el lenguaje es accesible para niños, la calidad de los efectos de mentalismo e ilusión visual está diseñada para dejar a los adultos preguntándose <em>"¿Cómo lo hizo?"</em>. Es <strong>entretenimiento integral para toda la familia</strong>.</div></details>
