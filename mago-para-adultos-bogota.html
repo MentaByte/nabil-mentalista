@@ -15,40 +15,89 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://nabilmentalista.com#negocio",
-      "name": "Nabil El Mentalista",
-      "image": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp",
-      "description": "Show de magia profesional y mentalismo de alto impacto para adultos y eventos corporativos en Bogotá.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bogotá",
-        "addressRegion": "Cundinamarca",
-        "addressCountry": "CO"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 4.6097,
-        "longitude": -74.0817
-      },
-      "url": "https://nabilmentalista.com/mago-para-adultos-bogota.html",
-      "telephone": "+573057679511",
-      "priceRange": "COP 700000 - 1500000",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "08:00",
-        "closes": "22:00"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "38"
-      },
-      "sameAs": [
-        "https://www.instagram.com/nabilmentalista/",
-        "https://www.linkedin.com/in/nabilmentalista/",
-        "https://www.google.com/maps?cid=3626227902060081910"
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://nabilmentalista.com#negocio",
+          "name": "Nabil El Mentalista",
+          "image": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp",
+          "description": "Show de magia profesional y mentalismo de alto impacto para adultos y eventos corporativos en Bogotá.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "addressCountry": "CO"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 4.6097,
+            "longitude": -74.0817
+          },
+          "url": "https://nabilmentalista.com/mago-para-adultos-bogota.html",
+          "telephone": "+573057679511",
+          "priceRange": "COP 700000 - 1500000",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "22:00"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "38"
+          },
+          "sameAs": [
+            "https://www.instagram.com/nabilmentalista/",
+            "https://www.linkedin.com/in/nabilmentalista/",
+            "https://www.google.com/maps?cid=3626227902060081910"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto dura el show central para adultos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El show central tiene una duración de 1 hora."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuál es el precio del show central para adultos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El show central tiene un precio de $1.000.000 COP."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Para cuántas personas está diseñado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Está diseñado para grupos de 15 personas en adelante."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿El show incluye equipo de sonido?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, el show central incluye equipo de sonido propio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En qué zonas prestas el servicio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cubro Bogotá y ciudades cercanas."
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -101,6 +150,10 @@
         .testimonios-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 20px 30px; max-width: 1300px; margin: 0 auto; }
         .testimonio-card { background: #fff; border-radius: 20px; padding: 24px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .stars { color: #FFB800; font-size: 1.4rem; margin-bottom: 12px; display: block; }
+        .faq-container { max-width: 800px; margin: 0 auto; padding: 20px 30px; }
+        .faq-item { background: #fff; border: 1px solid #eee; border-radius: 16px; margin-bottom: 16px; padding: 4px 24px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-item summary { cursor: pointer; font-weight: 700; padding: 16px 0; color: #800020; }
+        .faq-item p { padding-bottom: 16px; }
         
         .whatsapp-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1100; box-shadow: 0 6px 16px rgba(0,0,0,0.2); transition: transform 0.2s; }
         .whatsapp-float:hover { transform: scale(1.1); background: #128C7E; }
@@ -216,6 +269,32 @@
                 <svg width="20" height="20"><use xlink:href="#icon-google"></use></svg>
                 Ver más reseñas en Google Business
             </a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>¿Cuánto dura el show central para adultos?</summary>
+                <p>El show central tiene una duración de 1 hora.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cuál es el precio del show central para adultos?</summary>
+                <p>El show central tiene un precio de $1.000.000 COP.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Para cuántas personas está diseñado?</summary>
+                <p>Está diseñado para grupos de 15 personas en adelante.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿El show incluye equipo de sonido?</summary>
+                <p>Sí, el show central incluye equipo de sonido propio.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿En qué zonas prestas el servicio?</summary>
+                <p>Cubro Bogotá y ciudades cercanas.</p>
+            </details>
         </div>
     </section>
 </main>
