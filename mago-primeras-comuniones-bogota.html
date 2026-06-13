@@ -11,38 +11,72 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Mago Profesional para Primeras Comuniones",
-      "description": "Show de magia e ilusionismo de alto nivel para eventos familiares y primeras comuniones en Bogotá.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bogotá",
-        "addressRegion": "Cundinamarca",
-        "addressCountry": "CO"
-      },
-      "areaServed": ["Bogotá", "Chía", "Cajicá", "Sopó"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Shows de Magia",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Magia para Primera Comunión"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://nabilmentalista.com#negocio",
+          "name": "Mago Profesional para Primeras Comuniones",
+          "description": "Show de magia e ilusionismo de alto nivel para eventos familiares y primeras comuniones en Bogotá.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "addressCountry": "CO"
+          },
+          "areaServed": ["Bogotá", "Chía", "Cajicá", "Sopó"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Shows de Magia",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Magia para Primera Comunión"
+                }
+              }
+            ]
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "38"
+          },
+          "sameAs": [
+            "https://www.instagram.com/nabilmentalista/",
+            "https://www.linkedin.com/in/nabilmentalista/",
+            "https://www.google.com/maps?cid=3626227902060081910"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuánto dura el show de magia para una comunión?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "El espectáculo central tiene una duración de 45 a 60 minutos, tiempo ideal para mantener el asombro al máximo sin cansar a los invitados."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿En qué zonas de Bogotá prestan el servicio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cubrimos todo Bogotá (especialmente el norte, Cedritos, Colina, Rosales) y municipios cercanos como Chía, Cajicá, Sopó y La Calera."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Con cuánta anticipación debo reservar para mayo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mayo es temporada alta en Colombia. Recomendamos reservar con al menos 3 a 4 semanas de antelación para asegurar tu fecha."
+              }
             }
-          }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "38"
-      },
-      "sameAs": [
-        "https://www.instagram.com/nabilmentalista/",
-        "https://www.linkedin.com/in/nabilmentalista/",
-        "https://www.google.com/maps?cid=3626227902060081910"
+          ]
+        }
       ]
     }
     </script>
