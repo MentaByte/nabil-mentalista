@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página no encontrada - Nabil Mentalista</title>
+    <!-- Esto le avisa al navegador que redirija a la Home en 3 segundos -->
+    <meta http-equiv="refresh" content="3;url=https://nabilmentalista.com/">
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #111; color: #fff; }
+        h1 { color: #ffcc00; }
+        a { color: #00e676; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>¡Ups! Esta sección ha cambiado</h1>
+    <p>Los contenidos antiguos se han actualizado.</p>
+    <p>En 3 segundos serás redirigido a nuestra página principal...</p>
+    <p>Si no redirige automáticamente, <a href="https://nabilmentalista.com/">haz clic aquí</a>.</p>
+
+    <script>
+        // Redirección por JavaScript por si falla el meta refresh
+        setTimeout(function(){
+            window.location.href = "https://nabilmentalista.com/";
+        }, 3000);
+    </script>
+</body>
+</html>
