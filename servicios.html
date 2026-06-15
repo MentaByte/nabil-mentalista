@@ -110,13 +110,13 @@
   }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- CSS principal (sincrónico, sin CLS) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preconectar a Google Fonts para que la conexión TCP/TLS esté lista
+       cuando el JS inyecte el <link> después del load event -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -170,10 +170,13 @@
     <!-- IMAGEN PRINCIPAL -->
     <section style="padding: var(--section-py) var(--section-px);">
       <div class="fade-up" style="max-width:860px; margin:0 auto;">
-        <img src="imagenes/mentalismo-eventos-empresas.webp"
+        <img src="imagenes/mentalismo-eventos-empresas-880.webp"
+             srcset="imagenes/mentalismo-eventos-empresas-660.webp 660w, imagenes/mentalismo-eventos-empresas-880.webp 880w, imagenes/mentalismo-eventos-empresas.webp 930w"
+             sizes="(max-width: 860px) 100vw, 860px"
              alt="Show de mentalismo para eventos corporativos en Bogotá"
-             loading="lazy"
-             style="width:100%; display:block; border: 1px solid rgba(200,130,42,0.15);">
+             width="930" height="360"
+             fetchpriority="high" decoding="async"
+             style="width:100%; height:auto; display:block; border: 1px solid rgba(200,130,42,0.15);">
       </div>
     </section>
 
@@ -326,6 +329,23 @@
         if (!isOpen) item.classList.add('open');
       });
     });
+  </script>
+
+  <script>
+    // Inyectar Google Fonts DESPUÉS del evento load (post-LCP).
+    (function() {
+      function loadFonts() {
+        var l = document.createElement('link');
+        l.rel  = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap';
+        document.head.appendChild(l);
+      }
+      if (document.readyState === 'complete') {
+        loadFonts();
+      } else {
+        window.addEventListener('load', loadFonts);
+      }
+    })();
   </script>
 
 </body>
