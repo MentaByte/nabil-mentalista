@@ -1136,3 +1136,9 @@ footer {
   .page-hero { padding: 120px 24px 60px; }
   .page-hero-geo { display: none; }
 }
+
+/* Enlaces a shows sociales en el footer */
+.footer-social {
+  gap: 10px 24px;
+  margin-bottom: 24px;
+}
