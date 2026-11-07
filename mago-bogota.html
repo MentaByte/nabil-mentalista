@@ -33,42 +33,199 @@
       {
         "@type": "EntertainmentBusiness",
         "@id": "https://nabilmentalista.com#negocio",
-        "name": "Mago Nabil - Ilusionismo & Mentalismo Profesional",
-        "url": "https://nabilmentalista.com/mago-bogota.html",
+        "name": "Nabil Mentalista",
+        "alternateName": [
+          "Mago Nabil",
+          "Nabil El Mentalista"
+        ],
+        "description": "Nabil es un mago profesional en Bogotá, especializado en mentalismo, con más de 20 años de trayectoria. Shows de magia y mentalismo para eventos sociales (familias con niños y shows exclusivos para adultos) y shows corporativos personalizados para empresas. El mentalismo es una rama de la magia escénica basada en psicología, ilusión y habilidad: es entretenimiento, no una práctica esotérica ni un poder sobrenatural.",
+        "url": "https://nabilmentalista.com/",
+        "logo": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp",
+        "image": "https://nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
         "telephone": "+573057679511",
-        "priceRange": "$700.000 - $2.500.000 COP",
-        "image": "https://nabilmentalista.com/imagenes/mago-magia-de-cerca-eventos-bogota.webp",
-        "description": "Servicios profesionales de ilusionismo, magia corporativa y mentalismo de alto impacto para eventos empresariales, lanzamientos de marca y reuniones sociales exclusivas en Bogotá y la Sabana.",
+        "email": "nabilmentalista@gmail.com",
+        "priceRange": "Desde $700.000 COP",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Bogotá",
           "addressLocality": "Bogotá",
           "addressRegion": "Cundinamarca",
           "addressCountry": "CO"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "4.60971",
-          "longitude": "-74.08175"
+          "latitude": 4.6097,
+          "longitude": -74.0817
         },
         "areaServed": [
-          { "@type": "City", "name": "Bogotá" },
-          { "@type": "AdministrativeArea", "name": "Cundinamarca" },
-          { "@type": "City", "name": "Chía" },
-          { "@type": "City", "name": "Cajicá" },
-          { "@type": "City", "name": "Cota" }
+          {
+            "@type": "City",
+            "name": "Bogotá"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Cundinamarca"
+          },
+          {
+            "@type": "Country",
+            "name": "Colombia"
+          }
         ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        "founder": {
+          "@id": "https://nabilmentalista.com#nabil"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "42"
+        },
         "knowsAbout": [
-          "Magia Corporativa",
-          "Mentalismo",
+          "Magia",
+          "Mentalismo (arte escénico de la magia)",
           "Ilusionismo",
-          "Magia de Cerca",
-          "Experiential Learning",
-          "Eventos Corporativos"
+          "Magia de cerca",
+          "Eventos corporativos",
+          "Eventos sociales"
         ],
         "sameAs": [
           "https://www.instagram.com/nabilmentalista/",
+          "https://www.linkedin.com/in/nabilmentalista/",
           "https://www.google.com/maps?cid=3626227902060081910"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Shows de magia y mentalismo",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos sociales: familias con niños",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Show Central (familias con niños)",
+                  "price": "1000000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central (familias con niños)",
+                    "description": "Show central de magia y mentalismo para toda la familia, sonido incluido."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central + Magia de Cerca (familias con niños)",
+                  "price": "1300000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central + Magia de Cerca (familias con niños)",
+                    "description": "Show central más magia de cerca entre los invitados."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+                  "price": "1500000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+                    "description": "Show central, magia de cerca y un final personalizado para el homenajeado o la familia."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos sociales: shows exclusivos para adultos",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Magia de Cerca para adultos",
+                  "price": "700000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Magia de Cerca para adultos",
+                    "description": "Magia de cerca \"close-up\" para grupos pequeños, cócteles y cenas privadas."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central para adultos",
+                  "price": "1000000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central para adultos",
+                    "description": "Show central de magia y mentalismo para adultos, sonido incluido."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos corporativos",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Show corporativo personalizado",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": "2500000",
+                    "priceCurrency": "COP"
+                  },
+                  "description": "Desde $2.500.000 COP. Show diseñado a la medida de la empresa. 30 días de crédito y gestión de todo el trámite para trabajar con empresas.",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show corporativo personalizado de magia y mentalismo"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://nabilmentalista.com#nabil",
+        "name": "Nabil",
+        "alternateName": "Mago Nabil",
+        "jobTitle": "Mago profesional especializado en mentalismo",
+        "description": "Mago profesional con más de 20 años de trayectoria, especializado en mentalismo como arte escénico de la magia (no esotérico ni sobrenatural).",
+        "worksFor": {
+          "@id": "https://nabilmentalista.com#negocio"
+        },
+        "homeLocation": {
+          "@type": "City",
+          "name": "Bogotá"
+        },
+        "knowsLanguage": [
+          "es",
+          "en"
+        ],
+        "knowsAbout": [
+          "Magia",
+          "Mentalismo",
+          "Ilusionismo",
+          "Magia de cerca"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/nabilmentalista/",
+          "https://www.linkedin.com/in/nabilmentalista/"
         ]
       },
       {

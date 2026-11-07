@@ -26,120 +26,341 @@
   <!-- Robots -->
   <meta name="robots" content="index, follow" />
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "@id": "https://nabilmentalista.com/magia-familiar#service",
-      "serviceType": "Show de magia para novenas y reuniones familiares",
-      "name": "Show de Magia para Novenas y Reuniones Familiares",
-      "description": "Show de magia y mentalismo para novenas navideñas, fiestas de fin de año, reuniones familiares, primeras comuniones y bautizos en Bogotá y Cundinamarca.",
-      "provider": {
-        "@type": "Organization",
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EntertainmentBusiness",
         "@id": "https://nabilmentalista.com#negocio",
-        "name": "Mago Nabil",
-        "url": "https://nabilmentalista.com",
+        "name": "Nabil Mentalista",
+        "alternateName": [
+          "Mago Nabil",
+          "Nabil El Mentalista"
+        ],
+        "description": "Nabil es un mago profesional en Bogotá, especializado en mentalismo, con más de 20 años de trayectoria. Shows de magia y mentalismo para eventos sociales (familias con niños y shows exclusivos para adultos) y shows corporativos personalizados para empresas. El mentalismo es una rama de la magia escénica basada en psicología, ilusión y habilidad: es entretenimiento, no una práctica esotérica ni un poder sobrenatural.",
+        "url": "https://nabilmentalista.com/",
+        "logo": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp",
+        "image": "https://nabilmentalista.com/imagenes/mentalismo-corporativo-bogota-profesionalismo.webp",
         "telephone": "+573057679511",
-        "priceRange": "$1.000.000 - $1.500.000",
-        "image": "https://nabilmentalista.com/imagenes/show-magia-familiar-bogota-mago-nabil.webp",
+        "email": "nabilmentalista@gmail.com",
+        "priceRange": "Desde $700.000 COP",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
           "addressCountry": "CO"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 4.6097,
+          "longitude": -74.0817
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Bogotá"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Cundinamarca"
+          },
+          {
+            "@type": "Country",
+            "name": "Colombia"
+          }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        "founder": {
+          "@id": "https://nabilmentalista.com#nabil"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "42"
+        },
+        "knowsAbout": [
+          "Magia",
+          "Mentalismo (arte escénico de la magia)",
+          "Ilusionismo",
+          "Magia de cerca",
+          "Eventos corporativos",
+          "Eventos sociales"
+        ],
         "sameAs": [
           "https://www.instagram.com/nabilmentalista/",
           "https://www.linkedin.com/in/nabilmentalista/",
           "https://www.google.com/maps?cid=3626227902060081910"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Shows de magia y mentalismo",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos sociales: familias con niños",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Show Central (familias con niños)",
+                  "price": "1000000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central (familias con niños)",
+                    "description": "Show central de magia y mentalismo para toda la familia, sonido incluido."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central + Magia de Cerca (familias con niños)",
+                  "price": "1300000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central + Magia de Cerca (familias con niños)",
+                    "description": "Show central más magia de cerca entre los invitados."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+                  "price": "1500000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+                    "description": "Show central, magia de cerca y un final personalizado para el homenajeado o la familia."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos sociales: shows exclusivos para adultos",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Magia de Cerca para adultos",
+                  "price": "700000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Magia de Cerca para adultos",
+                    "description": "Magia de cerca \"close-up\" para grupos pequeños, cócteles y cenas privadas."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Show Central para adultos",
+                  "price": "1000000",
+                  "priceCurrency": "COP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show Central para adultos",
+                    "description": "Show central de magia y mentalismo para adultos, sonido incluido."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Eventos corporativos",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Show corporativo personalizado",
+                  "priceSpecification": {
+                    "@type": "PriceSpecification",
+                    "minPrice": "2500000",
+                    "priceCurrency": "COP"
+                  },
+                  "description": "Desde $2.500.000 COP. Show diseñado a la medida de la empresa. 30 días de crédito y gestión de todo el trámite para trabajar con empresas.",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Show corporativo personalizado de magia y mentalismo"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://nabilmentalista.com#nabil",
+        "name": "Nabil",
+        "alternateName": "Mago Nabil",
+        "jobTitle": "Mago profesional especializado en mentalismo",
+        "description": "Mago profesional con más de 20 años de trayectoria, especializado en mentalismo como arte escénico de la magia (no esotérico ni sobrenatural).",
+        "worksFor": {
+          "@id": "https://nabilmentalista.com#negocio"
+        },
+        "homeLocation": {
+          "@type": "City",
+          "name": "Bogotá"
+        },
+        "knowsLanguage": [
+          "es",
+          "en"
+        ],
+        "knowsAbout": [
+          "Magia",
+          "Mentalismo",
+          "Ilusionismo",
+          "Magia de cerca"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/nabilmentalista/",
+          "https://www.linkedin.com/in/nabilmentalista/"
         ]
       },
-      "areaServed": [
-        { "@type": "City", "name": "Bogotá" },
-        { "@type": "AdministrativeArea", "name": "Cundinamarca" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "1000000",
-        "highPrice": "1500000",
-        "priceCurrency": "COP",
-        "availability": "https://schema.org/InStock",
-        "offerCount": "1",
-        "areaServed": "Bogotá y Cundinamarca"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Para qué edades es el show de magia familiar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Es para todas las edades, desde niños de 4 años hasta los abuelos. El lenguaje y los efectos se adaptan al grupo para que toda la familia lo disfrute al mismo tiempo."
-          }
+      {
+        "@type": "Service",
+        "@id": "https://nabilmentalista.com/magia-familiar#service",
+        "serviceType": "Show de magia para novenas y reuniones familiares",
+        "name": "Show de Magia para Novenas y Reuniones Familiares",
+        "description": "Show de magia y mentalismo para novenas navideñas, fiestas de fin de año, reuniones familiares, primeras comuniones y bautizos en Bogotá y Cundinamarca.",
+        "provider": {
+          "@id": "https://nabilmentalista.com#negocio"
         },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto dura el show de magia familiar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El show principal tiene una duración aproximada de 1 hora. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%."
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Bogotá"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Cundinamarca"
           }
-        },
-        {
-          "@type": "Question",
-          "name": "¿El mago lleva su propio sonido?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, lleva micrófono y un parlante con capacidad para hasta 80 personas, asegurando que todos los invitados escuchen perfectamente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Se puede hacer el show durante una novena navideña?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Lo más común es hacerlo después de rezar la novena, cuando la familia ya está reunida. El show de 1 hora se convierte en el plan central de la noche y funciona en casas, conjuntos, salones sociales y fincas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿En qué zonas de Bogotá presta el servicio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cubre todas las zonas de Bogotá y municipios aledaños en Cundinamarca, incluyendo Chía, Cajicá, Cota, La Calera y alrededores."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es un show apto para adultos también?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutamente. Aunque el lenguaje es para niños, la calidad de los efectos de mentalismo y magia visual está diseñada para dejar a los adultos preguntándose '¿Cómo lo hizo?'. Es entretenimiento integral."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué necesito preparar antes de que llegue el mago?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Solo un espacio despejado para el show y 20 minutos para que el mago pueda armar todo en un sitio privado donde la preparación no sea vista por el público."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuál es el precio del show de magia familiar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El show de magia familiar tiene un valor entre $1.000.000 y $1.500.000 COP, según la fecha, el lugar y el número de invitados, para eventos en Bogotá y Cundinamarca."
-          }
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "1000000",
+          "highPrice": "1500000",
+          "priceCurrency": "COP",
+          "offerCount": "3",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Show Central (familias con niños)",
+              "price": "1000000",
+              "priceCurrency": "COP",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Show Central (familias con niños)",
+                "description": "Show central de magia y mentalismo para toda la familia, sonido incluido."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Show Central + Magia de Cerca (familias con niños)",
+              "price": "1300000",
+              "priceCurrency": "COP",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Show Central + Magia de Cerca (familias con niños)",
+                "description": "Show central más magia de cerca entre los invitados."
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+              "price": "1500000",
+              "priceCurrency": "COP",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Show Central + Magia de Cerca + Final Personalizado (familias con niños)",
+                "description": "Show central, magia de cerca y un final personalizado para el homenajeado o la familia."
+              }
+            }
+          ]
         }
-      ]
-    }
-  ]
-}
-</script>
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Para qué edades es el show de magia familiar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es para todas las edades, desde niños de 4 años hasta los abuelos. El lenguaje y los efectos se adaptan al grupo para que toda la familia lo disfrute al mismo tiempo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto dura el show de magia familiar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El show principal tiene una duración aproximada de 1 hora. Es el tiempo perfecto validado por años de experiencia para mantener la energía alta y la atención de los niños al 100%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿El mago lleva su propio sonido?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, lleva micrófono y un parlante con capacidad para hasta 80 personas, asegurando que todos los invitados escuchen perfectamente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se puede hacer el show durante una novena navideña?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Lo más común es hacerlo después de rezar la novena, cuando la familia ya está reunida. El show de 1 hora se convierte en el plan central de la noche y funciona en casas, conjuntos, salones sociales y fincas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué zonas de Bogotá presta el servicio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cubre todas las zonas de Bogotá y municipios aledaños en Cundinamarca, incluyendo Chía, Cajicá, Cota, La Calera y alrededores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es un show apto para adultos también?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutamente. Aunque el lenguaje es para niños, la calidad de los efectos de mentalismo y magia visual está diseñada para dejar a los adultos preguntándose '¿Cómo lo hizo?'. Es entretenimiento integral."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué necesito preparar antes de que llegue el mago?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Solo un espacio despejado para el show y 20 minutos para que el mago pueda armar todo en un sitio privado donde la preparación no sea vista por el público."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el precio del show de magia familiar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hay 3 opciones: Show Central, $1.000.000 COP; Show Central + Magia de Cerca, $1.300.000 COP; y Show Central + Magia de Cerca + Final Personalizado, $1.500.000 COP. Aplica para eventos en Bogotá y Cundinamarca."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <!-- Google Fonts — carga no bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -931,7 +1152,7 @@
         <details><summary>¿En qué zonas de Bogotá presta el servicio?</summary><div class="faq-answer">Cubre <strong>todas las zonas de Bogotá</strong> y municipios aledaños en Cundinamarca, incluyendo <strong>Chía, Cajicá, Cota, La Calera</strong> y alrededores.</div></details>
         <details><summary>¿Es un show apto para adultos también?</summary><div class="faq-answer">Absolutamente. Aunque el lenguaje es accesible para niños, la calidad de los efectos de mentalismo e ilusión visual está diseñada para dejar a los adultos preguntándose <em>"¿Cómo lo hizo?"</em>. Es <strong>entretenimiento integral para toda la familia</strong>.</div></details>
         <details><summary>¿Qué necesito preparar antes de que llegue el mago?</summary><div class="faq-answer">Solo un <strong>espacio despejado</strong> para el show y <strong>20 minutos para que el mago pueda armar todo en un sitio privado donde la preparación no sea vista por el público</strong>. El Mago Nabil se encarga del resto.</div></details>
-        <details><summary>¿Cuál es el precio del show de magia familiar?</summary><div class="faq-answer">El show tiene un valor <strong>entre $1.000.000 y $1.500.000 COP</strong>, según la fecha, el lugar y el número de invitados, para eventos en Bogotá y Cundinamarca.</div></details>
+        <details><summary>¿Cuál es el precio del show de magia familiar?</summary><div class="faq-answer">Hay 3 opciones: <strong>Show Central, $1.000.000 COP</strong>; <strong>Show Central + Magia de Cerca, $1.300.000 COP</strong>; y <strong>Show Central + Magia de Cerca + Final Personalizado, $1.500.000 COP</strong>. Aplica para eventos en Bogotá y Cundinamarca.</div></details>
         <details><summary>¿Con cuánto tiempo de anticipación debo reservar?</summary><div class="faq-answer">Se recomienda reservar con al menos <strong>2 a 3 semanas de anticipación</strong>, especialmente en temporadas altas (diciembre, vacaciones escolares). Contáctanos lo antes posible para asegurar disponibilidad.</div></details>
       </div>
     </div>
