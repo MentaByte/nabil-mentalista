@@ -188,6 +188,7 @@
       padding: 8px 16px;
       font-weight: 600;
       letter-spacing: 0.3px;
+      line-height: 16px; /* altura estable al cargar la fuente web (evita CLS) */
     }
     .topbar a { color: #FCD34D; text-decoration: underline; text-underline-offset: 2px; }
     /* ===== NAV ===== */
@@ -389,9 +390,12 @@
     /* Hero imagen */
     .hero-image-wrap {
       position: relative;
-      animation: fadeUp 0.8s ease 0.2s both;
-      will-change: transform, opacity;
+      animation: heroSlide 0.8s ease both;
+      will-change: transform;
     }
+    /* LCP: la imagen del hero no arranca en opacity:0 (solo desliza) */
+    @keyframes heroSlide { from { transform: translateY(20px); } to { transform: translateY(0); } }
+
     .hero-card {
       position: absolute;
       bottom: -20px;
@@ -795,7 +799,7 @@
   <!-- Topbar -->
   <div class="topbar" role="banner">
     📍 Bogotá y Cundinamarca &nbsp;|&nbsp;
-    <a href="tel:+573057679511" aria-label="Llamar a Mago Nabil">+57 305 767 9511</a>
+    <a href="tel:+573057679511">+57 305 767 9511</a>
   </div>
   <!-- Navegación -->
   <nav role="navigation" aria-label="Navegación principal">
@@ -805,7 +809,6 @@
     <div class="nav-cta">
       <a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20información%20del%20show%20familiar"
          class="btn-wa-nav"
-         aria-label="Consultar disponibilidad por WhatsApp"
          rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Consultar fecha
@@ -909,9 +912,9 @@
     <h2 class="section-title" id="eventos-titulo">Para Cada Momento Especial</h2>
     <p class="section-sub">Cada evento es único. El show se adapta perfectamente al tipo de celebración y al público asistente.</p>
     <div class="eventos-grid">
-      <article class="evento-card ec1"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">🎄</span><h3>Novenas y Fiestas de Fin de Año</h3><span class="evento-tag">Temporada de diciembre</span></div><div class="evento-body"><p>Después de rezar la novena, la familia ya está reunida: es el momento perfecto para una hora de magia que todos recordarán. También ideal para la cena de fin de año o la reunión de Año Nuevo.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20novena%20o%20fiesta%20de%20fin%20de%20a%C3%B1o" class="evento-cta" aria-label="Consultar show para novena por WhatsApp" rel="noopener">Consultar disponibilidad →</a></div></article>
-      <article class="evento-card ec2"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">⛪</span><h3>Primeras Comuniones y Bautizos</h3><span class="evento-tag">Varias generaciones</span></div><div class="evento-body"><p>Momentos que reúnen a varias generaciones. El show está equilibrado para captar la atención de los primos pequeños, los tíos y los abuelos, creando un puente de diversión compartida. <a href="mago-primeras-comuniones-bogota.html">Ver el show para primeras comuniones</a>.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20comuni%C3%B3n%20o%20bautizo" class="evento-cta" aria-label="Consultar show para comunión por WhatsApp" rel="noopener">Consultar disponibilidad →</a></div></article>
-      <article class="evento-card ec3"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">👨‍👩‍👧‍👦</span><h3>Reuniones Familiares Privadas</h3><span class="evento-tag">Rompe el hielo</span></div><div class="evento-body"><p>¿Una cena familiar o un reencuentro? La magia rompe el hielo de inmediato, generando temas de conversación y risas que duran mucho después de que el show termina.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20reuni%C3%B3n%20familiar%20privada" class="evento-cta" aria-label="Consultar show para reunión familiar por WhatsApp" rel="noopener">Consultar disponibilidad →</a></div></article>
+      <article class="evento-card ec1"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">🎄</span><h3>Novenas y Fiestas de Fin de Año</h3><span class="evento-tag">Temporada de diciembre</span></div><div class="evento-body"><p>Después de rezar la novena, la familia ya está reunida: es el momento perfecto para una hora de magia que todos recordarán. También ideal para la cena de fin de año o la reunión de Año Nuevo.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20novena%20o%20fiesta%20de%20fin%20de%20a%C3%B1o" class="evento-cta" rel="noopener">Consultar disponibilidad →</a></div></article>
+      <article class="evento-card ec2"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">⛪</span><h3>Primeras Comuniones y Bautizos</h3><span class="evento-tag">Varias generaciones</span></div><div class="evento-body"><p>Momentos que reúnen a varias generaciones. El show está equilibrado para captar la atención de los primos pequeños, los tíos y los abuelos, creando un puente de diversión compartida. <a href="mago-primeras-comuniones-bogota.html">Ver el show para primeras comuniones</a>.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20comuni%C3%B3n%20o%20bautizo" class="evento-cta" rel="noopener">Consultar disponibilidad →</a></div></article>
+      <article class="evento-card ec3"><div class="evento-header"><span class="evento-emoji" aria-hidden="true">👨‍👩‍👧‍👦</span><h3>Reuniones Familiares Privadas</h3><span class="evento-tag">Rompe el hielo</span></div><div class="evento-body"><p>¿Una cena familiar o un reencuentro? La magia rompe el hielo de inmediato, generando temas de conversación y risas que duran mucho después de que el show termina.</p><a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20un%20show%20para%20una%20reuni%C3%B3n%20familiar%20privada" class="evento-cta" rel="noopener">Consultar disponibilidad →</a></div></article>
     </div>
   </section>
   <!-- FAQ -->
@@ -950,7 +953,7 @@
     <p>No dejes el entretenimiento al azar. Asegura una fecha con el Mago Nabil y garantiza la sonrisa de todos tus invitados, desde el más pequeño hasta los abuelos.</p>
     <div class="cta-buttons">
       <a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quiero%20consultar%20disponibilidad%20para%20mi%20evento%20familiar" class="btn-wa-final" aria-label="Consultar disponibilidad por WhatsApp" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Consultar Disponibilidad por WhatsApp</a>
-      <a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quisiera%20una%20cotizaci%C3%B3n%20formal%20con%20todos%20los%20detalles%20del%20show" class="btn-cotizar" aria-label="Solicitar cotización formal por WhatsApp" rel="noopener">📋 Pedir Cotización Formal</a>
+      <a href="https://wa.me/573057679511?text=Hola%20Nabil%2C%20quisiera%20una%20cotizaci%C3%B3n%20formal%20con%20todos%20los%20detalles%20del%20show" class="btn-cotizar" rel="noopener">📋 Pedir Cotización Formal</a>
     </div>
   </section>
   </main>
@@ -959,7 +962,7 @@
     <div class="footer-logo">Mago Nabil</div>
     <p><strong>Show de Magia para Novenas y Reuniones Familiares en Bogotá</strong></p>
     <p style="margin-top: 8px;">¿Buscas un show para un cumpleaños infantil? Visita <a href="https://magonabil.com/" style="color: var(--amber);">magonabil.com</a></p>
-    <p>📍 Bogotá, Colombia &nbsp;|&nbsp; 📞 <a href="tel:+573057679511" aria-label="Llamar a Mago Nabil">+57 305 767 9511</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/573057679511" rel="noopener" aria-label="WhatsApp Mago Nabil">WhatsApp</a></p>
+    <p>📍 Bogotá, Colombia &nbsp;|&nbsp; 📞 <a href="tel:+573057679511">+57 305 767 9511</a> &nbsp;|&nbsp; 💬 <a href="https://wa.me/573057679511" rel="noopener" aria-label="WhatsApp Mago Nabil">WhatsApp</a></p>
     <nav aria-label="Otros shows" style="margin-top: 16px; font-size: 0.85rem;">
       <a href="mago-para-adultos-bogota.html" style="color: var(--amber);">Magia para Adultos en Bogotá</a>
       &nbsp;|&nbsp;

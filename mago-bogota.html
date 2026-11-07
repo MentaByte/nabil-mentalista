@@ -157,6 +157,7 @@
       font-size: 0.82rem;
       padding: 8px 16px;
       font-weight: 600;
+      line-height: 16px; /* altura estable al cargar la fuente web (evita CLS) */
     }
     .topbar a { color: #FCD34D; text-decoration: underline; text-underline-offset: 2px; }
     /* ===== NAV ===== */
@@ -304,7 +305,10 @@
       font-weight: 700;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-    .hero-image-wrap { position: relative; animation: fadeUp 0.8s ease 0.2s both; }
+    .hero-image-wrap { position: relative; animation: heroSlide 0.8s ease both; }
+    /* LCP: la imagen del hero no arranca en opacity:0 (solo desliza) */
+    @keyframes heroSlide { from { transform: translateY(20px); } to { transform: translateY(0); } }
+
     .hero-card {
       position: absolute;
       bottom: -15px;
@@ -450,7 +454,7 @@
 
   <div class="topbar" role="banner">
     ✨ Ilusionismo Profesional en Bogotá y la Sabana &nbsp;|&nbsp;
-    <a href="tel:+573057679511" aria-label="Llamar a Mago Nabil">+57 305 767 9511</a>
+    <a href="tel:+573057679511">+57 305 767 9511</a>
   </div>
 
   <nav role="navigation" aria-label="Navegación principal">

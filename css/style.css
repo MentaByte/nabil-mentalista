@@ -857,6 +857,8 @@ footer {
   flex-wrap: wrap;
 }
 .footer-links a {
+  display: inline-block;
+  padding: 6px 0; /* área táctil ≥ 24px */
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
