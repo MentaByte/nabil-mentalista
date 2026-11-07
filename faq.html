@@ -226,6 +226,16 @@
         ]
       },
       {
+        "@type": "WebSite",
+        "@id": "https://nabilmentalista.com/#website",
+        "url": "https://nabilmentalista.com/",
+        "name": "Nabil Mentalista",
+        "inLanguage": "es-CO",
+        "publisher": {
+          "@id": "https://nabilmentalista.com#negocio"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -285,6 +295,23 @@
             }
           }
         ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://nabilmentalista.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Preguntas frecuentes",
+            "item": "https://nabilmentalista.com/faq.html"
+          }
+        ]
       }
     ]
   }
@@ -332,11 +359,11 @@
       FAQ
     </div>
 
-    <p class="section-label fade-up">Todo lo que necesitas saber</p>
-    <h1 class="page-hero-title fade-up">
+    <h1 class="section-label fade-up">Preguntas frecuentes sobre el show de mentalismo corporativo</h1>
+    <p class="page-hero-title fade-up">
       Preguntas<br>
       <em>Frecuentes</em>
-    </h1>
+    </p>
     <p class="page-hero-sub fade-up">
       Mentalismo corporativo · Costos del show · Área de cobertura.<br>
       Resolvemos tus dudas antes de que las tengas.
@@ -350,7 +377,7 @@
     <section style="padding: var(--section-py) var(--section-px); max-width: 860px; margin: 0 auto;">
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿Cuánto dura el show?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -360,7 +387,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿Puedes personalizar el show con el mensaje de mi marca o producto?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -370,7 +397,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿El show es interactivo?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -380,7 +407,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿Dónde realizas tus shows? ¿Solo en Bogotá?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -390,7 +417,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿Qué necesito para el show (espacio, sonido, etc.)?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -404,7 +431,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿El mentalismo es algo esotérico o un poder sobrenatural?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -414,7 +441,7 @@
       </div>
 
       <div class="faq-item fade-up">
-        <div class="faq-question">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
           ¿Cuál es el precio de un show de mentalismo para mi evento corporativo?
           <span class="faq-toggle" aria-hidden="true">+</span>
         </div>
@@ -486,20 +513,27 @@
   </footer>
 
   <!-- JS principal -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 
   <!-- Acordeón FAQ — usa las clases .faq-item / .faq-question / .faq-answer del CSS -->
   <script>
     document.querySelectorAll('.faq-question').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var item = this.closest('.faq-item');
+      function toggle() {
+        var item = btn.closest('.faq-item');
         var isOpen = item.classList.contains('open');
         // Cierra todos
         document.querySelectorAll('.faq-item').forEach(function (i) {
           i.classList.remove('open');
+          var q = i.querySelector('.faq-question');
+          if (q) q.setAttribute('aria-expanded', 'false');
         });
         // Abre el clickeado si estaba cerrado
-        if (!isOpen) item.classList.add('open');
+        if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      }
+      btn.addEventListener('click', toggle);
+      // Accesible con teclado (Enter / Espacio)
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
       });
     });
   </script>
