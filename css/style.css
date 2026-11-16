@@ -374,7 +374,7 @@ section { padding: var(--section-py) var(--section-px); }
 .descripcion {
   background: var(--black);
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: 60px;
   align-items: center;
   padding-top: 100px;
@@ -1143,4 +1143,133 @@ footer {
 .footer-social {
   gap: 10px 24px;
   margin-bottom: 24px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TALLERES Y CHARLAS — componentes de las páginas de formación
+   ═══════════════════════════════════════════════════════════════ */
+.bloque {
+  padding: var(--section-py) var(--section-px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bloque-oscuro { max-width: none; background: var(--dark); }
+.bloque-oscuro > .content-grid { max-width: 1104px; margin: 0 auto; }
+.bloque-h2 {
+  font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', sans-serif;
+  font-weight: 900;
+  font-size: clamp(30px, 4.5vw, 56px);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 0.95;
+  margin: 16px 0 24px;
+}
+.bloque-h2 em,
+.sol-h2 em { font-family: 'Playfair Display', serif; font-style: italic; color: var(--amber); }
+.bloque-intro {
+  font-size: 15px;
+  color: var(--grey-light);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.bloque-texto { font-size: 15px; color: var(--grey-light); line-height: 1.8; margin-bottom: 32px; }
+
+.img-marco {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(200,130,42,0.15);
+}
+
+.taller-texto p { font-size: 15px; color: var(--grey-light); line-height: 1.85; margin-bottom: 18px; }
+.taller-texto p.section-label { margin-bottom: 20px; }
+.taller-texto strong, .card-body a, .faq-answer a { color: var(--white); }
+.card-body a, .faq-answer a { text-decoration: underline; text-decoration-color: var(--amber); }
+
+.sol-card-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
+.sol-card .sol-card-link { display: inline-block; margin-top: 24px; }
+
+/* Pasos de la dinámica */
+.pasos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.paso { background: var(--dark2); padding: 44px 36px; border-top: 2px solid var(--amber); }
+.paso-num { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--amber); line-height: 1; }
+.paso-tiempo {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin: 14px 0 18px;
+}
+.paso-title {
+  font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.paso-body { font-size: 14px; color: var(--grey); line-height: 1.75; }
+
+/* Testimonio */
+.testimonio-wrap { max-width: 900px; }
+.testimonio { position: relative; padding: 56px 48px; background: var(--dark2); border-left: 2px solid var(--amber); }
+.testimonio-mark {
+  position: absolute;
+  top: 8px; left: 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 96px;
+  color: rgba(200,130,42,0.25);
+  line-height: 1;
+}
+.testimonio blockquote p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.testimonio figcaption { margin-top: 28px; font-size: 13px; color: var(--grey); line-height: 1.6; }
+.testimonio figcaption strong {
+  display: block;
+  font-family: 'Barlow Condensed', 'BarlowCondensed-fallback', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+/* Listas */
+.lista-check { list-style: none; margin-top: 8px; }
+.lista-check li {
+  position: relative;
+  padding: 0 0 18px 30px;
+  font-size: 15px;
+  color: var(--grey-light);
+  line-height: 1.7;
+}
+.lista-check li::before { content: '◆'; position: absolute; left: 0; top: 1px; font-size: 11px; color: var(--amber); }
+
+.formatos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.otros-talleres { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 860px; margin: 32px auto 0; }
+.otro-taller { text-decoration: none; color: inherit; display: block; }
+
+@media (max-width: 900px) {
+  :root { --section-px: 24px; --section-py: 80px; }
+  .pasos, .formatos, .otros-talleres { grid-template-columns: 1fr; }
+  .testimonio { padding: 48px 24px 32px; }
+  .hero-actions { flex-wrap: wrap; }
 }
