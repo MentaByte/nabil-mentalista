@@ -1,55 +1,55 @@
+/* Nabil Mentalista — interacciones ligeras.
+   Todo el contenido está en el HTML: si este script no corre,
+   la página se ve completa y legible (mejora progresiva). */
 (function () {
   'use strict';
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
 
-  // Usamos una constante para el alto del nav (aprox 80px) para evitar 'offsetHeight' (Reflow)
-  var NAV_FIXED_HEIGHT = 80; 
-  var nav = document.querySelector('nav');
-
-  /* ── NAV — Scroll con rAF throttle, sin leer propiedades geométricas ── */
-  var ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        if (nav) {
-          if (window.scrollY > 40) {
-            nav.classList.add('scrolled');
-          } else {
-            nav.classList.remove('scrolled');
-          }
-        }
-        ticking = false;
+  /* 1. Aparición suave de bloques */
+  if (hasIO && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
-      ticking = true;
-    }
-  }, { passive: true });
-
-  /* ── FADE-UP — Solo para elementos que NO están en el Hero ── */
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.05 });
-
-    // IMPORTANTE: No observar elementos del Hero para evitar saltos visuales
-    document.querySelectorAll('.fade-up:not(.hero .fade-up)').forEach(function(el) {
-      observer.observe(el);
-    });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    document.querySelectorAll('.aparece').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.aparece').forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ── SMOOTH SCROLL — Usando el offset fijo ── */
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
-      var targetId = this.getAttribute('href');
-      var target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        var top = target.getBoundingClientRect().top + window.pageYOffset - NAV_FIXED_HEIGHT;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-      }
+  /* 2. Lista de talleres que se resalta según el taller visible */
+  var enlaces = document.querySelectorAll('.temas-lista a');
+  if (enlaces.length && hasIO) {
+    var porId = {};
+    enlaces.forEach(function (a) { porId[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          enlaces.forEach(function (a) { a.classList.remove('activo'); });
+          var a = porId[e.target.id];
+          if (a) a.classList.add('activo');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    document.querySelectorAll('.tema[id]').forEach(function (el) { obs.observe(el); });
+  }
+
+  /* 3. Formulario que arma el mensaje de WhatsApp */
+  document.querySelectorAll('form[data-whatsapp]').forEach(function (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var d = new FormData(form);
+      var lineas = ['Hola Nabil, quiero una propuesta para mi empresa.'];
+      var campos = [['nombre', 'Nombre'], ['empresa', 'Empresa'], ['tema', 'Tema'], ['formato', 'Formato'],
+                    ['participantes', 'Participantes'], ['fecha', 'Fecha y ciudad'], ['mensaje', 'Detalles']];
+      campos.forEach(function (c) {
+        var v = (d.get(c[0]) || '').toString().trim();
+        if (v) lineas.push(c[1] + ': ' + v);
+      });
+      var url = 'https://wa.me/' + form.getAttribute('data-whatsapp') + '?text=' + encodeURIComponent(lineas.join('\n'));
+      window.open(url, '_blank', 'noopener');
     });
   });
 })();
