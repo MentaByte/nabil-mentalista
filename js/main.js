@@ -41,7 +41,7 @@
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
       var d = new FormData(form);
-      var lineas = ['Hola Nabil, quiero una propuesta para mi empresa.'];
+      var lineas = [form.getAttribute('data-saludo') || 'Hola Nabil, quiero una propuesta para mi empresa.'];
       var campos = [['nombre', 'Nombre'], ['empresa', 'Empresa'], ['tema', 'Tema'], ['formato', 'Formato'],
                     ['participantes', 'Participantes'], ['fecha', 'Fecha y ciudad'], ['mensaje', 'Detalles']];
       campos.forEach(function (c) {
