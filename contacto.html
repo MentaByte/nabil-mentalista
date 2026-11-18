@@ -30,11 +30,8 @@
         "@type": "ProfessionalService",
         "@id": "https://nabilmentalista.com#negocio",
         "name": "Nabil Mentalista",
-        "alternateName": [
-          "Nabil El Mentalista",
-          "Mago Nabil"
-        ],
-        "description": "Talleres y charlas para empresas que usan la magia como metáfora y herramienta de aprendizaje: creatividad con método, comunicación que conecta y metas convertidas en logros. Presenciales o virtuales, en Bogotá y toda Colombia.",
+        "alternateName": "Nabil El Mentalista",
+        "description": "Talleres y conferencias de habilidades blandas para empresas: creatividad con el método SCAMPER, comunicación asertiva y no verbal basada en Juan Tamariz, y motivación laboral. Presenciales en Bogotá y toda Colombia, o virtuales, en español o inglés.",
         "url": "https://nabilmentalista.com/",
         "logo": "https://nabilmentalista.com/imagenes/logo-nabil-mentalista-bogota.webp",
         "image": "https://nabilmentalista.com/imagenes/elementos-brandeados-show.webp",
@@ -63,9 +60,15 @@
           "Método SCAMPER",
           "Comunicación efectiva",
           "Motivación y logro de metas",
-          "Formación corporativa",
           "Magia",
-          "Mentalismo"
+          "Mentalismo",
+          "Capacitación empresarial",
+          "Habilidades blandas",
+          "Comunicación asertiva",
+          "Comunicación no verbal",
+          "Oratoria",
+          "Motivación laboral",
+          "Conferencias motivacionales"
         ],
         "sameAs": [
           "https://www.instagram.com/nabilmentalista/",
@@ -81,6 +84,25 @@
             "en"
           ]
         }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://nabilmentalista.com#nabil",
+        "name": "Nabil Touchie",
+        "alternateName": "Nabil Mentalista",
+        "jobTitle": "Mago, mentalista y conferencista",
+        "description": "Mago especializado en mentalismo con más de 20 años de trayectoria en Colombia. Dicta talleres y conferencias de habilidades blandas para empresas como Servicios Bolívar, OPAIN, Inchcape y Davivienda.",
+        "worksFor": {
+          "@id": "https://nabilmentalista.com#negocio"
+        },
+        "knowsLanguage": [
+          "es",
+          "en"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/nabilmentalista/",
+          "https://www.linkedin.com/in/nabilmentalista/"
+        ]
       },
       {
         "@type": "ContactPage",
@@ -115,13 +137,13 @@
 
   <header class="cabecera">
     <div class="contenedor">
-      <a href="index.html" class="marca">
+      <a href="/" class="marca">
         <svg class="marca-logo" viewBox="60 -710 2780 710" role="img" aria-label="Nabil"><path fill="currentColor" d="M68 0V-710H250.8L510.6 -265.2V-710H684.6V0H500.6L242 -426.4V0Z M716.4 0 972.4 -710H1174L1430 0H1251.2L1205 -134H940.6L894.4 0ZM988 -272.4H1158.4L1073.6 -522.2Z M1461 0V-710H1748.2Q1882.2 -710 1954.4 -663.6Q2026.6 -617.2 2026.6 -516.6Q2026.6 -473 2009.4 -441.2Q1992.2 -409.4 1958.4 -390.7Q1924.6 -372 1876 -367.2L1875.8 -366.8Q1965.2 -359.6 2010.9 -315.1Q2056.6 -270.6 2056.6 -195.8Q2056.6 -96.4 1984.8 -48.2Q1913 0 1780.2 0ZM1635 -136.8H1769.8Q1818.8 -136.8 1850.3 -156.8Q1881.8 -176.8 1881.8 -218.4Q1881.8 -260 1850.7 -280.7Q1819.6 -301.4 1769.8 -301.4H1635ZM1635 -420.6H1741.8Q1791 -420.6 1821.4 -439.7Q1851.8 -458.8 1851.8 -496.6Q1851.8 -536.6 1822.1 -554.9Q1792.4 -573.2 1741.8 -573.2H1635Z M2116 0V-710H2290V0Z M2371 0V-710H2545V-40.8L2446.8 -142.4H2863.2V0Z"/></svg>
         <span class="marca-sub">Mentalista · Talleres y charlas para empresas</span>
       </a>
       <nav class="menu" aria-label="Principal">
         <ul>
-        <li><a href="index.html#talleres">Talleres</a></li>
+        <li><a href="/#talleres">Talleres</a></li>
         <li><a href="charlas-para-empresas.html">Charlas</a></li>
         <li><a href="faq.html">Preguntas</a></li>
         <li><a href="contacto.html" aria-current="page">Contacto</a></li>
@@ -132,7 +154,7 @@
   </header>
 
   <main id="main">
-    <div class="contenedor"><nav class="migas" aria-label="Ruta de navegación"><ol><li><a href="index.html">Inicio</a></li><li aria-current="page">Contacto</li></ol></nav></div>
+    <div class="contenedor"><nav class="migas" aria-label="Ruta de navegación"><ol><li><a href="/">Inicio</a></li><li aria-current="page">Contacto</li></ol></nav></div>
 
     <section class="seccion" style="padding-top:40px; padding-bottom:56px;">
       <div class="contenedor">
@@ -182,11 +204,11 @@
     <div class="contenedor">
       <div class="pie-cols">
         <div>
-          <h2>Nabil Mentalista</h2>
+          <p class="pie-titulo">Nabil Mentalista</p>
           <p>Talleres y charlas para empresas.<br>Bogotá y toda Colombia, presencial o virtual.</p>
         </div>
         <div>
-          <h2>Talleres</h2>
+          <p class="pie-titulo">Talleres</p>
           <ul>
             <li><a href="taller-creatividad-para-empresas.html">Creatividad con método</a></li>
             <li><a href="taller-comunicacion-para-empresas.html">Magia que conecta</a></li>
@@ -195,7 +217,7 @@
           </ul>
         </div>
         <div>
-          <h2>Contacto</h2>
+          <p class="pie-titulo">Contacto</p>
           <ul>
             <li><a href="https://wa.me/573057679511?text=Hola%20Nabil,%20quiero%20una%20propuesta%20de%20taller%20o%20charla%20para%20mi%20empresa" target="_blank" rel="noopener">WhatsApp +57 305 767 9511</a></li>
             <li><a href="https://www.linkedin.com/in/nabilmentalista/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -204,7 +226,7 @@
           </ul>
         </div>
         <div>
-          <h2>Más de Nabil</h2>
+          <p class="pie-titulo">Más de Nabil</p>
           <ul>
             <li><a href="https://www.magonabil.com/corporativos">Shows de magia y mentalismo para eventos → magonabil.com</a></li>
             <li><a href="https://actividadesparaempresas.com/">Team building → actividadesparaempresas.com</a></li>
